@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sản phẩm — WONDERLAB</title>
+  <meta name="description" content="Danh sách đồ chơi giáo dục của WONDERLAB: bộ lắp ráp STEM, xếp hình, vẽ sáng tạo, board game và đồ chơi nhập vai cho trẻ 4–12 tuổi.">
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Bỏ qua điều hướng</a>
+
+  <header class="site-head">
+    <div class="container site-head__top">
+      <a class="brand" href="index.html" aria-label="WONDERLAB — trang chủ">
+        <img class="brand__logo" src="assets/img/logo-wonderlab.png" alt="WONDERLAB — Bé Khám Phá" width="560" height="321">
+      </a>
+
+      <form class="search" role="search" action="products.html" method="get" data-search-form>
+        <label class="sr-only" for="q">Tìm sản phẩm</label>
+        <input class="search__input" id="q" name="q" type="search" placeholder="Tìm bộ lắp ráp, xếp hình, thí nghiệm…" autocomplete="off">
+        <button class="search__btn" type="submit" aria-label="Tìm sản phẩm">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.4-3.4"></path></svg>
+        </button>
+      </form>
+
+      <button class="cart-btn" type="button" data-cart-open aria-label="Mở giỏ hàng">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+          <circle cx="9" cy="20" r="1.4"></circle><circle cx="18" cy="20" r="1.4"></circle>
+          <path d="M2.5 3.5h2.2l2.5 11.6a1.8 1.8 0 0 0 1.8 1.4h8.6a1.8 1.8 0 0 0 1.8-1.4L21 7H6"></path>
+        </svg>
+        <span class="cart-btn__count" data-cart-count hidden>0</span>
+      </button>
+    </div>
+
+    <div class="site-head__bar" data-nav-bar>
+      <div class="container site-head__nav-row">
+        <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
+          <span>Menu</span>
+        </button>
+        <nav class="site-nav" id="site-nav" aria-label="Điều hướng chính">
+          <a class="site-nav__link" href="index.html">Trang chủ</a>
+          <a class="site-nav__link" href="products.html" aria-current="page">Sản phẩm</a>
+          <a class="site-nav__link" href="about.html">Giới thiệu</a>
+        </nav>
+        <p class="site-head__note">Đồ chơi cho trẻ 4–12 tuổi</p>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="page-main">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="index.html">Trang chủ</a></li>
+          <li><span aria-current="page">Sản phẩm</span></li>
+        </ol>
+      </nav>
+
+      <div class="p-catalogue__head">
+        <h1 class="p-catalogue__title">Tất cả đồ chơi</h1>
+        <p class="p-catalogue__lead">Lọc theo danh mục, độ tuổi, ngân sách và kỹ năng.</p>
+      </div>
+
+      <div class="catalogue">
+        <button class="filters-backdrop" type="button" data-filters-close hidden aria-label="Đóng bộ lọc"></button>
+
+        <aside aria-labelledby="filters-title">
+          <form class="filters" id="filters" data-filters>
+            <div class="filters__head">
+              <h2 class="filters__title" id="filters-title">Bộ lọc</h2>
+              <button class="filters__reset" type="reset" data-filters-reset>Xóa bộ lọc</button>
+              <button class="icon-btn filters__close" type="button" data-filters-close aria-label="Đóng bộ lọc">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M18 6 6 18M6 6l12 12"></path></svg>
+              </button>
+            </div>
+
+            <fieldset class="f-group">
+              <legend class="f-group__legend">Danh mục</legend>
+              <label class="f-check"><input type="checkbox" name="danh-muc" value="stem"><span>Lắp ráp &amp; STEM</span><span class="f-check__n">3</span></label>
+              <label class="f-check"><input type="checkbox" name="danh-muc" value="logic"><span>Xếp hình &amp; logic</span><span class="f-check__n">5</span></label>
+              <label class="f-check"><input type="checkbox" name="danh-muc" value="sang-tao"><span>Vẽ &amp; sáng tạo</span><span class="f-check__n">2</span></label>
+              <label class="f-check"><input type="checkbox" name="danh-muc" value="boardgame"><span>Board game</span><span class="f-check__n">1</span></label>
+              <label class="f-check"><input type="checkbox" name="danh-muc" value="nhap-vai"><span>Nhập vai</span><span class="f-check__n">1</span></label>
+            </fieldset>
+
+            <fieldset class="f-group">
+              <legend class="f-group__legend">Độ tuổi</legend>
+              <label class="f-check"><input type="checkbox" name="tuoi" value="4-6"><span>4–6 tuổi</span><span class="f-check__n">5</span></label>
+              <label class="f-check"><input type="checkbox" name="tuoi" value="6-8"><span>6–8 tuổi</span><span class="f-check__n">8</span></label>
+              <label class="f-check"><input type="checkbox" name="tuoi" value="9-12"><span>9–12 tuổi</span><span class="f-check__n">5</span></label>
+            </fieldset>
+
+            <fieldset class="f-group">
+              <legend class="f-group__legend">Khoảng giá</legend>
+              <label class="f-check"><input type="checkbox" name="gia" value="duoi-300"><span>Dưới 300.000đ</span><span class="f-check__n">4</span></label>
+              <label class="f-check"><input type="checkbox" name="gia" value="300-500"><span>300.000đ – 500.000đ</span><span class="f-check__n">7</span></label>
+              <label class="f-check"><input type="checkbox" name="gia" value="tren-500"><span>Trên 500.000đ</span><span class="f-check__n">1</span></label>
+            </fieldset>
+
+            <fieldset class="f-group">
+              <legend class="f-group__legend">Kỹ năng</legend>
+              <label class="f-check"><input type="checkbox" name="ky-nang" value="tu-duy"><span>Tư duy logic</span><span class="f-check__n">8</span></label>
+              <label class="f-check"><input type="checkbox" name="ky-nang" value="sang-tao"><span>Sáng tạo</span><span class="f-check__n">3</span></label>
+              <label class="f-check"><input type="checkbox" name="ky-nang" value="khoa-hoc"><span>Khoa học</span><span class="f-check__n">3</span></label>
+              <label class="f-check"><input type="checkbox" name="ky-nang" value="van-dong-tinh"><span>Vận động tinh</span><span class="f-check__n">6</span></label>
+              <label class="f-check"><input type="checkbox" name="ky-nang" value="choi-nhom"><span>Chơi nhóm</span><span class="f-check__n">2</span></label>
+            </fieldset>
+
+            <button class="c-btn c-btn--primary filters__apply" type="button" data-filters-apply>Xem sản phẩm</button>
+          </form>
+        </aside>
+
+        <section aria-labelledby="results-title">
+          <h2 class="sr-only" id="results-title">Kết quả</h2>
+
+          <div class="filter-bar">
+            <button class="filter-toggle" type="button" data-filters-open aria-expanded="false">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 5h18l-7 8v6l-4 2v-8z"></path></svg>
+              Bộ lọc
+            </button>
+            <p class="toolbar__count" data-count aria-live="polite">12 sản phẩm</p>
+          </div>
+
+          <div class="toolbar">
+            <p class="toolbar__count" data-count-desktop aria-live="polite">12 sản phẩm</p>
+            <div class="toolbar__sort">
+              <label for="sort">Sắp xếp</label>
+              <select class="select" id="sort" data-sort>
+                <option value="default">Mặc định</option>
+                <option value="price-asc">Giá tăng dần</option>
+                <option value="price-desc">Giá giảm dần</option>
+                <option value="name-asc">Tên A–Z</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="active-filters" data-active hidden></div>
+
+          <ul class="grid-catalogue" data-grid>
+            <li data-product data-slug="robot-stem" data-name="Bộ lắp ráp Robot STEM" data-cat="stem" data-age="6-8 9-12" data-price="599000" data-skills="tu-duy khoa-hoc" data-order="1">
+              <article class="p-card">
+                <a class="p-card__media" href="product-detail.html?sp=robot-stem" tabindex="-1" aria-hidden="true">
+                  <img src="assets/img/products/product-robot-stem.jpg" alt="" width="480" height="480" loading="lazy">
+                </a>
+                <div class="p-card__body">
+                  <p class="p-card__age">6–10 tuổi</p>
+                  <h3 class="p-card__title"><a href="product-detail.html?sp=robot-stem">Bộ lắp ráp Robot STEM</a></h3>
+                  <p class="p-card__act">Lắp ráp mô hình robot có bánh xe, tay gắp và cảm biến.</p>
+                  <div class="p-card__foot">
+                    <span class="price">599.000đ</span>
+                    <a class="p-card__link" href="product-detail.html?sp=robot-stem" aria-label="Xem chi tiết Bộ lắp ráp Robot STEM">Xem chi tiết
+                      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>
+                    </a>
+                  </div>
+                </div>
+              </article>
+            </li>
+
+            <li data-product data-slug="wooden-blocks" data-name="Bộ xếp hình gỗ đa dạng" data-cat="logic" data-age="4-6" data-price="299000" data-skills="tu-duy van-dong-tinh" data-order="2">
+              <article class="p-card">
+                <a class="p-card__media" href="product-detail.html?sp=wooden-blocks" tabindex="-1" aria-hidden="true">
+                  <img src="assets/img/products/product-wooden-blocks.jpg" alt="" width="480" height="480" loading="lazy">
+                </a>
+                <div class="p-card__body">
+                  <p class="p-card__age">4–6 tuổi</p>
+                  <h3 class="p-card__title"><a href="product-detail.html?sp=wooden-blocks">Bộ xếp hình gỗ đa dạng</a></h3>
+                  <p class="p-card__act">Xếp chồng khối gỗ thành tháp, cổng và cầu.</p>
+                  <div class="p-card__foot">
+                    <span class="price">299.000đ</span>
+                    <a class="p-card__link" href="product-detail.html?sp=wooden-blocks" aria-label="Xem chi tiết Bộ xếp hình gỗ đa dạng">Xem chi tiết
+                      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>
+                    </a>
+                  </div>
+                </div>
+              </article>
+            </li>
+
+            <li data-product data-slug="letter-logic" data-name="Bộ chữ từ logic" data-cat="logic" data-age="6-8" data-price="349000" data-skills="tu-duy" data-order="3">
+              <article class="p-card">
+                <a class="p-card__media" href="product-detail.html?sp=letter-logic" tabindex="-1" aria-hidden="true">
+                  <img src="assets/img/products/product-letter-logic.jpg" alt="" width="480" height="480" loading="lazy">
+                </a>
+                <div class="p-card__body">
+                  <p class="p-card__age">6–8 tuổi</p>
+                  <h3 class="p-card__title"><a href="product-detail.html?sp=letter-logic">Bộ chữ từ logic</a></h3>
+                  <p class="p-card__act">Ghép chữ cái thành từ theo thẻ gợi ý.</p>
+                  <div class="p-card__foot">
+                    <span class="price">349.000đ</span>
+                    <a class="p-card__link" href="product-detail.html?sp=letter-logic" aria-label="Xem chi tiết Bộ chữ từ logic">Xem chi tiết
+                      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>
+                    </a>
+                  </div>
+                </div>
+              </article>
+            </li>
+
+            <li data-product data-slug="art-set" data-name="Bộ vẽ nghệ thuật sáng tạo" data-cat="sang-tao" data-age="4-6 6-8" data-price="229000" data-skills="sang-tao van-dong-tinh" data-order="4">
+              <article class="p-card">
+                <a class="p-card__media" href="product-detail.html?sp=art-set" tabindex="-1" aria-hidden="true">
+                  <img src="assets/img/products/product-art-set.jpg" alt="" width="480" height="480" loading="lazy">
+                </a>
+                <div class="p-card__body">
+                  <p class="p-card__age">4–8 tuổi</p>
+                  <h3 class="p-card__title"><a href="product-detail.html?sp=art-set">Bộ vẽ nghệ thuật sáng tạo</a></h3>
+                  <p class="p-card__act">Pha màu nước, tô và vẽ trên giấy A5.</p>
+                  <div class="p-card__foot">
+                    <span class="price">229.000đ</span>
+                    <a class="p-card__link" href="product-detail.html?sp=art-set" aria-label="Xem chi tiết Bộ vẽ nghệ thuật sáng tạo">Xem chi tiết
+                      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>
+                    </a>
+                  </div>
+                </div>
+              </article>
+            </li>
+
+            <li data-product data-slug="board-game" data-name="Board Game Vương quốc động vật" data-cat="boardgame" data-age="9-12" data-price="459000" data-skills="tu-duy choi-nhom" data-order="5">
+              <article class="p-card">
+                <a class="p-card__media" href="product-detail.html?sp=board-game" tabindex="-1" aria-hidden="true">
+                  <img src="assets/img/products/product-board-game.jpg" alt="" width="480" height="480" loading="lazy">
+                </a>
+                <div class="p-card__body">
+                  <p class="p-card__age">9–12 tuổi</p>
+                  <h3 class="p-card__title"><a href="product-detail.html?sp=board-game">Board Game Vương quốc động vật</a></h3>
+                  <p class="p-card__act">Thu thập thẻ động vật và tính điểm theo lượt.</p>
+                  <div class="p-card__foot">
+                    <span class="price">459.000đ</span>
+                    <a class="p-card__link" href="product-detail.html?sp=board-game" aria-label="Xem chi tiết Board Game Vương quốc động vật">Xem chi tiết
+                      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>
+                    </a>
+                  </div>
+                </div>
+              </article>
+            </li>
+
+            <li data-product data-slug="play-kitchen" data-name="Bộ đồ chơi nhà bếp mini" data-cat="nhap-vai" data-age="4-6" data-price="379000" data-skills="choi-nhom van-dong-tinh" data-order="6">
+              <article class="p-card">
+                <a class="p-card__media" href="product-detail.html?sp=play-kitchen" tabindex="-1" aria-hidden="true">
+                  <img src="assets/img/products/product-play-kitchen.jpg" alt="" width="480" height="480" loading="lazy">
+                </a>
+                <div class="p-card__body">
+                  <p class="p-card__age">3–6 tuổi</p>
+                  <h3 class="p-card__title"><a href="product-detail.html?sp=play-kitchen">Bộ đồ chơi nhà bếp mini</a></h3>
+                  <p class="p-card__act">Nấu ăn giả với bếp, nồi và đồ ăn bằng gỗ.</p>
+                  <div class="p-card__foot">
+                    <span class="price">379.000đ</span>
+                    <a class="p-card__link" href="product-detail.html?sp=play-kitchen" aria-label="Xem chi tiết Bộ đồ chơi nhà bếp mini">Xem chi tiết
+                      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>
+                    </a>
+                  </div>
+                </div>
+              </article>
+            </li>
+
+            <li data-product data-slug="rc-car" data-name="Xe đua điều khiển từ xa" data-cat="stem" data-age="6-8" data-price="499000" data-skills="khoa-hoc van-dong-tinh" data-order="7">
+              <article class="p-card">
+                <a class="p-card__media" href="product-detail.html?sp=rc-car" tabindex="-1" aria-hidden="true">
+                  <img src="assets/img/products/product-rc-car.jpg" alt="" width="480" height="480" loading="lazy">
+                </a>
+                <div class="p-card__body">
+                  <p class="p-card__age">6–8 tuổi</p>
+                  <h3 class="p-card__title"><a href="product-detail.html?sp=rc-car">Xe đua điều khiển từ xa</a></h3>
+                  <p class="p-card__act">Lắp khung xe và điều khiển bằng tay cầm.</p>
+                  <div class="p-card__foot">
+                    <span class="price">499.000đ</span>
+                    <a class="p-card__link" href="product-detail.html?sp=rc-car" aria-label="Xem chi tiết Xe đua điều khiển từ xa">Xem chi tiết
+                      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>
+                    </a>
+                  </div>
+                </div>
+              </article>
+            </li>
+
+            <li data-product data-slug="science-kit" data-name="Bộ thí nghiệm khoa học" data-cat="stem" data-age="6-8 9-12" data-price="449000" data-skills="khoa-hoc tu-duy" data-order="8">
+              <article class="p-card">
+                <a class="p-card__media" href="product-detail.html?sp=science-kit" tabindex="-1" aria-hidden="true">
+                  <img src="assets/img/products/product-science-kit.jpg" alt="" width="480" height="480" loading="lazy">
+                </a>
+                <div class="p-card__body">
+                  <p class="p-card__age">6–12 tuổi</p>
+                  <h3 class="p-card__title"><a href="product-detail.html?sp=science-kit">Bộ thí nghiệm khoa học</a></h3>
+                  <p class="p-card__act">Làm thí nghiệm pha màu và quan sát phản ứng.</p>
+                  <div class="p-card__foot">
+                    <span class="price">449.000đ</span>
+                    <a class="p-card__link" href="product-detail.html?sp=science-kit" aria-label="Xem chi tiết Bộ thí nghiệm khoa học">Xem chi tiết
+                      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>
+                    </a>
+                  </div>
+                </div>
+              </article>
+            </li>
+
+            <li data-product data-slug="magnetic-tiles" data-name="Bộ nam châm xếp hình" data-cat="logic" data-age="6-8 9-12" data-price="399000" data-skills="tu-duy sang-tao" data-order="9">
+              <article class="p-card">
+                <a class="p-card__media" href="product-detail.html?sp=magnetic-tiles" tabindex="-1" aria-hidden="true">
+                  <img src="assets/img/products/product-magnetic-tiles.jpg" alt="" width="480" height="480" loading="lazy">
+                </a>
+                <div class="p-card__body">
+                  <p class="p-card__age">6–10 tuổi</p>
+                  <h3 class="p-card__title"><a href="product-detail.html?sp=magnetic-tiles">Bộ nam châm xếp hình</a></h3>
+                  <p class="p-card__act">Ghép nam châm thành hình khối, nhà và cầu.</p>
+                  <div class="p-card__foot">
+                    <span class="price">399.000đ</span>
+                    <a class="p-card__link" href="product-detail.html?sp=magnetic-tiles" aria-label="Xem chi tiết Bộ nam châm xếp hình">Xem chi tiết
+                      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>
+                    </a>
+                  </div>
+                </div>
+              </article>
+            </li>
+
+            <li data-product data-slug="space-puzzle" data-name="Tranh ghép hình vũ trụ" data-cat="logic" data-age="6-8 9-12" data-price="279000" data-skills="tu-duy" data-order="10">
+              <article class="p-card">
+                <a class="p-card__media" href="product-detail.html?sp=space-puzzle" tabindex="-1" aria-hidden="true">
+                  <img src="assets/img/products/product-space-puzzle.jpg" alt="" width="480" height="480" loading="lazy">
+                </a>
+                <div class="p-card__body">
+                  <p class="p-card__age">6–10 tuổi</p>
+                  <h3 class="p-card__title"><a href="product-detail.html?sp=space-puzzle">Tranh ghép hình vũ trụ</a></h3>
+                  <p class="p-card__act">Ghép 200 mảnh thành tranh hệ mặt trời.</p>
+                  <div class="p-card__foot">
+                    <span class="price">279.000đ</span>
+                    <a class="p-card__link" href="product-detail.html?sp=space-puzzle" aria-label="Xem chi tiết Tranh ghép hình vũ trụ">Xem chi tiết
+                      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>
+                    </a>
+                  </div>
+                </div>
+              </article>
+            </li>
+
+            <li data-product data-slug="clay-set" data-name="Bộ đất nặn sáng tạo" data-cat="sang-tao" data-age="4-6 6-8" data-price="249000" data-skills="sang-tao van-dong-tinh" data-order="11">
+              <article class="p-card">
+                <a class="p-card__media" href="product-detail.html?sp=clay-set" tabindex="-1" aria-hidden="true">
+                  <img src="assets/img/products/product-clay-set.jpg" alt="" width="480" height="480" loading="lazy">
+                </a>
+                <div class="p-card__body">
+                  <p class="p-card__age">5–9 tuổi</p>
+                  <h3 class="p-card__title"><a href="product-detail.html?sp=clay-set">Bộ đất nặn sáng tạo</a></h3>
+                  <p class="p-card__act">Nặn hình bằng đất màu và dụng cụ gỗ.</p>
+                  <div class="p-card__foot">
+                    <span class="price">249.000đ</span>
+                    <a class="p-card__link" href="product-detail.html?sp=clay-set" aria-label="Xem chi tiết Bộ đất nặn sáng tạo">Xem chi tiết
+                      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>
+                    </a>
+                  </div>
+                </div>
+              </article>
+            </li>
+
+            <li data-product data-slug="geometric-solids" data-name="Bộ khối hình học" data-cat="logic" data-age="4-6" data-price="319000" data-skills="tu-duy van-dong-tinh" data-order="12">
+              <article class="p-card">
+                <a class="p-card__media" href="product-detail.html?sp=geometric-solids" tabindex="-1" aria-hidden="true">
+                  <img src="assets/img/products/product-geometric-solids.jpg" alt="" width="480" height="480" loading="lazy">
+                </a>
+                <div class="p-card__body">
+                  <p class="p-card__age">4–6 tuổi</p>
+                  <h3 class="p-card__title"><a href="product-detail.html?sp=geometric-solids">Bộ khối hình học</a></h3>
+                  <p class="p-card__act">Cầm nắm khối cầu, trụ, nón và so sánh.</p>
+                  <div class="p-card__foot">
+                    <span class="price">319.000đ</span>
+                    <a class="p-card__link" href="product-detail.html?sp=geometric-solids" aria-label="Xem chi tiết Bộ khối hình học">Xem chi tiết
+                      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>
+                    </a>
+                  </div>
+                </div>
+              </article>
+            </li>
+          </ul>
+
+          <div class="empty-state" data-empty hidden>
+            <p>Không có sản phẩm nào khớp với bộ lọc hiện tại.</p>
+            <button class="c-btn c-btn--ghost" type="button" data-filters-reset>Xóa bộ lọc</button>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-foot">
+    <div class="container site-foot__grid">
+      <div class="site-foot__about">
+        <a class="brand brand--light" href="index.html" aria-label="WONDERLAB — trang chủ">
+          <span class="brand__plate">
+            <img class="brand__logo" src="assets/img/logo-wonderlab.png" alt="WONDERLAB — Bé Khám Phá" width="560" height="321">
+          </span>
+        </a>
+        <p class="brand__tagline">Play • Learn • Grow</p>
+        <p>Đồ chơi giáo dục giúp trẻ 4–12 tuổi lắp ráp, thử nghiệm và tự tìm ra cách chơi.</p>
+      </div>
+
+      <nav aria-labelledby="foot-links">
+        <h2 class="site-foot__title" id="foot-links">Liên kết nhanh</h2>
+        <ul class="site-foot__list">
+          <li><a href="index.html">Trang chủ</a></li>
+          <li><a href="products.html">Sản phẩm</a></li>
+          <li><a href="about.html">Giới thiệu</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <h2 class="site-foot__title">Liên hệ</h2>
+        <div class="site-foot__contact">
+          <a href="mailto:wonderlab@example.com">wonderlab@example.com</a>
+          <a href="tel:+84123456789">0123 456 789</a>
+          <span>Thứ 2 – Thứ 7, 8:00 – 17:00</span>
+        </div>
+      </div>
+    </div>
+    <div class="container site-foot__rule"></div>
+    <div class="container site-foot__bottom">
+      <span>© 2026 WONDERLAB. Dự án học tập, không phải cửa hàng thật.</span>
+      <span>Giỏ hàng trên trang là bản demo, không có thanh toán.</span>
+    </div>
+  </footer>
+
+  <div class="cart-drawer" data-cart-drawer hidden role="dialog" aria-modal="true" aria-labelledby="cart-title">
+    <button class="cart-drawer__scrim" type="button" data-cart-close aria-label="Đóng giỏ hàng"></button>
+    <div class="cart-drawer__panel">
+      <div class="cart-drawer__head">
+        <h2 class="cart-drawer__title" id="cart-title">Giỏ hàng của bạn</h2>
+        <button class="icon-btn" type="button" data-cart-close aria-label="Đóng giỏ hàng">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M18 6 6 18M6 6l12 12"></path></svg>
+        </button>
+      </div>
+      <div class="cart-drawer__items" data-cart-items></div>
+      <div class="cart-drawer__foot">
+        <div class="cart-drawer__total"><span>Tạm tính</span><strong data-cart-total>0đ</strong></div>
+        <a class="c-btn c-btn--ghost c-btn--wide" href="products.html">Tiếp tục xem sản phẩm</a>
+        <p class="cart-drawer__note">Đây là giỏ hàng demo của một dự án học tập. Chưa có bước thanh toán hoặc đặt hàng thật.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" data-toast hidden role="status" aria-live="polite">
+    <span data-toast-text>Đã thêm vào giỏ hàng demo.</span>
+    <button class="toast__close" type="button" data-toast-close aria-label="Đóng thông báo">
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M18 6 6 18M6 6l12 12"></path></svg>
+    </button>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/products.js"></script>
+</body>
+</html>

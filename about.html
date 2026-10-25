@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Giới thiệu — WONDERLAB</title>
+  <meta name="description" content="WONDERLAB chọn đồ chơi giáo dục cho trẻ 4–12 tuổi và ghi rõ độ tuổi, số chi tiết, chất liệu cùng kỹ năng trẻ luyện tập trên từng sản phẩm.">
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Bỏ qua điều hướng</a>
+
+  <header class="site-head">
+    <div class="container site-head__top">
+      <a class="brand" href="index.html" aria-label="WONDERLAB — trang chủ">
+        <img class="brand__logo" src="assets/img/logo-wonderlab.png" alt="WONDERLAB — Bé Khám Phá" width="560" height="321">
+      </a>
+
+      <form class="search" role="search" action="products.html" method="get">
+        <label class="sr-only" for="q">Tìm sản phẩm</label>
+        <input class="search__input" id="q" name="q" type="search" placeholder="Tìm bộ lắp ráp, xếp hình, thí nghiệm…" autocomplete="off">
+        <button class="search__btn" type="submit" aria-label="Tìm sản phẩm">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.4-3.4"></path></svg>
+        </button>
+      </form>
+
+      <button class="cart-btn" type="button" data-cart-open aria-label="Mở giỏ hàng">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+          <circle cx="9" cy="20" r="1.4"></circle><circle cx="18" cy="20" r="1.4"></circle>
+          <path d="M2.5 3.5h2.2l2.5 11.6a1.8 1.8 0 0 0 1.8 1.4h8.6a1.8 1.8 0 0 0 1.8-1.4L21 7H6"></path>
+        </svg>
+        <span class="cart-btn__count" data-cart-count hidden>0</span>
+      </button>
+    </div>
+
+    <div class="site-head__bar" data-nav-bar>
+      <div class="container site-head__nav-row">
+        <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
+          <span>Menu</span>
+        </button>
+        <nav class="site-nav" id="site-nav" aria-label="Điều hướng chính">
+          <a class="site-nav__link" href="index.html">Trang chủ</a>
+          <a class="site-nav__link" href="products.html">Sản phẩm</a>
+          <a class="site-nav__link" href="about.html" aria-current="page">Giới thiệu</a>
+        </nav>
+        <p class="site-head__note">Đồ chơi cho trẻ 4–12 tuổi</p>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="page-main">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="index.html">Trang chủ</a></li>
+          <li><span aria-current="page">Giới thiệu</span></li>
+        </ol>
+      </nav>
+
+      <section class="p-about__masthead" aria-labelledby="about-title">
+        <div>
+          <div class="about__lockup">
+            <img class="about__logo" src="assets/img/logo-wonderlab.png" alt="WONDERLAB — Bé Khám Phá" width="560" height="321">
+            <p class="brand__tagline">Play • Learn • Grow</p>
+          </div>
+
+          <h1 class="about__title">Chúng tôi chọn đồ chơi theo cách trẻ chơi.</h1>
+          <p class="about__lead">
+            WONDERLAB là cửa hàng chuyên đồ chơi giáo dục cho trẻ từ 4 đến 12 tuổi: bộ lắp ráp, xếp hình, dụng cụ vẽ và bộ thí nghiệm. Chúng tôi không bán đồ chơi theo mốc tuổi chung chung, mà dựa vào việc trẻ sẽ làm gì với món đồ đó.
+          </p>
+          <p class="about__lead mt-2">
+            Mỗi sản phẩm trên trang đều có độ tuổi, số chi tiết, chất liệu và ba bước hướng dẫn đầu tiên. Bạn biết trước bé cần làm gì trước khi mở hộp.
+          </p>
+          <p class="mt-3">
+            <a class="c-link" href="products.html">Xem danh mục sản phẩm
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>
+            </a>
+          </p>
+        </div>
+
+        <div class="about__figures">
+          <figure class="about__figure">
+            <img class="about__img about__img--wide" src="https://images.pexels.com/photos/8535599/pexels-photo-8535599.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200" alt="Ba trẻ đang lắp những khối đồ chơi trên bàn trong lớp học sáng. Ảnh: Ksenia Chernaya trên Pexels." width="1200" height="800" loading="lazy">
+            <figcaption class="about__caption">Một buổi chiều ở lớp học: ba trẻ cùng lắp một công trình từ những khối rời.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section aria-labelledby="values-title">
+        <div class="sec-head">
+          <h2 class="sec-head__h" id="values-title">Điều chúng tôi quan tâm</h2>
+          <p class="sec-head__note">Bốn nguyên tắc dùng cho mọi sản phẩm trong danh mục.</p>
+        </div>
+
+        <div class="values">
+          <div class="value">
+            <h3 class="value__h">Độ tuổi ghi rõ, không đoán</h3>
+            <p class="value__p">Khoảng tuổi trên mỗi sản phẩm dựa vào số chi tiết và mức phức tạp của bộ đồ chơi. Bộ có nhiều chi tiết nhỏ luôn ghi tuổi cao hơn, kể cả khi trẻ đã quen lắp ghép.</p>
+          </div>
+          <div class="value">
+            <h3 class="value__h">Thông tin đủ để quyết định</h3>
+            <p class="value__p">Số chi tiết, chất liệu, kích thước khi lắp và những gì có trong hộp nằm cùng một chỗ. Nếu sản phẩm cần pin hoặc cần người lớn ở bên, phần mô tả nói rõ.</p>
+          </div>
+          <div class="value">
+            <h3 class="value__h">Hướng dẫn cụ thể cho từng bộ</h3>
+            <p class="value__p">Ba bước đầu tiên được viết riêng cho từng sản phẩm, không dùng lại một đoạn giới thiệu chung. Mục đích là để bạn biết lần lắp đầu tiên sẽ mất bao lâu và cần chuẩn bị gì.</p>
+          </div>
+          <div class="value">
+            <h3 class="value__h">Danh mục theo hoạt động</h3>
+            <p class="value__p">Sản phẩm được xếp theo việc trẻ làm: lắp ráp, xếp hình, vẽ, thí nghiệm, nhập vai. Một món đồ có thể xuất hiện ở hai nhóm nếu trẻ dùng nó theo hai cách khác nhau.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section class="example-band" aria-labelledby="example-title">
+        <div class="container example-band__grid">
+          <div>
+            <h2 class="sec-head__h" id="example-title">Một sản phẩm, những gì bạn được biết</h2>
+            <p class="about__lead mt-2">
+              Đây là ví dụ về phần thông tin đi kèm mỗi sản phẩm. Bạn không cần mở nhiều tab hay đọc hết mô tả để tìm số chi tiết hay chất liệu.
+            </p>
+            <p class="t-caption mt-2">Ví dụ minh hoạ, không phải thông tin kiểm định.</p>
+          </div>
+
+          <div class="example-card">
+            <p class="example-card__title">Bộ lắp ráp Robot STEM</p>
+            <p class="t-caption mb-1">Lắp ráp &amp; STEM — 599.000đ</p>
+            <div class="example-card__row"><span>Độ tuổi</span><span>6–10 tuổi</span></div>
+            <div class="example-card__row"><span>Số chi tiết</span><span>420 chi tiết</span></div>
+            <div class="example-card__row"><span>Chất liệu</span><span>Nhựa ABS</span></div>
+            <div class="example-card__row"><span>Trong hộp</span><span>Chi tiết, tua vít, sách 24 trang</span></div>
+            <div class="example-card__row"><span>Kỹ năng</span><span>Tư duy logic, khoa học</span></div>
+          </div>
+        </div>
+      </section>
+
+    <div class="container">
+      <section class="contact-grid" aria-labelledby="contact-title">
+        <div>
+          <h2 class="sec-head__h" id="contact-title">Liên hệ</h2>
+          <p class="hours mt-2">
+            WONDERLAB là dự án học tập của một nhóm sinh viên. Nếu bạn cần hỏi về một sản phẩm, hãy dùng thông tin bên cạnh; chúng tôi trả lời trong giờ hành chính.
+          </p>
+        </div>
+
+        <div>
+          <dl class="contact-list">
+            <div>
+              <dt>Email</dt>
+              <dd><a href="mailto:wonderlab@example.com">wonderlab@example.com</a></dd>
+            </div>
+            <div>
+              <dt>Điện thoại</dt>
+              <dd><a href="tel:+84123456789">0123 456 789</a></dd>
+            </div>
+            <div>
+              <dt>Thời gian hỗ trợ</dt>
+              <dd>Thứ 2 – Thứ 7, 8:00 – 17:00</dd>
+            </div>
+          </dl>
+          <p class="t-caption mt-3 note-narrow">
+            Đây là thông tin mẫu dùng cho bài tập môn học. Dự án chưa có địa chỉ cửa hàng thật và không nhận đơn hàng.
+          </p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-foot">
+    <div class="container site-foot__grid">
+      <div class="site-foot__about">
+        <a class="brand brand--light" href="index.html" aria-label="WONDERLAB — trang chủ">
+          <span class="brand__plate">
+            <img class="brand__logo" src="assets/img/logo-wonderlab.png" alt="WONDERLAB — Bé Khám Phá" width="560" height="321">
+          </span>
+        </a>
+        <p class="brand__tagline">Play • Learn • Grow</p>
+        <p>Đồ chơi giáo dục giúp trẻ 4–12 tuổi lắp ráp, thử nghiệm và tự tìm ra cách chơi.</p>
+      </div>
+
+      <nav aria-labelledby="foot-links">
+        <h2 class="site-foot__title" id="foot-links">Liên kết nhanh</h2>
+        <ul class="site-foot__list">
+          <li><a href="index.html">Trang chủ</a></li>
+          <li><a href="products.html">Sản phẩm</a></li>
+          <li><a href="about.html">Giới thiệu</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <h2 class="site-foot__title">Liên hệ</h2>
+        <div class="site-foot__contact">
+          <a href="mailto:wonderlab@example.com">wonderlab@example.com</a>
+          <a href="tel:+84123456789">0123 456 789</a>
+          <span>Thứ 2 – Thứ 7, 8:00 – 17:00</span>
+        </div>
+      </div>
+    </div>
+    <div class="container site-foot__rule"></div>
+    <div class="container site-foot__bottom">
+      <span>© 2026 WONDERLAB. Dự án học tập, không phải cửa hàng thật.</span>
+      <span>Giỏ hàng trên trang là bản demo, không có thanh toán.</span>
+    </div>
+  </footer>
+
+  <div class="cart-drawer" data-cart-drawer hidden role="dialog" aria-modal="true" aria-labelledby="cart-title">
+    <button class="cart-drawer__scrim" type="button" data-cart-close aria-label="Đóng giỏ hàng"></button>
+    <div class="cart-drawer__panel">
+      <div class="cart-drawer__head">
+        <h2 class="cart-drawer__title" id="cart-title">Giỏ hàng của bạn</h2>
+        <button class="icon-btn" type="button" data-cart-close aria-label="Đóng giỏ hàng">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M18 6 6 18M6 6l12 12"></path></svg>
+        </button>
+      </div>
+      <div class="cart-drawer__items" data-cart-items></div>
+      <div class="cart-drawer__foot">
+        <div class="cart-drawer__total"><span>Tạm tính</span><strong data-cart-total>0đ</strong></div>
+        <a class="c-btn c-btn--ghost c-btn--wide" href="products.html">Tiếp tục xem sản phẩm</a>
+        <p class="cart-drawer__note">Đây là giỏ hàng demo của một dự án học tập. Chưa có bước thanh toán hoặc đặt hàng thật.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" data-toast hidden role="status" aria-live="polite">
+    <span data-toast-text>Đã thêm vào giỏ hàng demo.</span>
+    <button class="toast__close" type="button" data-toast-close aria-label="Đóng thông báo">
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M18 6 6 18M6 6l12 12"></path></svg>
+    </button>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
