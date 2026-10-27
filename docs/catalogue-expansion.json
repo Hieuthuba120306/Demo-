@@ -1,0 +1,107 @@
+{
+  "date": "2026-10-27",
+  "purpose": "17 sản phẩm minh họa cho dự án học tập WONDERLAB. Giá, vật liệu và cấu hình là dữ liệu mẫu, không mô tả sản phẩm thương mại đã kiểm chứng.",
+  "research": [
+    {
+      "title": "AAP — Toy Buying Tips for Babies & Young Children",
+      "url": "https://www.healthychildren.org/English/ages-stages/baby/Pages/What-to-Look-for-in-a-Toy.aspx",
+      "application": "Chọn hoạt động lắp ghép, sáng tạo, trò chơi theo lượt và nhập vai tạo cơ hội tương tác. Không dùng nguồn này làm chứng nhận cho sản phẩm mẫu."
+    },
+    {
+      "title": "NAEYC — Good Toys for Young Children by Age and Stage",
+      "url": "https://www.naeyc.org/resources/topics/play/toys",
+      "application": "Dựa trên mức độ thao tác và kiểu chơi để gợi ý nhóm tuổi. Nhóm tuổi là biên tập cho mô hình website, không phải nhãn tuổi nhà sản xuất."
+    }
+  ],
+  "imageGeneration": {
+    "mode": "Built-in image_gen",
+    "style": "Use case: product-mockup. Create one square, high quality realistic studio catalogue photograph of this generic educational toy concept: SUBJECT. Warm ivory seamless background, soft natural shadows, centered three quarter view, tactile wood and matte materials, cheerful blue mustard yellow teal accents, generous space around the entire toy. Match an elegant educational toy ecommerce catalogue. No people, no logos, no watermarks, no labels or text. Only this one product set; not a collage. Visually coherent real toy construction.",
+    "assets": [
+      {
+        "slug": "marble-run",
+        "path": "assets/img/products/product-marble-run.jpg",
+        "prompt": "Use case: product-mockup. Create one square, high quality realistic studio catalogue photograph of this generic educational toy concept: A children's wooden marble run construction toy, assembled tracks, ramps and blue yellow teal supports, a few wooden balls. Warm ivory seamless background, soft natural shadows, centered three quarter view, tactile wood and matte materials, cheerful blue mustard yellow teal accents, generous space around the entire toy. Match an elegant educational toy ecommerce catalogue. No people, no logos, no watermarks, no labels or text. Only this one product set; not a collage. Visually coherent real toy construction."
+      },
+      {
+        "slug": "solar-rover",
+        "path": "assets/img/products/product-solar-rover.jpg",
+        "prompt": "Use case: product-mockup. Create one square, high quality realistic studio catalogue photograph of this generic educational toy concept: A children's buildable solar powered exploration rover toy with four rugged wheels, small black solar panel and blue yellow chassis. Warm ivory seamless background, soft natural shadows, centered three quarter view, tactile wood and matte materials, cheerful blue mustard yellow teal accents, generous space around the entire toy. Match an elegant educational toy ecommerce catalogue. No people, no logos, no watermarks, no labels or text. Only this one product set; not a collage. Visually coherent real toy construction."
+      },
+      {
+        "slug": "tangram",
+        "path": "assets/img/products/product-tangram.jpg",
+        "prompt": "Use case: product-mockup. Create one square, high quality realistic studio catalogue photograph of this generic educational toy concept: A wooden tangram puzzle, seven colorful geometric pieces forming a fox silhouette next to a square wooden tray and a few silhouette challenge cards. Warm ivory seamless background, soft natural shadows, centered three quarter view, tactile wood and matte materials, cheerful blue mustard yellow teal accents, generous space around the entire toy. Match an elegant educational toy ecommerce catalogue. No people, no logos, no watermarks, no labels or text. Only this one product set; not a collage. Visually coherent real toy construction."
+      },
+      {
+        "slug": "origami-set",
+        "path": "assets/img/products/product-origami-set.jpg",
+        "prompt": "Use case: product-mockup. Create one square, high quality realistic studio catalogue photograph of this generic educational toy concept: An origami craft kit, colorful square paper stacks and finished folded crane, fox and small boat. Warm ivory seamless background, soft natural shadows, centered three quarter view, tactile wood and matte materials, cheerful blue mustard yellow teal accents, generous space around the entire toy. Match an elegant educational toy ecommerce catalogue. No people, no logos, no watermarks, no labels or text. Only this one product set; not a collage. Visually coherent real toy construction."
+      },
+      {
+        "slug": "bead-jewelry",
+        "path": "assets/img/products/product-bead-jewelry.jpg",
+        "prompt": "Use case: product-mockup. Create one square, high quality realistic studio catalogue photograph of this generic educational toy concept: A children's bead threading jewelry kit, tray of large colorful wooden beads, cords and two completed bracelets. Warm ivory seamless background, soft natural shadows, centered three quarter view, tactile wood and matte materials, cheerful blue mustard yellow teal accents, generous space around the entire toy. Match an elegant educational toy ecommerce catalogue. No people, no logos, no watermarks, no labels or text. Only this one product set; not a collage. Visually coherent real toy construction."
+      },
+      {
+        "slug": "stencil-art",
+        "path": "assets/img/products/product-stencil-art.jpg",
+        "prompt": "Use case: product-mockup. Create one square, high quality realistic studio catalogue photograph of this generic educational toy concept: A children's drawing stencil kit, reusable animal and plant stencil sheets, colored pencils and a partially drawn animal scene on paper. Warm ivory seamless background, soft natural shadows, centered three quarter view, tactile wood and matte materials, cheerful blue mustard yellow teal accents, generous space around the entire toy. Match an elegant educational toy ecommerce catalogue. No people, no logos, no watermarks, no labels or text. Only this one product set; not a collage. Visually coherent real toy construction."
+      },
+      {
+        "slug": "weaving-loom",
+        "path": "assets/img/products/product-weaving-loom.jpg",
+        "prompt": "Use case: product-mockup. Create one square, high quality realistic studio catalogue photograph of this generic educational toy concept: A children's wooden weaving loom with a half-finished blue yellow teal wool textile, yarn balls, wooden shuttle and comb. Warm ivory seamless background, soft natural shadows, centered three quarter view, tactile wood and matte materials, cheerful blue mustard yellow teal accents, generous space around the entire toy. Match an elegant educational toy ecommerce catalogue. No people, no logos, no watermarks, no labels or text. Only this one product set; not a collage. Visually coherent real toy construction."
+      },
+      {
+        "slug": "animal-memory",
+        "path": "assets/img/products/product-animal-memory.jpg",
+        "prompt": "Use case: product-mockup. Create one square, high quality realistic studio catalogue photograph of this generic educational toy concept: A children's animal memory matching card game, thick square cards arranged face up and face down, paired friendly fox, whale and rabbit illustrations. Warm ivory seamless background, soft natural shadows, centered three quarter view, tactile wood and matte materials, cheerful blue mustard yellow teal accents, generous space around the entire toy. Match an elegant educational toy ecommerce catalogue. No people, no logos, no watermarks, no labels or text. Only this one product set; not a collage. Visually coherent real toy construction."
+      },
+      {
+        "slug": "picture-domino",
+        "path": "assets/img/products/product-picture-domino.jpg",
+        "prompt": "Use case: product-mockup. Create one square, high quality realistic studio catalogue photograph of this generic educational toy concept: A children's animal picture domino game, thick rectangular wooden tiles with friendly forest animal pictures arranged in a connected path. Warm ivory seamless background, soft natural shadows, centered three quarter view, tactile wood and matte materials, cheerful blue mustard yellow teal accents, generous space around the entire toy. Match an elegant educational toy ecommerce catalogue. No people, no logos, no watermarks, no labels or text. Only this one product set; not a collage. Visually coherent real toy construction."
+      },
+      {
+        "slug": "ludo-game",
+        "path": "assets/img/products/product-ludo-game.jpg",
+        "prompt": "Use case: product-mockup. Create one square, high quality realistic studio catalogue photograph of this generic educational toy concept: A children's classic ludo board game with four clearly colored home areas blue yellow teal coral, chunky pawns and a single die. Warm ivory seamless background, soft natural shadows, centered three quarter view, tactile wood and matte materials, cheerful blue mustard yellow teal accents, generous space around the entire toy. Match an elegant educational toy ecommerce catalogue. No people, no logos, no watermarks, no labels or text. Only this one product set; not a collage. Visually coherent real toy construction."
+      },
+      {
+        "slug": "balance-tower",
+        "path": "assets/img/products/product-balance-tower.jpg",
+        "prompt": "Use case: product-mockup. Create one square, high quality realistic studio catalogue photograph of this generic educational toy concept: A children's wooden stacking tower board game with rectangular blue yellow teal blocks stacked in a tower, one pulled-out block and a color die. Warm ivory seamless background, soft natural shadows, centered three quarter view, tactile wood and matte materials, cheerful blue mustard yellow teal accents, generous space around the entire toy. Match an elegant educational toy ecommerce catalogue. No people, no logos, no watermarks, no labels or text. Only this one product set; not a collage. Visually coherent real toy construction."
+      },
+      {
+        "slug": "math-market",
+        "path": "assets/img/products/product-math-market.jpg",
+        "prompt": "Use case: product-mockup. Create one square, high quality realistic studio catalogue photograph of this generic educational toy concept: A children's market-themed arithmetic board game, colorful market path board, fruit picture cards, number tokens, chunky pawns and a die; no legible text. Warm ivory seamless background, soft natural shadows, centered three quarter view, tactile wood and matte materials, cheerful blue mustard yellow teal accents, generous space around the entire toy. Match an elegant educational toy ecommerce catalogue. No people, no logos, no watermarks, no labels or text. Only this one product set; not a collage. Visually coherent real toy construction."
+      },
+      {
+        "slug": "doctor-kit",
+        "path": "assets/img/products/product-doctor-kit.jpg",
+        "prompt": "Use case: product-mockup. Create one square, high quality realistic studio catalogue photograph of this generic educational toy concept: A children's pretend doctor play kit, teal carry case, toy stethoscope, thermometer, blunt toy syringe, bandage and patient chart; all visibly toys. Warm ivory seamless background, soft natural shadows, centered three quarter view, tactile wood and matte materials, cheerful blue mustard yellow teal accents, generous space around the entire toy. Match an elegant educational toy ecommerce catalogue. No people, no logos, no watermarks, no labels or text. Only this one product set; not a collage. Visually coherent real toy construction."
+      },
+      {
+        "slug": "tool-workbench",
+        "path": "assets/img/products/product-tool-workbench.jpg",
+        "prompt": "Use case: product-mockup. Create one square, high quality realistic studio catalogue photograph of this generic educational toy concept: A children's wooden pretend carpenter workbench, small bench with peg holes, wooden hammer, toy wrench, toy screwdriver, chunky wooden bolts; blue yellow teal. Warm ivory seamless background, soft natural shadows, centered three quarter view, tactile wood and matte materials, cheerful blue mustard yellow teal accents, generous space around the entire toy. Match an elegant educational toy ecommerce catalogue. No people, no logos, no watermarks, no labels or text. Only this one product set; not a collage. Visually coherent real toy construction."
+      },
+      {
+        "slug": "grocery-store",
+        "path": "assets/img/products/product-grocery-store.jpg",
+        "prompt": "Use case: product-mockup. Create one square, high quality realistic studio catalogue photograph of this generic educational toy concept: A children's tabletop pretend grocery shop, miniature wooden counter and striped canopy, play fruit baskets, toy cash register and paper play money without writing. Warm ivory seamless background, soft natural shadows, centered three quarter view, tactile wood and matte materials, cheerful blue mustard yellow teal accents, generous space around the entire toy. Match an elegant educational toy ecommerce catalogue. No people, no logos, no watermarks, no labels or text. Only this one product set; not a collage. Visually coherent real toy construction."
+      },
+      {
+        "slug": "tea-party",
+        "path": "assets/img/products/product-tea-party.jpg",
+        "prompt": "Use case: product-mockup. Create one square, high quality realistic studio catalogue photograph of this generic educational toy concept: A children's pretend wooden tea party set, teapot, two cups and saucers, tray, wooden cookies and cake slices; blue yellow teal colors. Warm ivory seamless background, soft natural shadows, centered three quarter view, tactile wood and matte materials, cheerful blue mustard yellow teal accents, generous space around the entire toy. Match an elegant educational toy ecommerce catalogue. No people, no logos, no watermarks, no labels or text. Only this one product set; not a collage. Visually coherent real toy construction."
+      },
+      {
+        "slug": "vet-clinic",
+        "path": "assets/img/products/product-vet-clinic.jpg",
+        "prompt": "Use case: product-mockup. Create one square, high quality realistic studio catalogue photograph of this generic educational toy concept: A children's pretend veterinarian kit with a small plush puppy, teal pet carrier, toy stethoscope, grooming brush and pretend food bowl. Warm ivory seamless background, soft natural shadows, centered three quarter view, tactile wood and matte materials, cheerful blue mustard yellow teal accents, generous space around the entire toy. Match an elegant educational toy ecommerce catalogue. No people, no logos, no watermarks, no labels or text. Only this one product set; not a collage. Visually coherent real toy construction."
+      }
+    ]
+  }
+}
