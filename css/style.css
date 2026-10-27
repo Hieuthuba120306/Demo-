@@ -2773,6 +2773,142 @@ main {
   }
 }
 
+/* About page: image led sections inspired by the LEGO About Us layout. */
+.about-page {
+  padding-bottom: var(--s6);
+}
+
+.about-page__title {
+  margin: var(--s3) 0 var(--s4);
+  font-size: var(--fs-page);
+  line-height: 1.2;
+}
+
+.about-feature {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  min-height: clamp(360px, 50vw, 590px);
+  margin-bottom: var(--s5);
+  overflow: hidden;
+  background: #d9d9d9;
+}
+
+.about-feature__image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-feature__copy {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: inherit;
+  padding: clamp(24px, 5vw, 56px);
+  text-align: center;
+  background: rgba(228, 231, 233, 0.56);
+}
+
+.about-feature--second .about-feature__copy {
+  background: rgba(228, 231, 233, 0.44);
+}
+
+.about-feature__copy h2 {
+  max-width: 24ch;
+  font-size: clamp(26px, 4vw, 46px);
+  line-height: 1.14;
+  font-weight: 700;
+}
+
+.about-feature__link {
+  display: inline-block;
+  margin-top: var(--s2);
+  color: var(--c-brand-strong);
+  font-size: var(--fs-sm);
+  font-weight: 400;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.about-feature__link:hover {
+  color: var(--c-brand);
+}
+
+.about-feature__copy p {
+  max-width: 68ch;
+  margin-top: var(--s2);
+  color: #39434a;
+  font-size: clamp(15px, 1.5vw, 18px);
+  line-height: 1.7;
+}
+
+.about-history {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(220px, 0.8fr);
+  gap: var(--s5);
+  align-items: center;
+  padding: var(--s5) 0 var(--s2);
+  border-top: 1px solid var(--c-border);
+}
+
+.about-history__eyebrow {
+  color: var(--c-muted);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.about-history h2 {
+  margin-top: var(--s1);
+  font-size: var(--fs-section);
+  line-height: 1.3;
+}
+
+.about-history__copy > p:last-child {
+  max-width: 58ch;
+  margin-top: var(--s2);
+  color: var(--c-muted);
+  line-height: 1.75;
+}
+
+.about-history__logo {
+  width: min(100%, 360px);
+  max-height: 210px;
+  justify-self: center;
+  object-fit: contain;
+}
+
+@media (max-width: 640px) {
+  .about-feature {
+    min-height: 470px;
+    align-items: flex-end;
+    margin-bottom: var(--s4);
+  }
+
+  .about-feature__copy {
+    width: 100%;
+    padding: var(--s3);
+  }
+
+  .about-history {
+    grid-template-columns: 1fr;
+    gap: var(--s3);
+    padding-top: var(--s4);
+  }
+
+  .about-history__logo {
+    justify-self: start;
+    width: 230px;
+  }
+}
+
 /* 11b mobile filter controls (shown under 1024px) */
 .filter-bar {
   display: none;
