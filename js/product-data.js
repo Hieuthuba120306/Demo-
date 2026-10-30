@@ -1842,7 +1842,8 @@ window.WONDERLAB_PRODUCTS = {
         "comment": "Các học viên nhí trong lớp đều rất thích thú khi robot có thể tự động tránh chướng ngại vật.",
         "verified": true
       }
-    ]
+    ],
+    "video": "assets/videos/Bo-lap-rap-robot-stem.mp4"
   },
   "wooden-blocks": {
     "name": "Bộ xếp hình gỗ đa dạng",
@@ -1932,7 +1933,8 @@ window.WONDERLAB_PRODUCTS = {
         "comment": "Chơi xong hai mẹ con vừa dọn vừa chơi trò phân loại hình khối để cất vào thùng.",
         "verified": true
       }
-    ]
+    ],
+    "video": "assets/videos/Bo-xep-hinh-go-da-dang.mp4"
   },
   "letter-logic": {
     "name": "Bộ chữ từ logic",
@@ -2112,7 +2114,8 @@ window.WONDERLAB_PRODUCTS = {
         "comment": "Hộp gỗ có quai xách tiện lợi, mang đi học vẽ ngoại khóa rất ngầu.",
         "verified": true
       }
-    ]
+    ],
+    "video": "assets/videos/Bo-ve-nghe-thuat-sang-tao.mp4"
   },
   "board-game": {
     "name": "Board Game Vương quốc động vật",
@@ -2476,7 +2479,8 @@ window.WONDERLAB_PRODUCTS = {
         "comment": "Cuối tuần hai bố con làm thí nghiệm vừa học vừa chơi, con hiểu được nhiều hiện tượng tự nhiên quanh mình.",
         "verified": true
       }
-    ]
+    ],
+    "video": "assets/videos/Bo-thi-nghiem-khoa-hoc.mp4"
   },
   "magnetic-tiles": {
     "name": "Bộ nam châm xếp hình",

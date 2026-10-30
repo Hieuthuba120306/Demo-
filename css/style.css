@@ -3615,3 +3615,308 @@ main {
   font-size: var(--fs-sm);
 }
 .grid-catalogue { scroll-margin-top: 140px; }
+
+/* 26 product video styles ------------------------------------------------- */
+.gallery__main {
+  position: relative;
+}
+
+.gallery__video-box {
+  width: 100%;
+  height: 100%;
+  background: #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery__video-box video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #111;
+  display: block;
+}
+
+.gallery__video-pill {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 14px;
+  background: rgba(36, 87, 167, 0.92);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: all var(--dur) var(--ease);
+  z-index: 5;
+}
+
+.gallery__video-pill:hover {
+  background: var(--c-brand);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(36, 87, 167, 0.35);
+}
+
+.gallery__video-pill .pill-play-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  background: #fff;
+  color: var(--c-brand);
+  border-radius: 50%;
+}
+
+.gallery__thumb--video {
+  position: relative;
+}
+
+.gallery__thumb--video .thumb-video-icon {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  transition: background var(--dur) var(--ease);
+  z-index: 1;
+}
+
+.gallery__thumb--video:hover .thumb-video-icon {
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.gallery__thumb--video .thumb-video-badge {
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--c-brand);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 1px 6px;
+  border-radius: 4px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  z-index: 2;
+}
+
+.video-quick-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-left: 8px;
+  padding: 3px 10px;
+  background: rgba(36, 87, 167, 0.08);
+  color: var(--c-brand);
+  border: 1px solid rgba(36, 87, 167, 0.2);
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--dur) var(--ease);
+}
+
+.video-quick-link:hover {
+  background: var(--c-brand);
+  color: #fff;
+  border-color: var(--c-brand);
+}
+
+.tab-video-badge {
+  display: inline-block;
+  padding: 1px 6px;
+  margin-left: 5px;
+  background: #E85D04;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  border-radius: 4px;
+  vertical-align: middle;
+}
+
+/* Video Tab Panel */
+.video-panel-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s3);
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-card);
+  padding: var(--s4);
+}
+
+.video-panel-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--c-brand);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+}
+
+.video-panel-title {
+  font-size: clamp(20px, 2.2vw, 24px);
+  margin-bottom: 6px;
+}
+
+.video-panel-desc {
+  font-size: var(--fs-body);
+  color: var(--c-muted);
+  max-width: 680px;
+}
+
+.video-player-frame {
+  position: relative;
+  width: 100%;
+  max-width: 860px;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  border-radius: var(--r-card);
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  margin-top: var(--s2);
+}
+
+.video-player-frame video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* Overview Video Card in Tab 1 */
+.overview-video-card {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: var(--s3);
+  align-items: center;
+  margin-top: var(--s4);
+  padding: var(--s3);
+  background: linear-gradient(135deg, rgba(36, 87, 167, 0.05), rgba(69, 184, 172, 0.08));
+  border: 1px solid rgba(36, 87, 167, 0.18);
+  border-radius: var(--r-card);
+}
+
+.overview-video-card__tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--c-brand);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+}
+
+.overview-video-card__heading {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: var(--c-ink);
+}
+
+.overview-video-card__text {
+  font-size: 14px;
+  color: var(--c-muted);
+  line-height: 1.5;
+  margin-bottom: var(--s2);
+}
+
+.overview-video-card__thumb {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  border-radius: var(--r-plate);
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.overview-video-card__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--dur) var(--ease);
+}
+
+.overview-video-card__thumb:hover img {
+  transform: scale(1.05);
+}
+
+.overview-video-card__play {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.35);
+  color: #fff;
+  transition: background var(--dur) var(--ease);
+}
+
+.overview-video-card__thumb:hover .overview-video-card__play {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.overview-video-card__duration {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  padding: 2px 6px;
+  background: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  border-radius: 4px;
+}
+
+/* Card Video Badge in Catalog & Homepage */
+.p-card__media {
+  position: relative;
+}
+
+.p-card__video-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 9px;
+  background: rgba(36, 87, 167, 0.92);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  border-radius: 999px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(4px);
+  z-index: 2;
+  transition: all var(--dur) var(--ease);
+}
+
+.p-card:hover .p-card__video-badge {
+  background: var(--c-brand);
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .overview-video-card {
+    grid-template-columns: 1fr;
+  }
+}
+

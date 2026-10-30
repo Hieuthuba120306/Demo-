@@ -39,23 +39,82 @@
 
   /* gallery --------------------------------------------------------------- */
   var mainImage = document.getElementById("gallery-main");
+  var galleryVideoBox = document.getElementById("gallery-video-box");
+  var galleryVideo = document.getElementById("gallery-video");
+  var galleryVideoPill = document.querySelector("[data-play-main-video]");
   var thumbs = document.querySelector("[data-thumbs]");
 
   if (mainImage) {
     mainImage.src = product.images[0];
     mainImage.alt = product.name;
+    mainImage.hidden = false;
+  }
+  if (galleryVideoBox) {
+    galleryVideoBox.hidden = true;
+  }
+
+  if (product.video && galleryVideo) {
+    galleryVideo.src = product.video;
+    galleryVideo.poster = product.images[0] || "";
+    galleryVideo.load();
+    if (galleryVideoPill) galleryVideoPill.hidden = false;
+  } else {
+    if (galleryVideoPill) galleryVideoPill.hidden = true;
+  }
+
+  function showGalleryVideo() {
+    if (!product.video || !galleryVideoBox || !mainImage) return;
+    mainImage.hidden = true;
+    galleryVideoBox.hidden = false;
+    if (galleryVideoPill) galleryVideoPill.hidden = true;
+    if (galleryVideo) galleryVideo.play().catch(function () {});
+
+    if (thumbs) {
+      Array.prototype.forEach.call(thumbs.querySelectorAll(".gallery__thumb"), function (thumb) {
+        thumb.setAttribute("aria-pressed", thumb.getAttribute("data-type") === "video" ? "true" : "false");
+      });
+    }
+  }
+
+  function showGalleryImage(index) {
+    var src = product.images[index];
+    if (!src || !mainImage) return;
+
+    if (galleryVideo) galleryVideo.pause();
+    if (galleryVideoBox) galleryVideoBox.hidden = true;
+    mainImage.hidden = false;
+    mainImage.src = src;
+    mainImage.alt = product.name + " — ảnh " + (index + 1);
+    if (galleryVideoPill && product.video) galleryVideoPill.hidden = false;
+
+    if (thumbs) {
+      Array.prototype.forEach.call(thumbs.querySelectorAll(".gallery__thumb"), function (thumb) {
+        var isTarget = thumb.getAttribute("data-type") === "image" && Number(thumb.getAttribute("data-index")) === index;
+        thumb.setAttribute("aria-pressed", isTarget ? "true" : "false");
+      });
+    }
+  }
+
+  if (galleryVideoPill) {
+    galleryVideoPill.addEventListener("click", showGalleryVideo);
   }
 
   if (thumbs) {
     thumbs.textContent = "";
 
-    if (product.images.length < 2) {
+    var totalItems = product.images.length + (product.video ? 1 : 0);
+
+    if (totalItems < 2) {
       thumbs.hidden = true;
     } else {
+      thumbs.hidden = false;
+
+      // Add image thumbnails
       product.images.forEach(function (src, index) {
         var button = document.createElement("button");
         button.type = "button";
         button.className = "gallery__thumb";
+        button.setAttribute("data-type", "image");
         button.setAttribute("data-index", String(index));
         button.setAttribute("aria-pressed", index === 0 ? "true" : "false");
         button.setAttribute("aria-label", "Xem ảnh " + (index + 1) + " của " + product.name);
@@ -70,23 +129,66 @@
         button.appendChild(img);
         thumbs.appendChild(button);
       });
+
+      // Add video thumbnail if product has video
+      if (product.video) {
+        var vButton = document.createElement("button");
+        vButton.type = "button";
+        vButton.className = "gallery__thumb gallery__thumb--video";
+        vButton.setAttribute("data-type", "video");
+        vButton.setAttribute("aria-pressed", "false");
+        vButton.setAttribute("aria-label", "Xem video thực tế " + product.name);
+
+        var vIcon = document.createElement("div");
+        vIcon.className = "thumb-video-icon";
+        vIcon.innerHTML = '<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+
+        var vImg = document.createElement("img");
+        vImg.src = product.images[0] || "";
+        vImg.alt = "";
+        vImg.width = 160;
+        vImg.height = 160;
+        vImg.loading = "lazy";
+
+        var vBadge = document.createElement("span");
+        vBadge.className = "thumb-video-badge";
+        vBadge.textContent = "Video";
+
+        vButton.appendChild(vIcon);
+        vButton.appendChild(vImg);
+        vButton.appendChild(vBadge);
+        thumbs.appendChild(vButton);
+      }
     }
 
     thumbs.addEventListener("click", function (event) {
-      var button = event.target.closest("[data-index]");
-      if (!button || !mainImage) return;
+      var button = event.target.closest(".gallery__thumb");
+      if (!button) return;
 
-      var index = Number(button.getAttribute("data-index"));
-      var src = product.images[index];
-      if (!src) return;
-
-      mainImage.src = src;
-      mainImage.alt = product.name + " — ảnh " + (index + 1);
-
-      Array.prototype.forEach.call(thumbs.querySelectorAll("[data-index]"), function (thumb) {
-        thumb.setAttribute("aria-pressed", thumb === button ? "true" : "false");
-      });
+      var type = button.getAttribute("data-type");
+      if (type === "video") {
+        showGalleryVideo();
+      } else {
+        var index = Number(button.getAttribute("data-index"));
+        showGalleryImage(index);
+      }
     });
+  }
+
+  // Quick jump to video from rating badge
+  var jumpVideoBtn = document.querySelector("[data-jump-video]");
+  if (jumpVideoBtn) {
+    if (product.video) {
+      jumpVideoBtn.hidden = false;
+      jumpVideoBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        showGalleryVideo();
+        var galleryEl = document.querySelector(".gallery");
+        if (galleryEl) galleryEl.scrollIntoView({ behavior: "smooth", block: "center" });
+      });
+    } else {
+      jumpVideoBtn.hidden = true;
+    }
   }
 
   /* tab panels ------------------------------------------------------------ */
@@ -153,7 +255,13 @@
       item.tabIndex = selected ? 0 : -1;
 
       var panel = document.getElementById(item.getAttribute("aria-controls"));
-      if (panel) panel.hidden = !selected;
+      if (panel) {
+        panel.hidden = !selected;
+        if (!selected) {
+          var vid = panel.querySelector("video");
+          if (vid && typeof vid.pause === "function") vid.pause();
+        }
+      }
     });
 
     if (focus) tab.focus();
@@ -178,6 +286,40 @@
       }
     });
   });
+
+  /* video showcases & tabs ------------------------------------------------- */
+  var videoTab = document.querySelector("[data-tab-video]");
+  var tabVideoPlayer = document.getElementById("tab-video-player");
+  var overviewVideoCard = document.querySelector("[data-overview-video-card]");
+
+  if (product.video) {
+    if (videoTab) videoTab.hidden = false;
+    if (overviewVideoCard) {
+      overviewVideoCard.hidden = false;
+      setAll("[data-overview-video-title]", "Xem video thực tế: " + product.name);
+      var overviewThumb = document.querySelector("[data-overview-video-thumb]");
+      if (overviewThumb) overviewThumb.src = product.images[0] || "";
+    }
+    if (tabVideoPlayer) {
+      tabVideoPlayer.src = product.video;
+      tabVideoPlayer.poster = product.images[0] || "";
+      tabVideoPlayer.load();
+      setAll("[data-tab-video-title]", "Video thực tế: " + product.name);
+    }
+
+    Array.prototype.forEach.call(document.querySelectorAll("[data-switch-to-video-tab]"), function (el) {
+      el.addEventListener("click", function () {
+        if (videoTab) {
+          selectTab(videoTab, false);
+          videoTab.scrollIntoView({ behavior: "smooth", block: "center" });
+          if (tabVideoPlayer) tabVideoPlayer.play().catch(function () {});
+        }
+      });
+    });
+  } else {
+    if (videoTab) videoTab.hidden = true;
+    if (overviewVideoCard) overviewVideoCard.hidden = true;
+  }
 
   /* quantity -------------------------------------------------------------- */
   var qtyInput = document.getElementById("qty");

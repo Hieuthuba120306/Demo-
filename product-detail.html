@@ -67,19 +67,34 @@
         <div class="gallery">
           <div class="gallery__main">
             <img id="gallery-main" src="assets/img/products/product-robot-stem.jpg" alt="Bộ lắp ráp robot STEM màu xanh và trắng có tay gắp và bốn bánh xe" width="1024" height="1024">
+            <div class="gallery__video-box" id="gallery-video-box" hidden>
+              <video id="gallery-video" playsinline controls preload="metadata" poster="assets/img/products/product-robot-stem.jpg">
+                <source src="assets/videos/Bo-lap-rap-robot-stem.mp4" type="video/mp4">
+                Trình duyệt của bạn không hỗ trợ thẻ video.
+              </video>
+            </div>
+            <button class="gallery__video-pill" type="button" data-play-main-video aria-label="Xem video sản phẩm">
+              <span class="pill-play-icon"><svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+              <span>Video thực tế</span>
+            </button>
           </div>
           <div class="gallery__thumbs" data-thumbs role="group" aria-label="Chọn ảnh sản phẩm">
-            <button class="gallery__thumb" type="button" aria-pressed="true" data-index="0" aria-label="Xem ảnh 1: toàn bộ mô hình robot">
+            <button class="gallery__thumb" type="button" aria-pressed="true" data-type="image" data-index="0" aria-label="Xem ảnh 1: toàn bộ mô hình robot">
               <img src="assets/img/products/product-robot-stem.jpg" alt="" width="160" height="160">
             </button>
-            <button class="gallery__thumb" type="button" aria-pressed="false" data-index="1" aria-label="Xem ảnh 2: robot nhìn nghiêng">
+            <button class="gallery__thumb" type="button" aria-pressed="false" data-type="image" data-index="1" aria-label="Xem ảnh 2: robot nhìn nghiêng">
               <img src="assets/img/products/robot-stem-2.jpg" alt="" width="160" height="160">
             </button>
-            <button class="gallery__thumb" type="button" aria-pressed="false" data-index="2" aria-label="Xem ảnh 3: các chi tiết trong hộp">
+            <button class="gallery__thumb" type="button" aria-pressed="false" data-type="image" data-index="2" aria-label="Xem ảnh 3: các chi tiết trong hộp">
               <img src="assets/img/products/robot-stem-3.jpg" alt="" width="160" height="160">
             </button>
-            <button class="gallery__thumb" type="button" aria-pressed="false" data-index="3" aria-label="Xem ảnh 4: cận cảnh tay gắp và bánh trước">
+            <button class="gallery__thumb" type="button" aria-pressed="false" data-type="image" data-index="3" aria-label="Xem ảnh 4: cận cảnh tay gắp và bánh trước">
               <img src="assets/img/products/robot-stem-4.jpg" alt="" width="160" height="160">
+            </button>
+            <button class="gallery__thumb gallery__thumb--video" type="button" aria-pressed="false" data-type="video" aria-label="Xem video mô hình robot">
+              <div class="thumb-video-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
+              <img src="assets/img/products/product-robot-stem.jpg" alt="" width="160" height="160">
+              <span class="thumb-video-badge">Video</span>
             </button>
           </div>
         </div>
@@ -93,6 +108,10 @@
             </div>
             <span class="rating-badge__score" data-rating-score>4.9</span>
             <a href="#panel-danhgia" class="rating-badge__count" data-jump-reviews>(<span data-review-count>28</span> đánh giá)</a>
+            <button type="button" class="video-quick-link" data-jump-video aria-label="Xem video mô hình thực tế">
+              <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              <span>Xem video (0:10)</span>
+            </button>
           </div>
           <p class="buy__meta">
             <span class="buy__meta-age" data-age>6–10 tuổi</span>
@@ -153,27 +172,72 @@
         <div>
           <div class="tabs__list" role="tablist" aria-label="Thông tin sản phẩm">
             <button class="tabs__tab" role="tab" id="tab-mota" aria-controls="panel-mota" aria-selected="true" tabindex="0">Mô tả sản phẩm</button>
+            <button class="tabs__tab" role="tab" id="tab-video" aria-controls="panel-video" aria-selected="false" tabindex="-1" data-tab-video>Video thực tế <span class="tab-video-badge">HD</span></button>
             <button class="tabs__tab" role="tab" id="tab-thongso" aria-controls="panel-thongso" aria-selected="false" tabindex="-1">Thông số kỹ thuật</button>
             <button class="tabs__tab" role="tab" id="tab-huongdan" aria-controls="panel-huongdan" aria-selected="false" tabindex="-1">Hướng dẫn sử dụng</button>
             <button class="tabs__tab" role="tab" id="tab-danhgia" aria-controls="panel-danhgia" aria-selected="false" tabindex="-1">Đánh giá (<span data-tab-review-count>28</span>)</button>
           </div>
 
-          <div class="tabs__panel" role="tabpanel" id="panel-mota" aria-labelledby="tab-mota" tabindex="0" data-panel-body>
-            <p>Bộ lắp ráp Robot STEM dành cho trẻ 6–10 tuổi gồm 420 chi tiết nhựa ABS để bé tự dựng một mô hình robot có bánh xe, tay gắp và cảm biến khoảng cách. Đây là món đồ chơi lắp ráp giúp bé làm quen với cơ khí và điện cơ đơn giản thông qua việc tự thao tác với từng bộ phận.</p>
-            <h2>Đặc điểm nổi bật của bộ lắp ráp Robot STEM</h2>
-            <ul class="spec-list">
-              <li>420 chi tiết gồm thanh nhựa, bánh xe, mô tơ và khớp nối.</li>
-              <li>Kèm tua vít và sách hướng dẫn 24 trang với hình minh họa từng bước.</li>
-              <li>Nhựa ABS, không có cạnh sắc, kích thước khi lắp 24 × 18 × 15 cm.</li>
-              <li>Tay gắp có thể thay đổi vị trí để bé thử các cách hoạt động khác nhau.</li>
-            </ul>
-            <h2>Lợi ích khi bé lắp robot</h2>
-            <p>Quá trình lắp từ khung, bánh trước đến tay gắp giúp bé hiểu mối liên hệ giữa cấu tạo và chức năng. Bé rèn khả năng đọc sơ đồ, nhận diện chi tiết, kiên nhẫn với những bước dài và tự khắc phục khi lắp sai. Sau khi robot hoàn thành, bé còn có thể chơi thử và cải tiến, đó là nền tảng của tư duy kỹ thuật.</p>
-            <h2>Gợi ý khi lắp ráp cùng Bộ lắp ráp Robot STEM</h2>
-            <p>Hãy mở hộp và phân loại chi tiết theo nhóm màu trước khi lắp. Bắt đầu từ khung xe và bánh trước, sau đó mới gắn tay gắp. Trước khi bật mô tơ, hãy xoay thử các khớp bằng tay để chắc chắn mọi bộ phận chuyển động trơn tru. Sản phẩm phù hợp với trẻ đã quen lắp ghép và có thể đọc hình minh họa; người lớn nên có mặt ở lần lắp đầu tiên để giúp bé phân biệt ốc và chi tiết nhỏ.</p>
-            <h2>Nguồn điện và lưu ý của Bộ lắp ráp Robot STEM</h2>
-            <p>Mô tơ sử dụng 2 pin AA (pin không kèm theo bộ sản phẩm). Các chi tiết nhỏ không phù hợp với trẻ dưới độ tuổi khuyến nghị, nên hãy cất gọn sau khi chơi.</p>
-            <p>Bộ lắp ráp Robot STEM tại WONDERLAB là món quà ý nghĩa cho bé yêu công nghệ và thích tự tay tạo ra mô hình của riêng mình.</p>
+          <div class="tabs__panel" role="tabpanel" id="panel-mota" aria-labelledby="tab-mota" tabindex="0">
+            <div data-panel-body>
+              <p>Bộ lắp ráp Robot STEM dành cho trẻ 6–10 tuổi gồm 420 chi tiết nhựa ABS để bé tự dựng một mô hình robot có bánh xe, tay gắp và cảm biến khoảng cách. Đây là món đồ chơi lắp ráp giúp bé làm quen với cơ khí và điện cơ đơn giản thông qua việc tự thao tác với từng bộ phận.</p>
+              <h2>Đặc điểm nổi bật của bộ lắp ráp Robot STEM</h2>
+              <ul class="spec-list">
+                <li>420 chi tiết gồm thanh nhựa, bánh xe, mô tơ và khớp nối.</li>
+                <li>Kèm tua vít và sách hướng dẫn 24 trang với hình minh họa từng bước.</li>
+                <li>Nhựa ABS, không có cạnh sắc, kích thước khi lắp 24 × 18 × 15 cm.</li>
+                <li>Tay gắp có thể thay đổi vị trí để bé thử các cách hoạt động khác nhau.</li>
+              </ul>
+              <h2>Lợi ích khi bé lắp robot</h2>
+              <p>Quá trình lắp từ khung, bánh trước đến tay gắp giúp bé hiểu mối liên hệ giữa cấu tạo và chức năng. Bé rèn khả năng đọc sơ đồ, nhận diện chi tiết, kiên nhẫn với những bước dài và tự khắc phục khi lắp sai. Sau khi robot hoàn thành, bé còn có thể chơi thử và cải tiến, đó là nền tảng của tư duy kỹ thuật.</p>
+              <h2>Gợi ý khi lắp ráp cùng Bộ lắp ráp Robot STEM</h2>
+              <p>Hãy mở hộp và phân loại chi tiết theo nhóm màu trước khi lắp. Bắt đầu từ khung xe và bánh trước, sau đó mới gắn tay gắp. Trước khi bật mô tơ, hãy xoay thử các khớp bằng tay để chắc chắn mọi bộ phận chuyển động trơn tru. Sản phẩm phù hợp với trẻ đã quen lắp ghép và có thể đọc hình minh họa; người lớn nên có mặt ở lần lắp đầu tiên để giúp bé phân biệt ốc và chi tiết nhỏ.</p>
+              <h2>Nguồn điện và lưu ý của Bộ lắp ráp Robot STEM</h2>
+              <p>Mô tơ sử dụng 2 pin AA (pin không kèm theo bộ sản phẩm). Các chi tiết nhỏ không phù hợp với trẻ dưới độ tuổi khuyến nghị, nên hãy cất gọn sau khi chơi.</p>
+              <p>Bộ lắp ráp Robot STEM tại WONDERLAB là món quà ý nghĩa cho bé yêu công nghệ và thích tự tay tạo ra mô hình của riêng mình.</p>
+            </div>
+
+            <!-- Overview Video Showcase Card -->
+            <div class="overview-video-card" data-overview-video-card>
+              <div class="overview-video-card__info">
+                <span class="overview-video-card__tag">
+                  <svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                  Trải nghiệm trực quan
+                </span>
+                <h3 class="overview-video-card__heading" data-overview-video-title>Xem video thực tế Bộ lắp ráp Robot STEM</h3>
+                <p class="overview-video-card__text">Khám phá chi tiết chuyển động cơ học và cách bé tương tác thực tế với sản phẩm qua clip ngắn sắc nét 10 giây.</p>
+                <button type="button" class="c-btn c-btn--outline overview-video-card__btn" data-switch-to-video-tab>
+                  <svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                  Xem video toàn màn hình
+                </button>
+              </div>
+              <div class="overview-video-card__thumb" data-switch-to-video-tab tabindex="0" role="button" aria-label="Xem video sản phẩm">
+                <img src="assets/img/products/product-robot-stem.jpg" alt="" data-overview-video-thumb width="280" height="180">
+                <div class="overview-video-card__play">
+                  <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                </div>
+                <span class="overview-video-card__duration">0:10</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="tabs__panel" role="tabpanel" id="panel-video" aria-labelledby="tab-video" tabindex="0" hidden>
+            <div class="video-panel-card">
+              <div class="video-panel-header">
+                <span class="video-panel-badge">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                  <span>Video mở hộp &amp; trải nghiệm</span>
+                </span>
+                <h3 class="video-panel-title" data-tab-video-title>Video thực tế: Bộ lắp ráp Robot STEM</h3>
+                <p class="video-panel-desc">Góc quay thực tế giúp phụ huynh và các bé quan sát rõ ràng kích thước, khớp nối và cách món đồ chơi vận hành.</p>
+              </div>
+              <div class="video-player-frame">
+                <video id="tab-video-player" class="video-player-element" controls playsinline preload="metadata" poster="assets/img/products/product-robot-stem.jpg">
+                  <source src="assets/videos/Bo-lap-rap-robot-stem.mp4" type="video/mp4">
+                  Trình duyệt của bạn không hỗ trợ thẻ video.
+                </video>
+              </div>
+            </div>
           </div>
 
           <div class="tabs__panel" role="tabpanel" id="panel-thongso" aria-labelledby="tab-thongso" tabindex="0" hidden>
