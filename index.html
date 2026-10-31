@@ -2,837 +2,471 @@
 <html lang="vi">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>WONDERLAB - Đồ chơi giáo dục cho trẻ 4–12 tuổi</title>
-    <meta
-      name="description"
-      content="WONDERLAB cung cấp đồ chơi giáo dục, bộ lắp ráp STEM, xếp hình và thí nghiệm khoa học cho trẻ 4–12 tuổi. Mỗi sản phẩm ghi rõ độ tuổi, số chi tiết và kỹ năng trẻ luyện tập."
-    />
-    <link rel="icon" href="assets/img/favicon.png" type="image/png" />
-    <link rel="stylesheet" href="css/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wonderlab | Trang chủ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --red: #c43b45;
+        --navy: #18296d;
+        --ink: #272a3a;
+        --muted: #858998;
+        --bg: #f8f8fb;
+        --card: #ffffff;
+        --shadow: 0 18px 55px rgba(16, 24, 60, 0.12);
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        font-family: 'Nunito', Arial, sans-serif;
+        background: linear-gradient(180deg, #fffaf7 0%, var(--bg) 100%);
+        color: var(--ink);
+      }
+
+      a { text-decoration: none; }
+
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        height: 72px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 5vw;
+        background: rgba(255,255,255,0.92);
+        border-bottom: 1px solid #eee;
+        backdrop-filter: blur(10px);
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 24px;
+        font-weight: 900;
+        color: var(--navy);
+      }
+
+      .brand-mark {
+        display: inline-grid;
+        place-items: center;
+        width: 36px;
+        height: 36px;
+        border-radius: 11px;
+        background: var(--red);
+        color: #fff;
+        box-shadow: 4px 4px #f4c5a4;
+      }
+
+      .brand span { color: var(--red); }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        font-weight: 800;
+      }
+
+      .nav a {
+        color: #66708b;
+      }
+
+      .nav .primary {
+        padding: 12px 18px;
+        border-radius: 999px;
+        background: var(--red);
+        color: #fff;
+        box-shadow: 0 12px 22px rgba(196,59,69,0.25);
+      }
+
+      .hero {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 56px 24px 24px;
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        align-items: center;
+        gap: 36px;
+      }
+
+      .eyebrow {
+        display: inline-block;
+        margin-bottom: 18px;
+        padding: 10px 16px;
+        border-radius: 999px;
+        font-size: 12px;
+        font-weight: 900;
+        letter-spacing: 1.8px;
+        color: var(--navy);
+        background: #fff3d6;
+      }
+
+      h1 {
+        margin: 0 0 18px;
+        font-size: clamp(42px, 5vw, 72px);
+        line-height: 1.08;
+        letter-spacing: -1.8px;
+      }
+
+      h1 em {
+        font-style: normal;
+        color: var(--red);
+      }
+
+      .lead {
+        max-width: 620px;
+        margin: 0 0 26px;
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: #5d647a;
+      }
+
+      .cta-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-bottom: 32px;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 170px;
+        height: 52px;
+        border: none;
+        border-radius: 16px;
+        font-size: 1rem;
+        font-weight: 800;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+      }
+
+      .btn:hover { transform: translateY(-1px); }
+
+      .btn-primary {
+        background: var(--navy);
+        color: white;
+        box-shadow: 0 18px 28px rgba(24, 41, 109, 0.18);
+      }
+
+      .btn-secondary {
+        background: white;
+        color: var(--navy);
+        border: 1px solid #dfe7f6;
+      }
+
+      .mini-stats {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 22px;
+      }
+
+      .mini-stats div {
+        min-width: 120px;
+      }
+
+      .mini-stats strong {
+        display: block;
+        font-size: 1.7rem;
+        color: var(--navy);
+      }
+
+      .mini-stats span {
+        color: var(--muted);
+        font-weight: 700;
+      }
+
+      .hero-art {
+        position: relative;
+        padding: 28px;
+      }
+
+      .product-card {
+        position: relative;
+        width: min(520px, 95%);
+        margin: 0 auto;
+        padding: 26px;
+        border-radius: 32px;
+        background: linear-gradient(145deg, #f9b66f, #f0efea);
+        box-shadow: var(--shadow);
+      }
+
+      .product-shape {
+        position: relative;
+        height: 270px;
+        border-radius: 28px;
+        background: linear-gradient(145deg, #3856a1, #17276b);
+        overflow: hidden;
+      }
+
+      .product-shape::before,
+      .product-shape::after {
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(255,255,255,0.2);
+      }
+
+      .product-shape::before {
+        width: 210px;
+        height: 210px;
+        right: -40px;
+        top: -20px;
+      }
+
+      .product-shape::after {
+        width: 160px;
+        height: 160px;
+        left: -30px;
+        bottom: -30px;
+      }
+
+      .toy {
+        position: absolute;
+        inset: 0;
+      }
+
+      .toy .box {
+        position: absolute;
+        bottom: 42px;
+        left: 50%;
+        transform: translateX(-50%) rotate(-12deg);
+        width: 165px;
+        height: 165px;
+        border-radius: 24px;
+        background: linear-gradient(135deg, #f8d97d, #f0b648);
+        box-shadow: inset -10px -10px rgba(0,0,0,0.08), 0 20px 26px rgba(0,0,0,0.08);
+      }
+
+      .toy .box::before,
+      .toy .box::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+      }
+
+      .toy .box::before {
+        border-radius: 24px;
+        background: linear-gradient(90deg, transparent 0 30%, rgba(255,255,255,0.28) 30% 35%, transparent 35% 65%, rgba(255,255,255,0.28) 65% 70%, transparent 70% 100%);
+      }
+
+      .toy .box::after {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: rgba(255,255,255,0.2);
+        right: 20px;
+        top: 26px;
+      }
+
+      .badge {
+        position: absolute;
+        right: 18px;
+        top: 18px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background: rgba(255,255,255,0.55);
+        font-size: 2.2rem;
+        color: var(--red);
+        font-weight: 900;
+      }
+
+      .card-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        margin-top: 18px;
+      }
+
+      .card-bottom h3 {
+        margin: 0;
+        font-size: 1.7rem;
+        color: var(--navy);
+      }
+
+      .card-bottom p {
+        margin: 8px 0 0;
+        color: var(--muted);
+        font-weight: 700;
+      }
+
+      .price {
+        font-size: 2rem;
+        font-weight: 900;
+        color: var(--red);
+      }
+
+      .section {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 24px 90px;
+      }
+
+      .section-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 28px;
+      }
+
+      .section-head h2 {
+        margin: 0;
+        font-size: clamp(28px, 3vw, 42px);
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 22px;
+      }
+
+      .feature {
+        padding: 26px 22px;
+        border-radius: 24px;
+        background: rgba(255,255,255,0.7);
+        border: 1px solid #edf0f8;
+        box-shadow: 0 10px 24px rgba(39,42,58,0.04);
+      }
+
+      .icon {
+        display: inline-grid;
+        place-items: center;
+        width: 48px;
+        height: 48px;
+        border-radius: 14px;
+        background: #fff2d4;
+        font-size: 1.6rem;
+      }
+
+      .feature h3 {
+        margin: 18px 0 10px;
+        color: var(--navy);
+        font-size: 1.35rem;
+      }
+
+      .feature p {
+        margin: 0;
+        line-height: 1.7;
+        color: #59647b;
+      }
+
+      @media (max-width: 900px) {
+        .hero {
+          grid-template-columns: 1fr;
+          padding-top: 32px;
+        }
+
+        .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 560px) {
+        .nav {
+          gap: 10px;
+          font-size: 0.85rem;
+        }
+
+        .nav a:nth-child(2) {
+          display: none;
+        }
+      }
+    </style>
   </head>
   <body>
-    <a class="skip-link" href="#main">Bỏ qua điều hướng</a>
-
-    <header class="site-head">
-      <div class="container site-head__top">
-        <a class="brand" href="index.html" aria-label="WONDERLAB — trang chủ">
-          <video
-            class="brand__logo"
-            autoplay
-            muted
-            loop
-            playsinline
-            poster="assets/img/logo-wonderlab.png"
-            aria-hidden="true"
-          >
-            <source src="assets/img/video-logo.mp4" type="video/mp4" />
-            <img src="assets/img/logo-wonderlab.png" alt="" />
-          </video>
-        </a>
-
-        <form
-          class="search"
-          role="search"
-          action="products.html"
-          method="get"
-          data-search-form
-        >
-          <label class="sr-only" for="q">Tìm sản phẩm</label>
-          <input
-            class="search__input"
-            id="q"
-            name="q"
-            type="search"
-            placeholder="Tìm kiếm"
-            autocomplete="off"
-          />
-          <button class="search__btn" type="submit" aria-label="Tìm sản phẩm">
-            <svg
-              class="icon"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.8"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              aria-hidden="true"
-              focusable="false"
-            >
-              <circle cx="11" cy="11" r="7"></circle>
-              <path d="m20 20-3.4-3.4"></path>
-            </svg>
-          </button>
-        </form>
-
-        <button
-          class="cart-btn"
-          type="button"
-          data-cart-open
-          aria-label="Mở giỏ hàng"
-        >
-          <svg
-            class="icon"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.7"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            aria-hidden="true"
-            focusable="false"
-          >
-            <circle cx="9" cy="20" r="1.4"></circle>
-            <circle cx="18" cy="20" r="1.4"></circle>
-            <path
-              d="M2.5 3.5h2.2l2.5 11.6a1.8 1.8 0 0 0 1.8 1.4h8.6a1.8 1.8 0 0 0 1.8-1.4L21 7H6"
-            ></path>
-          </svg>
-          <span class="cart-btn__count" data-cart-count hidden>0</span>
-        </button>
-      </div>
-
-      <div class="site-head__bar" data-nav-bar>
-        <div class="container site-head__nav-row">
-          <button
-            class="nav-toggle"
-            type="button"
-            data-nav-toggle
-            aria-expanded="false"
-            aria-controls="site-nav"
-          >
-            <svg
-              class="icon"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.8"
-              stroke-linecap="round"
-              aria-hidden="true"
-              focusable="false"
-            >
-              <path d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
-            <span>Menu</span>
-          </button>
-          <nav class="site-nav" id="site-nav" aria-label="Điều hướng chính">
-            <a class="site-nav__link" href="index.html" aria-current="page"
-              >Trang chủ</a
-            >
-            <a class="site-nav__link" href="products.html">Sản phẩm</a>
-            <a class="site-nav__link" href="about.html">Giới thiệu</a>
-          </nav>
-          <p class="site-head__note">Đồ chơi cho trẻ 4–12 tuổi</p>
-        </div>
-      </div>
+    <header class="topbar">
+      <a class="brand" href="index.html"><span class="brand-mark">W</span> Wonder<span>lab</span></a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#features">Khám phá</a>
+        <a href="login.html">Đăng nhập</a>
+        <a class="primary" href="register.html">Tạo tài khoản</a>
+      </nav>
     </header>
 
-    <main id="main" class="page-main">
-      <section class="container promo" aria-label="Chương trình khuyến mãi">
-        <div class="promo__slider" data-promo-slider>
-          <div class="promo__viewport">
-            <div class="promo__track">
-              <a class="promo__slide" href="products.html">
-                <img
-                  src="assets/img/chuong-trinh-khuyen-mai/san-deal-xin-chot-gia-hoi.png"
-                  alt="Săn deal xịn, chốt giá hời — xem sản phẩm"
-                  fetchpriority="high"
-                />
-              </a>
-
-              <a class="promo__slide" href="products.html">
-                <img
-                  src="assets/img/chuong-trinh-khuyen-mai/sieu-sale-wonderlab.png"
-                  alt="Siêu sale Wonderlab — xem sản phẩm"
-                />
-              </a>
-            </div>
-          </div>
-
-          <button
-            class="promo__arrow promo__arrow--prev"
-            type="button"
-            data-promo-prev
-            aria-label="Khuyến mãi trước"
-          >
-            ❮
-          </button>
-
-          <button
-            class="promo__arrow promo__arrow--next"
-            type="button"
-            data-promo-next
-            aria-label="Khuyến mãi tiếp theo"
-          >
-            ❯
-          </button>
-        </div>
-
-        <div
-          class="promo__dots"
-          data-promo-dots
-          role="group"
-          aria-label="Chọn chương trình khuyến mãi"
-        ></div>
-      </section>
-      <section class="container p-home__hero" aria-labelledby="hero-title">
+    <main>
+      <section class="hero">
         <div>
-          <h1 class="hero__title" id="hero-title">
-            Chọn đúng món đồ chơi theo độ tuổi của trẻ.
-          </h1>
-          <p class="hero__lead">
-            Bộ lắp ráp, xếp hình và thí nghiệm khoa học cho trẻ 4–12 tuổi. Mỗi
-            sản phẩm ghi rõ độ tuổi, số chi tiết và kỹ năng trẻ luyện tập, để
-            bạn chọn được món phù hợp ngay từ lần đầu.
+          <span class="eyebrow">LEARN · PLAY · GROW</span>
+          <h1>Mỗi món đồ chơi là một <em>hành trình</em> khám phá.</h1>
+          <p class="lead">
+            Wonderlab mang đến trải nghiệm mua sắm sáng tạo cho trẻ em và gia đình, với những sản phẩm khơi dậy trí tưởng tượng, sự tò mò và niềm vui mỗi ngày.
           </p>
-          <div class="hero__actions">
-            <a class="c-btn c-btn--primary" href="products.html">
-              Xem đồ chơi theo độ tuổi
-              <svg
-                class="icon"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.8"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                aria-hidden="true"
-                focusable="false"
-              >
-                <path d="M5 12h14"></path>
-                <path d="m13 6 6 6-6 6"></path>
-              </svg>
-            </a>
-            <a class="c-link" href="about.html">Cách WONDERLAB chọn đồ chơi</a>
-          </div>
-          <ul class="hero__ages">
-            <li class="hero__ages-label" aria-hidden="true">
-              Xem nhanh theo tuổi
-            </li>
-            <li>
-              <a class="hero__age" href="products.html?tuoi=4-6">4–6 tuổi</a>
-            </li>
-            <li>
-              <a class="hero__age" href="products.html?tuoi=6-8">6–8 tuổi</a>
-            </li>
-            <li>
-              <a class="hero__age" href="products.html?tuoi=9-12">9–12 tuổi</a>
-            </li>
-          </ul>
-        </div>
 
-        <div class="hero-slider" data-hero-slider>
-          <div class="hero-slider__track">
-            <!-- Sản phẩm 1 -->
-            <figure class="hero__figure">
-              <img
-                class="hero__img"
-                src="https://images.pexels.com/photos/7296807/pexels-photo-7296807.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900&amp;h=1125&amp;fit=crop"
-                alt="Người lớn và trẻ cùng lắp những khối gỗ trên mặt bàn sáng màu. Ảnh: kaboompics.com trên Pexels."
-                width="900"
-                height="1125"
-                fetchpriority="high"
-              />
-              <figcaption class="hero__caption">
-                Trong ảnh: các khối gỗ trong bộ
-                <a href="product-detail.html?sp=wooden-blocks"
-                  >Bộ xếp hình gỗ đa dạng</a
-                >
-                chỉ với 299.000đ.
-              </figcaption>
-            </figure>
-            <!-- Sản phẩm 2 -->
-            <figure class="hero__figure">
-              <img
-                class="hero__img"
-                src="assets/img/products/product-robot-stem.jpg"
-                alt="Bộ lắp ráp Robot STEM"
-                width="900"
-                height="1125"
-              />
-              <figcaption class="hero__caption">
-                Khám phá
-                <a href="product-detail.html?sp=robot-stem">
-                  Bộ lắp ráp Robot STEM</a
-                >
-                chỉ với 599.000đ.
-              </figcaption>
-            </figure>
-            <!-- Sản phẩm 3 -->
-            <figure class="hero__figure">
-              <img
-                class="hero__img"
-                src="assets/img/products/product-board-game.jpg"
-                alt="Board Game Vương quốc động vật"
-                width="900"
-                height="1125"
-              />
-              <figcaption class="hero__caption">
-                Khám phá
-                <a href="product-detail.html?sp=board-game">
-                  Board Game Vương quốc động vật</a
-                >
-                chỉ với 459.000đ.
-              </figcaption>
-            </figure>
-          </div>
-          <div class="hero-slider__arrows">
-            <button
-              class="hero-slider__arrow"
-              type="button"
-              data-prev
-              aria-label="Sản phẩm trước"
-            >
-              ❮
-            </button>
-
-            <button
-              class="hero-slider__arrow"
-              type="button"
-              data-next
-              aria-label="Sản phẩm tiếp theo"
-            >
-              ❯
-            </button>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="login.html">Đăng nhập</a>
+            <a class="btn btn-secondary" href="register.html">Tạo tài khoản</a>
           </div>
 
-          <div
-            class="hero-slider__dots"
-            data-slider-dots
-            role="group"
-            aria-label="Chọn sản phẩm giới thiệu"
-          ></div>
-        </div>
-      </section>
-
-      <section
-        class="container section section--tight"
-        aria-labelledby="cats-title"
-      >
-        <div class="sec-head">
-          <h2 class="sec-head__h" id="cats-title">Danh mục</h2>
-          <a class="c-link" href="products.html"
-            >Tất cả sản phẩm
-            <svg
-              class="icon"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.8"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              aria-hidden="true"
-              focusable="false"
-            >
-              <path d="M5 12h14"></path>
-              <path d="m13 6 6 6-6 6"></path>
-            </svg>
-          </a>
-        </div>
-        <ul class="cat-list">
-          <li class="cat-list__item">
-            <a class="cat-list__link" href="products.html?danh-muc=stem">
-              <img
-                class="cat-list__img"
-                src="assets/img/products/product-robot-stem.jpg"
-                alt=""
-                width="240"
-                height="180"
-                loading="lazy"
-              />
-              <span class="cat-list__name">Lắp ráp &amp; STEM</span>
-              <span class="cat-list__n">6 sản phẩm</span>
-            </a>
-          </li>
-          <li class="cat-list__item">
-            <a class="cat-list__link" href="products.html?danh-muc=logic">
-              <img
-                class="cat-list__img"
-                src="assets/img/products/product-wooden-blocks.jpg"
-                alt=""
-                width="240"
-                height="180"
-                loading="lazy"
-              />
-              <span class="cat-list__name">Xếp hình &amp; logic</span>
-              <span class="cat-list__n">6 sản phẩm</span>
-            </a>
-          </li>
-          <li class="cat-list__item">
-            <a class="cat-list__link" href="products.html?danh-muc=sang-tao">
-              <img
-                class="cat-list__img"
-                src="assets/img/products/product-art-set.jpg"
-                alt=""
-                width="240"
-                height="180"
-                loading="lazy"
-              />
-              <span class="cat-list__name">Vẽ &amp; sáng tạo</span>
-              <span class="cat-list__n">6 sản phẩm</span>
-            </a>
-          </li>
-          <li class="cat-list__item">
-            <a class="cat-list__link" href="products.html?danh-muc=boardgame">
-              <img
-                class="cat-list__img"
-                src="assets/img/products/product-board-game.jpg"
-                alt=""
-                width="240"
-                height="180"
-                loading="lazy"
-              />
-              <span class="cat-list__name">Board game</span>
-              <span class="cat-list__n">6 sản phẩm</span>
-            </a>
-          </li>
-          <li class="cat-list__item">
-            <a class="cat-list__link" href="products.html?danh-muc=nhap-vai">
-              <img
-                class="cat-list__img"
-                src="assets/img/products/product-play-kitchen.jpg"
-                alt=""
-                width="240"
-                height="180"
-                loading="lazy"
-              />
-              <span class="cat-list__name">Nhập vai</span>
-              <span class="cat-list__n">6 sản phẩm</span>
-            </a>
-          </li>
-        </ul>
-      </section>
-
-      <section class="container section" aria-labelledby="featured-title">
-        <div class="sec-head">
-          <h2 class="sec-head__h" id="featured-title">Sản phẩm nổi bật</h2>
-          <a class="c-link" href="products.html"
-            >Xem tất cả sản phẩm
-            <svg
-              class="icon"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.8"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              aria-hidden="true"
-              focusable="false"
-            >
-              <path d="M5 12h14"></path>
-              <path d="m13 6 6 6-6 6"></path>
-            </svg>
-          </a>
-        </div>
-
-        <ul class="grid-products">
-          <li>
-            <article class="p-card">
-              <a
-                class="p-card__media"
-                href="product-detail.html?sp=robot-stem"
-                tabindex="-1"
-                aria-hidden="true"
-              >
-                <span class="p-card__video-badge"><svg viewBox="0 0 24 24" width="10" height="10" fill="currentColor"><path d="M8 5v14l11-7z"/></svg> Video</span>
-                <img
-                  src="assets/img/products/product-robot-stem.jpg"
-                  alt=""
-                  width="480"
-                  height="480"
-                  loading="lazy"
-                />
-              </a>
-              <div class="p-card__body">
-                <p class="p-card__age">6–10 tuổi</p>
-                <h3 class="p-card__title">
-                  <a href="product-detail.html?sp=robot-stem"
-                    >Bộ lắp ráp Robot STEM</a
-                  >
-                </h3>
-                <p class="p-card__act">
-                  Lắp ráp mô hình robot có bánh xe, tay gắp và cảm biến.
-                </p>
-                <div class="p-card__foot">
-                  <span class="price">599.000đ</span>
-                  <a
-                    class="p-card__link"
-                    href="product-detail.html?sp=robot-stem"
-                    aria-label="Xem chi tiết Bộ lắp ráp Robot STEM"
-                  >
-                    Xem chi tiết
-                    <svg
-                      class="icon"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="1.8"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      aria-hidden="true"
-                      focusable="false"
-                    >
-                      <path d="M5 12h14"></path>
-                      <path d="m13 6 6 6-6 6"></path>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </article>
-          </li>
-          <li>
-            <article class="p-card">
-              <a
-                class="p-card__media"
-                href="product-detail.html?sp=wooden-blocks"
-                tabindex="-1"
-                aria-hidden="true"
-              >
-                <span class="p-card__video-badge"><svg viewBox="0 0 24 24" width="10" height="10" fill="currentColor"><path d="M8 5v14l11-7z"/></svg> Video</span>
-                <img
-                  src="assets/img/products/product-wooden-blocks.jpg"
-                  alt=""
-                  width="480"
-                  height="480"
-                  loading="lazy"
-                />
-              </a>
-              <div class="p-card__body">
-                <p class="p-card__age">4–6 tuổi</p>
-                <h3 class="p-card__title">
-                  <a href="product-detail.html?sp=wooden-blocks"
-                    >Bộ xếp hình gỗ đa dạng</a
-                  >
-                </h3>
-                <p class="p-card__act">
-                  Xếp chồng khối gỗ thành tháp, cổng và cầu.
-                </p>
-                <div class="p-card__foot">
-                  <span class="price">299.000đ</span>
-                  <a
-                    class="p-card__link"
-                    href="product-detail.html?sp=wooden-blocks"
-                    aria-label="Xem chi tiết Bộ xếp hình gỗ đa dạng"
-                  >
-                    Xem chi tiết
-                    <svg
-                      class="icon"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="1.8"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      aria-hidden="true"
-                      focusable="false"
-                    >
-                      <path d="M5 12h14"></path>
-                      <path d="m13 6 6 6-6 6"></path>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </article>
-          </li>
-          <li>
-            <article class="p-card">
-              <a
-                class="p-card__media"
-                href="product-detail.html?sp=art-set"
-                tabindex="-1"
-                aria-hidden="true"
-              >
-                <span class="p-card__video-badge"><svg viewBox="0 0 24 24" width="10" height="10" fill="currentColor"><path d="M8 5v14l11-7z"/></svg> Video</span>
-                <img
-                  src="assets/img/products/product-art-set.jpg"
-                  alt=""
-                  width="480"
-                  height="480"
-                  loading="lazy"
-                />
-              </a>
-              <div class="p-card__body">
-                <p class="p-card__age">4–8 tuổi</p>
-                <h3 class="p-card__title">
-                  <a href="product-detail.html?sp=art-set"
-                    >Bộ vẽ nghệ thuật sáng tạo</a
-                  >
-                </h3>
-                <p class="p-card__act">Pha màu nước, tô và vẽ trên giấy A5.</p>
-                <div class="p-card__foot">
-                  <span class="price">229.000đ</span>
-                  <a
-                    class="p-card__link"
-                    href="product-detail.html?sp=art-set"
-                    aria-label="Xem chi tiết Bộ vẽ nghệ thuật sáng tạo"
-                  >
-                    Xem chi tiết
-                    <svg
-                      class="icon"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="1.8"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      aria-hidden="true"
-                      focusable="false"
-                    >
-                      <path d="M5 12h14"></path>
-                      <path d="m13 6 6 6-6 6"></path>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </article>
-          </li>
-          <li>
-            <article class="p-card">
-              <a
-                class="p-card__media"
-                href="product-detail.html?sp=science-kit"
-                tabindex="-1"
-                aria-hidden="true"
-              >
-                <span class="p-card__video-badge"><svg viewBox="0 0 24 24" width="10" height="10" fill="currentColor"><path d="M8 5v14l11-7z"/></svg> Video</span>
-                <img
-                  src="assets/img/products/product-science-kit.jpg"
-                  alt=""
-                  width="480"
-                  height="480"
-                  loading="lazy"
-                />
-              </a>
-              <div class="p-card__body">
-                <p class="p-card__age">6–12 tuổi</p>
-                <h3 class="p-card__title">
-                  <a href="product-detail.html?sp=science-kit"
-                    >Bộ thí nghiệm khoa học</a
-                  >
-                </h3>
-                <p class="p-card__act">
-                  Làm thí nghiệm pha màu và quan sát phản ứng.
-                </p>
-                <div class="p-card__foot">
-                  <span class="price">449.000đ</span>
-                  <a
-                    class="p-card__link"
-                    href="product-detail.html?sp=science-kit"
-                    aria-label="Xem chi tiết Bộ thí nghiệm khoa học"
-                  >
-                    Xem chi tiết
-                    <svg
-                      class="icon"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="1.8"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      aria-hidden="true"
-                      focusable="false"
-                    >
-                      <path d="M5 12h14"></path>
-                      <path d="m13 6 6 6-6 6"></path>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </article>
-          </li>
-        </ul>
-      </section>
-
-      <section class="band" aria-labelledby="band-title">
-        <div class="container band__inner">
-          <div>
-            <h2 class="band__title" id="band-title">
-              Thông tin đủ để chọn, không cần đoán.
-            </h2>
-            <p class="band__note">
-              WONDERLAB là dự án học tập về thương mại điện tử, chọn lọc đồ chơi
-              giáo dục cho trẻ từ 4 đến 12 tuổi.
-            </p>
-          </div>
-          <div>
-            <dl class="band__facts">
-              <div class="band__fact">
-                <dt>Độ tuổi</dt>
-                <dd>Ghi rõ khoảng tuổi phù hợp trên từng sản phẩm.</dd>
-              </div>
-              <div class="band__fact">
-                <dt>Chi tiết</dt>
-                <dd>Số chi tiết và chất liệu để bạn biết trước khi mua.</dd>
-              </div>
-              <div class="band__fact">
-                <dt>Kỹ năng</dt>
-                <dd>Tư duy logic, vận động tinh, làm việc nhóm.</dd>
-              </div>
-            </dl>
-            <a class="c-link c-link--onblue" href="about.html"
-              >Về WONDERLAB
-              <svg
-                class="icon"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.8"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                aria-hidden="true"
-                focusable="false"
-              >
-                <path d="M5 12h14"></path>
-                <path d="m13 6 6 6-6 6"></path>
-              </svg>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <section class="container" aria-labelledby="quickpick-title">
-        <h2 class="sr-only" id="quickpick-title">Chọn nhanh</h2>
-        <div class="quickpick">
-          <div>
-            <h3 class="quickpick__title">Theo độ tuổi</h3>
-            <div class="quickpick__links">
-              <a href="products.html?tuoi=4-6">4–6 tuổi</a>
-              <a href="products.html?tuoi=6-8">6–8 tuổi</a>
-              <a href="products.html?tuoi=9-12">9–12 tuổi</a>
+          <div class="mini-stats">
+            <div>
+              <strong>2.4K+</strong>
+              <span>Khách hàng</span>
+            </div>
+            <div>
+              <strong>120+</strong>
+              <span>Sản phẩm</span>
+            </div>
+            <div>
+              <strong>4.9/5</strong>
+              <span>Đánh giá</span>
             </div>
           </div>
-          <div>
-            <h3 class="quickpick__title">Theo ngân sách</h3>
-            <div class="quickpick__links">
-              <a href="products.html?gia=duoi-300">Dưới 300.000đ</a>
-              <a href="products.html?gia=300-500">300.000đ – 500.000đ</a>
-              <a href="products.html?gia=tren-500">Trên 500.000đ</a>
+        </div>
+
+        <div class="hero-art" aria-label="Featured toy product">
+          <div class="product-card">
+            <div class="product-shape">
+              <div class="badge">★</div>
+              <div class="toy">
+                <div class="box"></div>
+              </div>
+            </div>
+            <div class="card-bottom">
+              <div>
+                <h3>Magic Build Kit</h3>
+                <p>Bộ sáng tạo cho bé</p>
+              </div>
+              <div class="price">890K</div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section id="features" class="section">
+        <div class="section-head">
+          <h2>Vì sao chọn Wonderlab?</h2>
+        </div>
+
+        <div class="grid">
+          <article class="feature">
+            <div class="icon">✦</div>
+            <h3>Sản phẩm sáng tạo</h3>
+            <p>Mỗi bộ đồ chơi được chọn lọc để khơi gợi trí tò mò, kỹ năng và sự hứng thú của trẻ theo từng giai đoạn phát triển.</p>
+          </article>
+
+          <article class="feature">
+            <div class="icon">★</div>
+            <h3>Trải nghiệm tin cậy</h3>
+            <p>Giao diện mượt, quy trình mua sắm rõ ràng và trải nghiệm an toàn giúp phụ huynh yên tâm hơn khi lựa chọn.</p>
+          </article>
+
+          <article class="feature">
+            <div class="icon">✓</div>
+            <h3>Cộng đồng yêu thích</h3>
+            <p>Tham gia cùng các bậc phụ huynh để tìm sản phẩm phù hợp, lưu yêu thích và cùng bé khám phá những điều mới mẻ.</p>
+          </article>
         </div>
       </section>
     </main>
-
-    <footer class="site-foot">
-      <div class="container site-foot__grid">
-        <div class="site-foot__about">
-          <a
-            class="brand brand--light"
-            href="index.html"
-            aria-label="WONDERLAB — trang chủ"
-          >
-            <span class="brand__plate">
-              <img class="brand__logo" src="assets/img/logo-wonderlab.png" alt="WONDERLAB — Bé Khám Phá" width="560" height="321" />
-            </span>
-          </a>
-          <p class="brand__tagline">Play • Learn • Grow</p>
-          <p>
-            Đồ chơi giáo dục giúp trẻ 4–12 tuổi lắp ráp, thử nghiệm và tự tìm ra
-            cách chơi.
-          </p>
-        </div>
-
-        <nav aria-labelledby="foot-links">
-          <h2 class="site-foot__title" id="foot-links">Liên kết nhanh</h2>
-          <ul class="site-foot__list">
-            <li><a href="index.html">Trang chủ</a></li>
-            <li><a href="products.html">Sản phẩm</a></li>
-            <li><a href="about.html">Giới thiệu</a></li>
-          </ul>
-        </nav>
-
-        <div>
-          <h2 class="site-foot__title">Liên hệ</h2>
-          <div class="site-foot__contact">
-            <a href="mailto:wonderlab@example.com">wonderlab@example.com</a>
-            <a href="tel:+84123456789">0123 456 789</a>
-            <span>Thứ 2 – Thứ 7, 8:00 – 17:00</span>
-          </div>
-        </div>
-      </div>
-      <div class="container site-foot__rule"></div>
-      <div class="container site-foot__bottom">
-        <span>© 2026 WONDERLAB. Dự án học tập, không phải cửa hàng thật.</span>
-        <span>Giỏ hàng trên trang là bản demo, không có thanh toán.</span>
-      </div>
-    </footer>
-
-    <div
-      class="cart-drawer"
-      data-cart-drawer
-      hidden
-      role="dialog"
-      aria-modal="true"
-      aria-labelledby="cart-title"
-    >
-      <button
-        class="cart-drawer__scrim"
-        type="button"
-        data-cart-close
-        aria-label="Đóng giỏ hàng"
-      ></button>
-      <div class="cart-drawer__panel">
-        <div class="cart-drawer__head">
-          <h2 class="cart-drawer__title" id="cart-title">Giỏ hàng của bạn</h2>
-          <button
-            class="icon-btn"
-            type="button"
-            data-cart-close
-            aria-label="Đóng giỏ hàng"
-          >
-            <svg
-              class="icon"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.8"
-              stroke-linecap="round"
-              aria-hidden="true"
-              focusable="false"
-            >
-              <path d="M18 6 6 18M6 6l12 12"></path>
-            </svg>
-          </button>
-        </div>
-        <div class="cart-drawer__items" data-cart-items></div>
-        <div class="cart-drawer__foot">
-          <div class="cart-drawer__total">
-            <span>Tạm tính</span><strong data-cart-total>0đ</strong>
-          </div>
-          <a class="c-btn c-btn--ghost c-btn--wide" href="products.html"
-            >Tiếp tục xem sản phẩm</a
-          >
-          <p class="cart-drawer__note">
-            Đây là giỏ hàng demo của một dự án học tập. Chưa có bước thanh toán
-            hoặc đặt hàng thật.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <div class="toast" data-toast hidden role="status" aria-live="polite">
-      <span data-toast-text>Đã thêm vào giỏ hàng demo.</span>
-      <button
-        class="toast__close"
-        type="button"
-        data-toast-close
-        aria-label="Đóng thông báo"
-      >
-        <svg
-          class="icon"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          aria-hidden="true"
-          focusable="false"
-        >
-          <path d="M18 6 6 18M6 6l12 12"></path>
-        </svg>
-      </button>
-    </div>
-
-    <script src="js/main.js"></script>
   </body>
 </html>
