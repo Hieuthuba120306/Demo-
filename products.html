@@ -47,9 +47,65 @@
 <span>Menu</span>
 </button>
 <nav aria-label="Điều hướng chính" class="site-nav" id="site-nav">
-<a class="site-nav__link" href="index.html">Trang chủ</a>
-<a aria-current="page" class="site-nav__link" href="products.html">Sản phẩm</a>
-<a class="site-nav__link" href="about.html">Giới thiệu</a>
+  <a class="site-nav__link" href="index.html">Trang chủ</a>
+  <a class="site-nav__link" href="mega-live.html">Mega Live</a>
+
+  <div class="catalog-menu">
+    <a
+      aria-current="page"
+      class="site-nav__link"
+      href="products.html"
+    >
+      Sản phẩm ▾
+    </a>
+
+    <div class="catalog-menu__panel">
+      <div class="catalog-menu__column">
+        <h3>Theo danh mục</h3>
+
+        <a href="products.html?danh-muc=stem">
+          🛠️ Lắp ráp &amp; STEM
+        </a>
+        <a href="products.html?danh-muc=logic">
+          🧩 Xếp hình &amp; logic
+        </a>
+        <a href="products.html?danh-muc=sang-tao">
+          🎨 Vẽ &amp; sáng tạo
+        </a>
+        <a href="products.html?danh-muc=boardgame">
+          🎲 Board game
+        </a>
+        <a href="products.html?danh-muc=nhap-vai">
+          🎭 Nhập vai
+        </a>
+      </div>
+
+      <div class="catalog-menu__column">
+        <h3>Theo độ tuổi</h3>
+
+        <a href="products.html?tuoi=4-6">🧸 4–6 tuổi</a>
+        <a href="products.html?tuoi=6-8">🎈 6–8 tuổi</a>
+        <a href="products.html?tuoi=9-12">🚀 9–12 tuổi</a>
+
+        <h3 class="catalog-menu__subtitle">Theo giới tính</h3>
+
+        <a href="products.html?gioi-tinh=boy">👦 Bé trai</a>
+        <a href="products.html?gioi-tinh=girl">👧 Bé gái</a>
+        <a href="products.html?gioi-tinh=unisex">
+          🧒 Phù hợp mọi bé
+        </a>
+      </div>
+
+      <div class="catalog-menu__column">
+        <h3>Khám phá thêm</h3>
+
+        <a href="products.html">🛍️ Tất cả sản phẩm →</a>
+        <a href="mega-live.html">⚡ Mega Live →</a>
+      </div>
+    </div>
+  </div>
+
+  <a class="site-nav__link" href="about.html">Giới thiệu</a>
 </nav>
 <p class="site-head__note">Đồ chơi cho trẻ 4–12 tuổi</p>
 </div>
@@ -99,6 +155,24 @@
 <label class="f-check"><input name="tuoi" type="checkbox" value="9-12"/><span>9–12 tuổi</span><span class="f-check__n">13</span></label>
 </fieldset>
 <fieldset class="f-group">
+<legend class="f-group__legend">Giới tính</legend>
+
+<label class="f-check">
+<input type="checkbox" name="gioi-tinh" value="boy">
+<span>Bé trai</span>
+</label>
+
+<label class="f-check">
+<input type="checkbox" name="gioi-tinh" value="girl">
+<span>Bé gái</span>
+</label>
+
+<label class="f-check">
+<input type="checkbox" name="gioi-tinh" value="unisex">
+<span>Phù hợp mọi bé</span>
+</label>
+</fieldset>
+<fieldset class="f-group">
 <legend class="f-group__legend">Khoảng giá</legend>
 <label class="f-check"><input name="gia" type="checkbox" value="duoi-300"/><span>Dưới 300.000đ</span><span class="f-check__n">32</span></label>
 <label class="f-check"><input name="gia" type="checkbox" value="300-500"/><span>300.000đ – 500.000đ</span><span class="f-check__n">21</span></label>
@@ -146,7 +220,7 @@
 </div>
 <div class="active-filters" data-active="" hidden=""></div>
 <ul class="grid-catalogue" data-grid="">
-<li data-age="6-8 9-12" data-cat="stem" data-name="Bộ lắp ráp Robot STEM" data-order="1" data-price="599000" data-product="" data-skills="tu-duy khoa-hoc" data-slug="robot-stem">
+<li data-age="6-8 9-12" data-cat="stem" data-name="Bộ lắp ráp Robot STEM" data-order="1" data-price="599000" data-product="" data-skills="tu-duy khoa-hoc" data-slug="robot-stem" data-gender="boy">
 <article class="p-card">
 <a aria-hidden="true" class="p-card__media" href="product-detail.html?sp=robot-stem" tabindex="-1">
 <span class="p-card__video-badge"><svg viewBox="0 0 24 24" width="10" height="10" fill="currentColor"><path d="M8 5v14l11-7z"/></svg> Video</span>
@@ -172,7 +246,7 @@
 </div>
 </article>
 </li>
-<li data-age="4-6" data-cat="logic" data-name="Bộ xếp hình gỗ đa dạng" data-order="2" data-price="299000" data-product="" data-skills="tu-duy van-dong-tinh" data-slug="wooden-blocks">
+<li data-age="4-6" data-cat="logic" data-name="Bộ xếp hình gỗ đa dạng" data-order="2" data-price="299000" data-product="" data-skills="tu-duy van-dong-tinh" data-slug="wooden-blocks" data-gender="unisex">
 <article class="p-card">
 <a aria-hidden="true" class="p-card__media" href="product-detail.html?sp=wooden-blocks" tabindex="-1">
 <span class="p-card__video-badge"><svg viewBox="0 0 24 24" width="10" height="10" fill="currentColor"><path d="M8 5v14l11-7z"/></svg> Video</span>
@@ -198,7 +272,7 @@
 </div>
 </article>
 </li>
-<li data-age="6-8" data-cat="logic" data-name="Bộ chữ từ logic" data-order="3" data-price="349000" data-product="" data-skills="tu-duy" data-slug="letter-logic">
+<li data-age="6-8" data-cat="logic" data-name="Bộ chữ từ logic" data-order="3" data-price="349000" data-product="" data-skills="tu-duy" data-slug="letter-logic" data-gender="unisex">
 <article class="p-card">
 <a aria-hidden="true" class="p-card__media" href="product-detail.html?sp=letter-logic" tabindex="-1">
 <img alt="" height="480" loading="lazy" src="assets/img/products/product-letter-logic.jpg" width="480"/>
@@ -223,7 +297,7 @@
 </div>
 </article>
 </li>
-<li data-age="4-6 6-8" data-cat="sang-tao" data-name="Bộ vẽ nghệ thuật sáng tạo" data-order="4" data-price="229000" data-product="" data-skills="sang-tao van-dong-tinh" data-slug="art-set">
+<li data-age="4-6 6-8" data-cat="sang-tao" data-name="Bộ vẽ nghệ thuật sáng tạo" data-order="4" data-price="229000" data-product="" data-skills="sang-tao van-dong-tinh" data-slug="art-set" data-gender="unisex">
 <article class="p-card">
 <a aria-hidden="true" class="p-card__media" href="product-detail.html?sp=art-set" tabindex="-1">
 <span class="p-card__video-badge"><svg viewBox="0 0 24 24" width="10" height="10" fill="currentColor"><path d="M8 5v14l11-7z"/></svg> Video</span>
@@ -249,7 +323,7 @@
 </div>
 </article>
 </li>
-<li data-age="9-12" data-cat="boardgame" data-name="Board Game Vương quốc động vật" data-order="5" data-price="459000" data-product="" data-skills="tu-duy choi-nhom" data-slug="board-game">
+<li data-age="9-12" data-cat="boardgame" data-name="Board Game Vương quốc động vật" data-order="5" data-price="459000" data-product="" data-skills="tu-duy choi-nhom" data-slug="board-game" data-gender="unisex">
 <article class="p-card">
 <a aria-hidden="true" class="p-card__media" href="product-detail.html?sp=board-game" tabindex="-1">
 <img alt="" height="480" loading="lazy" src="assets/img/products/product-board-game.jpg" width="480"/>
@@ -274,7 +348,7 @@
 </div>
 </article>
 </li>
-<li data-age="4-6" data-cat="nhap-vai" data-name="Bộ đồ chơi nhà bếp mini" data-order="6" data-price="379000" data-product="" data-skills="choi-nhom van-dong-tinh" data-slug="play-kitchen">
+<li data-age="4-6" data-cat="nhap-vai" data-name="Bộ đồ chơi nhà bếp mini" data-order="6" data-price="379000" data-product="" data-skills="choi-nhom van-dong-tinh" data-slug="play-kitchen" data-gender="girl">
 <article class="p-card">
 <a aria-hidden="true" class="p-card__media" href="product-detail.html?sp=play-kitchen" tabindex="-1">
 <img alt="" height="480" loading="lazy" src="assets/img/products/product-play-kitchen.jpg" width="480"/>
@@ -299,7 +373,7 @@
 </div>
 </article>
 </li>
-<li data-age="6-8" data-cat="stem" data-name="Xe đua điều khiển từ xa" data-order="7" data-price="499000" data-product="" data-skills="khoa-hoc van-dong-tinh" data-slug="rc-car">
+<li data-age="6-8" data-cat="stem" data-name="Xe đua điều khiển từ xa" data-order="7" data-price="499000" data-product="" data-skills="khoa-hoc van-dong-tinh" data-slug="rc-car" data-gender="boy">
 <article class="p-card">
 <a aria-hidden="true" class="p-card__media" href="product-detail.html?sp=rc-car" tabindex="-1">
 <img alt="" height="480" loading="lazy" src="assets/img/products/product-rc-car.jpg" width="480"/>
@@ -324,7 +398,7 @@
 </div>
 </article>
 </li>
-<li data-age="6-8 9-12" data-cat="stem" data-name="Bộ thí nghiệm khoa học" data-order="8" data-price="449000" data-product="" data-skills="khoa-hoc tu-duy" data-slug="science-kit">
+<li data-age="6-8 9-12" data-cat="stem" data-name="Bộ thí nghiệm khoa học" data-order="8" data-price="449000" data-product="" data-skills="khoa-hoc tu-duy" data-slug="science-kit" data-gender="unisex">
 <article class="p-card">
 <a aria-hidden="true" class="p-card__media" href="product-detail.html?sp=science-kit" tabindex="-1">
 <span class="p-card__video-badge"><svg viewBox="0 0 24 24" width="10" height="10" fill="currentColor"><path d="M8 5v14l11-7z"/></svg> Video</span>
@@ -350,7 +424,7 @@
 </div>
 </article>
 </li>
-<li data-age="6-8 9-12" data-cat="logic" data-name="Bộ nam châm xếp hình" data-order="9" data-price="399000" data-product="" data-skills="tu-duy sang-tao" data-slug="magnetic-tiles">
+<li data-age="6-8 9-12" data-cat="logic" data-name="Bộ nam châm xếp hình" data-order="9" data-price="399000" data-product="" data-skills="tu-duy sang-tao" data-slug="magnetic-tiles" data-gender="unisex">
 <article class="p-card">
 <a aria-hidden="true" class="p-card__media" href="product-detail.html?sp=magnetic-tiles" tabindex="-1">
 <img alt="" height="480" loading="lazy" src="assets/img/products/product-magnetic-tiles.jpg" width="480"/>
@@ -375,7 +449,7 @@
 </div>
 </article>
 </li>
-<li data-age="6-8 9-12" data-cat="logic" data-name="Tranh ghép hình vũ trụ" data-order="10" data-price="279000" data-product="" data-skills="tu-duy" data-slug="space-puzzle">
+<li data-age="6-8 9-12" data-cat="logic" data-name="Tranh ghép hình vũ trụ" data-order="10" data-price="279000" data-product="" data-skills="tu-duy" data-slug="space-puzzle" data-gender="unisex">
 <article class="p-card">
 <a aria-hidden="true" class="p-card__media" href="product-detail.html?sp=space-puzzle" tabindex="-1">
 <img alt="" height="480" loading="lazy" src="assets/img/products/product-space-puzzle.jpg" width="480"/>
@@ -400,7 +474,7 @@
 </div>
 </article>
 </li>
-<li data-age="4-6 6-8" data-cat="sang-tao" data-name="Bộ đất nặn sáng tạo" data-order="11" data-price="249000" data-product="" data-skills="sang-tao van-dong-tinh" data-slug="clay-set">
+<li data-age="4-6 6-8" data-cat="sang-tao" data-name="Bộ đất nặn sáng tạo" data-order="11" data-price="249000" data-product="" data-skills="sang-tao van-dong-tinh" data-slug="clay-set" data-gender="unisex">
 <article class="p-card">
 <a aria-hidden="true" class="p-card__media" href="product-detail.html?sp=clay-set" tabindex="-1">
 <img alt="" height="480" loading="lazy" src="assets/img/products/product-clay-set.jpg" width="480"/>
@@ -425,7 +499,7 @@
 </div>
 </article>
 </li>
-<li data-age="4-6" data-cat="logic" data-name="Bộ khối hình học" data-order="12" data-price="319000" data-product="" data-skills="tu-duy van-dong-tinh" data-slug="geometric-solids">
+<li data-age="4-6" data-cat="logic" data-name="Bộ khối hình học" data-order="12" data-price="319000" data-product="" data-skills="tu-duy van-dong-tinh" data-slug="geometric-solids" data-gender="unisex">
 <article class="p-card">
 <a aria-hidden="true" class="p-card__media" href="product-detail.html?sp=geometric-solids" tabindex="-1">
 <img alt="" height="480" loading="lazy" src="assets/img/products/product-geometric-solids.jpg" width="480"/>
@@ -450,7 +524,7 @@
 </div>
 </article>
 </li>
-<li data-age="6-8" data-cat="stem" data-name="Bộ Thí Nghiệm Núi Lửa Phun Trào" data-order="13" data-price="309000" data-product="" data-skills="sang-tao khoa-hoc" data-slug="volcano-kit">
+<li data-age="6-8" data-cat="stem" data-name="Bộ Thí Nghiệm Núi Lửa Phun Trào" data-order="13" data-price="309000" data-product="" data-skills="sang-tao khoa-hoc" data-slug="volcano-kit" data-gender="unisex">
 <article class="p-card">
 <a aria-hidden="true" class="p-card__media" href="product-detail.html?sp=volcano-kit" tabindex="-1">
 <img alt="" height="480" loading="lazy" src="assets/img/products/nui-lua-phun-trao-1.webp" width="480"/>
@@ -475,7 +549,7 @@
 </div>
 </article>
 </li>
-<li data-age="6-8" data-cat="stem" data-name="Bộ lắp ráp đường đua bi" data-order="14" data-price="429000" data-product="" data-skills="tu-duy khoa-hoc van-dong-tinh" data-slug="marble-run">
+<li data-age="6-8" data-cat="stem" data-name="Bộ lắp ráp đường đua bi" data-order="14" data-price="429000" data-product="" data-skills="tu-duy khoa-hoc van-dong-tinh" data-slug="marble-run" data-gender="boy">
 <article class="p-card">
 <a aria-hidden="true" class="p-card__media" href="product-detail.html?sp=marble-run" tabindex="-1">
 <img alt="" height="480" loading="lazy" src="assets/img/products/product-marble-run.jpg" width="480"/>
@@ -501,7 +575,7 @@
 </div>
 </article>
 </li>
-<li data-age="9-12" data-cat="stem" data-name="Xe thám hiểm năng lượng mặt trời" data-order="15" data-price="549000" data-product="" data-skills="tu-duy khoa-hoc" data-slug="solar-rover">
+<li data-age="9-12" data-cat="stem" data-name="Xe thám hiểm năng lượng mặt trời" data-order="15" data-price="549000" data-product="" data-skills="tu-duy khoa-hoc" data-slug="solar-rover" data-gender="boy">
 <article class="p-card">
 <a aria-hidden="true" class="p-card__media" href="product-detail.html?sp=solar-rover" tabindex="-1">
 <img alt="" height="480" loading="lazy" src="assets/img/products/product-solar-rover.jpg" width="480"/>
@@ -527,7 +601,7 @@
 </div>
 </article>
 </li>
-<li data-age="6-8" data-cat="logic" data-name="Bộ ghép hình Tangram 7 mảnh" data-order="16" data-price="179000" data-product="" data-skills="tu-duy sang-tao" data-slug="tangram">
+<li data-age="6-8" data-cat="logic" data-name="Bộ ghép hình Tangram 7 mảnh" data-order="16" data-price="179000" data-product="" data-skills="tu-duy sang-tao" data-slug="tangram" data-gender="unisex">
 <article class="p-card">
 <a aria-hidden="true" class="p-card__media" href="product-detail.html?sp=tangram" tabindex="-1">
 <img alt="" height="480" loading="lazy" src="assets/img/products/product-tangram.jpg" width="480"/>
@@ -552,7 +626,7 @@
 </div>
 </article>
 </li>
-<li data-age="6-8" data-cat="sang-tao" data-name="Bộ gấp giấy Origami muôn thú" data-order="17" data-price="129000" data-product="" data-skills="sang-tao van-dong-tinh" data-slug="origami-set">
+<li data-age="6-8" data-cat="sang-tao" data-name="Bộ gấp giấy Origami muôn thú" data-order="17" data-price="129000" data-product="" data-skills="sang-tao van-dong-tinh" data-slug="origami-set" data-gender="unisex">
 <article class="p-card">
 <a aria-hidden="true" class="p-card__media" href="product-detail.html?sp=origami-set" tabindex="-1">
 <img alt="" height="480" loading="lazy" src="assets/img/products/product-origami-set.jpg" width="480"/>
@@ -577,7 +651,7 @@
 </div>
 </article>
 </li>
-<li data-age="6-8" data-cat="sang-tao" data-name="Bộ xâu hạt làm vòng sáng tạo" data-order="18" data-price="219000" data-product="" data-skills="sang-tao van-dong-tinh" data-slug="bead-jewelry">
+<li data-age="6-8" data-cat="sang-tao" data-name="Bộ xâu hạt làm vòng sáng tạo" data-order="18" data-price="219000" data-product="" data-skills="sang-tao van-dong-tinh" data-slug="bead-jewelry" data-gender="girl">
 <article class="p-card">
 <a aria-hidden="true" class="p-card__media" href="product-detail.html?sp=bead-jewelry" tabindex="-1">
 <img alt="" height="480" loading="lazy" src="assets/img/products/product-bead-jewelry.jpg" width="480"/>
@@ -602,7 +676,7 @@
 </div>
 </article>
 </li>
-<li data-age="4-6" data-cat="sang-tao" data-name="Bộ khuôn vẽ thế giới tự nhiên" data-order="19" data-price="189000" data-product="" data-skills="sang-tao van-dong-tinh" data-slug="stencil-art">
+<li data-age="4-6" data-cat="sang-tao" data-name="Bộ khuôn vẽ thế giới tự nhiên" data-order="19" data-price="189000" data-product="" data-skills="sang-tao van-dong-tinh" data-slug="stencil-art" data-gender="unisex">
 <article class="p-card">
 <a aria-hidden="true" class="p-card__media" href="product-detail.html?sp=stencil-art" tabindex="-1">
 <img alt="" height="480" loading="lazy" src="assets/img/products/product-stencil-art.jpg" width="480"/>
@@ -627,7 +701,7 @@
 </div>
 </article>
 </li>
-<li data-age="9-12" data-cat="sang-tao" data-name="Bộ khung dệt len mini" data-order="20" data-price="329000" data-product="" data-skills="sang-tao van-dong-tinh" data-slug="weaving-loom">
+<li data-age="9-12" data-cat="sang-tao" data-name="Bộ khung dệt len mini" data-order="20" data-price="329000" data-product="" data-skills="sang-tao van-dong-tinh" data-slug="weaving-loom" data-gender="unisex">
 <article class="p-card">
 <a aria-hidden="true" class="p-card__media" href="product-detail.html?sp=weaving-loom" tabindex="-1">
 <img alt="" height="480" loading="lazy" src="assets/img/products/product-weaving-loom.jpg" width="480"/>
@@ -652,7 +726,7 @@
 </div>
 </article>
 </li>
-<li data-age="4-6" data-cat="boardgame" data-name="Trò chơi lật thẻ đôi động vật" data-order="21" data-price="159000" data-product="" data-skills="tu-duy choi-nhom" data-slug="animal-memory">
+<li data-age="4-6" data-cat="boardgame" data-name="Trò chơi lật thẻ đôi động vật" data-order="21" data-price="159000" data-product="" data-skills="tu-duy choi-nhom" data-slug="animal-memory" data-gender="unisex">
 <article class="p-card">
 <a aria-hidden="true" class="p-card__media" href="product-detail.html?sp=animal-memory" tabindex="-1">
 <img alt="" height="480" loading="lazy" src="assets/img/products/product-animal-memory.jpg" width="480"/>
@@ -677,7 +751,7 @@
 </div>
 </article>
 </li>
-<li data-age="4-6" data-cat="boardgame" data-name="Domino hình thú rừng" data-order="22" data-price="199000" data-product="" data-skills="tu-duy choi-nhom" data-slug="picture-domino">
+<li data-age="4-6" data-cat="boardgame" data-name="Domino hình thú rừng" data-order="22" data-price="199000" data-product="" data-skills="tu-duy choi-nhom" data-slug="picture-domino" data-gender="unisex">
 <article class="p-card">
 <a aria-hidden="true" class="p-card__media" href="product-detail.html?sp=picture-domino" tabindex="-1">
 <img alt="" height="480" loading="lazy" src="assets/img/products/product-picture-domino.jpg" width="480"/>
@@ -702,7 +776,7 @@
 </div>
 </article>
 </li>
-<li data-age="6-8" data-cat="boardgame" data-name="Cờ cá ngựa sắc màu" data-order="23" data-price="249000" data-product="" data-skills="tu-duy choi-nhom" data-slug="ludo-game">
+<li data-age="6-8" data-cat="boardgame" data-name="Cờ cá ngựa sắc màu" data-order="23" data-price="249000" data-product="" data-skills="tu-duy choi-nhom" data-slug="ludo-game" data-gender="unisex">
 <article class="p-card">
 <a aria-hidden="true" class="p-card__media" href="product-detail.html?sp=ludo-game" tabindex="-1">
 <img alt="" height="480" loading="lazy" src="assets/img/products/product-ludo-game.jpg" width="480"/>
@@ -727,7 +801,7 @@
 </div>
 </article>
 </li>
-<li data-age="6-8" data-cat="boardgame" data-name="Tháp gỗ cân bằng sắc màu" data-order="24" data-price="289000" data-product="" data-skills="tu-duy van-dong-tinh choi-nhom" data-slug="balance-tower">
+<li data-age="6-8" data-cat="boardgame" data-name="Tháp gỗ cân bằng sắc màu" data-order="24" data-price="289000" data-product="" data-skills="tu-duy van-dong-tinh choi-nhom" data-slug="balance-tower" data-gender="unisex">
 <article class="p-card">
 <a aria-hidden="true" class="p-card__media" href="product-detail.html?sp=balance-tower" tabindex="-1">
 <img alt="" height="480" loading="lazy" src="assets/img/products/product-balance-tower.jpg" width="480"/>
@@ -752,7 +826,7 @@
 </div>
 </article>
 </li>
-<li data-age="9-12" data-cat="boardgame" data-name="Board game phiên chợ toán học" data-order="25" data-price="359000" data-product="" data-skills="tu-duy choi-nhom" data-slug="math-market">
+<li data-age="9-12" data-cat="boardgame" data-name="Board game phiên chợ toán học" data-order="25" data-price="359000" data-product="" data-skills="tu-duy choi-nhom" data-slug="math-market" data-gender="unisex">
 <article class="p-card">
 <a aria-hidden="true" class="p-card__media" href="product-detail.html?sp=math-market" tabindex="-1">
 <img alt="" height="480" loading="lazy" src="assets/img/products/product-math-market.jpg" width="480"/>
@@ -777,7 +851,7 @@
 </div>
 </article>
 </li>
-<li data-age="4-6" data-cat="nhap-vai" data-name="Bộ nhập vai bác sĩ nhí" data-order="26" data-price="269000" data-product="" data-skills="sang-tao choi-nhom" data-slug="doctor-kit">
+<li data-age="4-6" data-cat="nhap-vai" data-name="Bộ nhập vai bác sĩ nhí" data-order="26" data-price="269000" data-product="" data-skills="sang-tao choi-nhom" data-slug="doctor-kit" data-gender="girl">
 <article class="p-card">
 <a aria-hidden="true" class="p-card__media" href="product-detail.html?sp=doctor-kit" tabindex="-1">
 <img alt="" height="480" loading="lazy" src="assets/img/products/product-doctor-kit.jpg" width="480"/>
@@ -802,7 +876,7 @@
 </div>
 </article>
 </li>
-<li data-age="4-6" data-cat="nhap-vai" data-name="Bàn dụng cụ thợ mộc mini" data-order="27" data-price="599000" data-product="" data-skills="sang-tao van-dong-tinh" data-slug="tool-workbench">
+<li data-age="4-6" data-cat="nhap-vai" data-name="Bàn dụng cụ thợ mộc mini" data-order="27" data-price="599000" data-product="" data-skills="sang-tao van-dong-tinh" data-slug="tool-workbench" data-gender="boy">
 <article class="p-card">
 <a aria-hidden="true" class="p-card__media" href="product-detail.html?sp=tool-workbench" tabindex="-1">
 <img alt="" height="480" loading="lazy" src="assets/img/products/product-tool-workbench.jpg" width="480"/>
@@ -827,7 +901,7 @@
 </div>
 </article>
 </li>
-<li data-age="4-6 6-8" data-cat="nhap-vai" data-name="Quầy bán hàng rau củ mini" data-order="28" data-price="649000" data-product="" data-skills="sang-tao choi-nhom" data-slug="grocery-store">
+<li data-age="4-6 6-8" data-cat="nhap-vai" data-name="Quầy bán hàng rau củ mini" data-order="28" data-price="649000" data-product="" data-skills="sang-tao choi-nhom" data-slug="grocery-store" data-gender="unisex">
 <article class="p-card">
 <a aria-hidden="true" class="p-card__media" href="product-detail.html?sp=grocery-store" tabindex="-1">
 <img alt="" height="480" loading="lazy" src="assets/img/products/product-grocery-store.jpg" width="480"/>
@@ -852,7 +926,7 @@
 </div>
 </article>
 </li>
-<li data-age="4-6" data-cat="nhap-vai" data-name="Bộ tiệc trà bánh ngọt" data-order="29" data-price="279000" data-product="" data-skills="sang-tao choi-nhom" data-slug="tea-party">
+<li data-age="4-6" data-cat="nhap-vai" data-name="Bộ tiệc trà bánh ngọt" data-order="29" data-price="279000" data-product="" data-skills="sang-tao choi-nhom" data-slug="tea-party" data-gender="girl">
 <article class="p-card">
 <a aria-hidden="true" class="p-card__media" href="product-detail.html?sp=tea-party" tabindex="-1">
 <img alt="" height="480" loading="lazy" src="assets/img/products/product-tea-party.jpg" width="480"/>
@@ -877,7 +951,7 @@
 </div>
 </article>
 </li>
-<li data-age="4-6 6-8" data-cat="nhap-vai" data-name="Bộ chăm sóc thú cưng nhồi bông" data-order="30" data-price="389000" data-product="" data-skills="sang-tao choi-nhom" data-slug="vet-clinic">
+<li data-age="4-6 6-8" data-cat="nhap-vai" data-name="Bộ chăm sóc thú cưng nhồi bông" data-order="30" data-price="389000" data-product="" data-skills="sang-tao choi-nhom" data-slug="vet-clinic" data-gender="girl">
 <article class="p-card">
 <a aria-hidden="true" class="p-card__media" href="product-detail.html?sp=vet-clinic" tabindex="-1">
 <img alt="" height="480" loading="lazy" src="assets/img/products/product-vet-clinic.jpg" width="480"/>
@@ -902,7 +976,7 @@
 </div>
 </article>
 </li>
-<li data-age="4-6" data-cat="logic" data-name="Bộ hộp thả khối gỗ hình học Montessori" data-order="31" data-price="269000" data-product="" data-skills="tu-duy van-dong-tinh" data-slug="shape-sorter-cube">
+<li data-age="4-6" data-cat="logic" data-name="Bộ hộp thả khối gỗ hình học Montessori" data-order="31" data-price="269000" data-product="" data-skills="tu-duy van-dong-tinh" data-slug="shape-sorter-cube" data-gender="unisex">
 <article class="p-card">
 <a aria-hidden="true" class="p-card__media" href="product-detail.html?sp=shape-sorter-cube" tabindex="-1">
 <img alt="" height="480" loading="lazy" src="assets/img/products/product-shape-sorter-cube.jpg" width="480"/>
@@ -927,7 +1001,7 @@
 </div>
 </article>
 </li>
-<li data-age="4-6 6-8" data-cat="nhap-vai" data-name="Đoàn tàu hỏa gỗ đường ray uốn lượn" data-order="32" data-price="389000" data-product="" data-skills="sang-tao choi-nhom van-dong-tinh" data-slug="wooden-train-set">
+<li data-age="4-6 6-8" data-cat="nhap-vai" data-name="Đoàn tàu hỏa gỗ đường ray uốn lượn" data-order="32" data-price="389000" data-product="" data-skills="sang-tao choi-nhom van-dong-tinh" data-slug="wooden-train-set" data-gender="boy">
 <article class="p-card">
 <a aria-hidden="true" class="p-card__media" href="product-detail.html?sp=wooden-train-set" tabindex="-1">
 <img alt="" height="480" loading="lazy" src="assets/img/products/product-wooden-train-set.jpg" width="480"/>
@@ -952,7 +1026,7 @@
 </div>
 </article>
 </li>
-<li data-age="4-6" data-cat="sang-tao" data-name="Cầu vồng gỗ xếp tầng Montessori 7 dải màu" data-order="33" data-price="249000" data-product="" data-skills="sang-tao tu-duy" data-slug="rainbow-stacker">
+<li data-age="4-6" data-cat="sang-tao" data-name="Cầu vồng gỗ xếp tầng Montessori 7 dải màu" data-order="33" data-price="249000" data-product="" data-skills="sang-tao tu-duy" data-slug="rainbow-stacker" data-gender="unisex">
 <article class="p-card">
 <a aria-hidden="true" class="p-card__media" href="product-detail.html?sp=rainbow-stacker" tabindex="-1">
 <img alt="" height="480" loading="lazy" src="assets/img/products/product-rainbow-stacker.jpg" width="480"/>
@@ -977,7 +1051,7 @@
 </div>
 </article>
 </li>
-<li data-age="4-6" data-cat="nhap-vai" data-name="Bộ 3 xe gỗ giao thông đô thị mini" data-order="34" data-price="199000" data-product="" data-skills="sang-tao choi-nhom" data-slug="wooden-car-set">
+<li data-age="4-6" data-cat="nhap-vai" data-name="Bộ 3 xe gỗ giao thông đô thị mini" data-order="34" data-price="199000" data-product="" data-skills="sang-tao choi-nhom" data-slug="wooden-car-set" data-gender="boy">
 <article class="p-card">
 <a aria-hidden="true" class="p-card__media" href="product-detail.html?sp=wooden-car-set" tabindex="-1">
 <img alt="" height="480" loading="lazy" src="assets/img/products/product-wooden-car-set.jpg" width="480"/>
@@ -1002,7 +1076,7 @@
 </div>
 </article>
 </li>
-<li data-age="4-6 6-8" data-cat="sang-tao" data-name="Đàn gõ Xylophone 8 phím âm thanh gỗ" data-order="35" data-price="229000" data-product="" data-skills="sang-tao van-dong-tinh" data-slug="wooden-xylophone">
+<li data-age="4-6 6-8" data-cat="sang-tao" data-name="Đàn gõ Xylophone 8 phím âm thanh gỗ" data-order="35" data-price="229000" data-product="" data-skills="sang-tao van-dong-tinh" data-slug="wooden-xylophone" data-gender="unisex">
 <article class="p-card">
 <a aria-hidden="true" class="p-card__media" href="product-detail.html?sp=wooden-xylophone" tabindex="-1">
 <img alt="" height="480" loading="lazy" src="assets/img/products/product-wooden-xylophone.jpg" width="480"/>
@@ -1027,7 +1101,7 @@
 </div>
 </article>
 </li>
-<li data-age="4-6" data-cat="logic" data-name="Khối lập phương bận rộn đa mặt Busy Cube" data-order="36" data-price="429000" data-product="" data-skills="tu-duy van-dong-tinh" data-slug="wooden-activity-cube">
+<li data-age="4-6" data-cat="logic" data-name="Khối lập phương bận rộn đa mặt Busy Cube" data-order="36" data-price="429000" data-product="" data-skills="tu-duy van-dong-tinh" data-slug="wooden-activity-cube" data-gender="unisex">
 <article class="p-card">
 <a aria-hidden="true" class="p-card__media" href="product-detail.html?sp=wooden-activity-cube" tabindex="-1">
 <img alt="" height="480" loading="lazy" src="assets/img/products/product-wooden-activity-cube.jpg" width="480"/>
@@ -1052,7 +1126,7 @@
 </div>
 </article>
 </li>
-<li data-age="4-6" data-cat="logic" data-name="Mê cung luồn hạt gỗ uốn lượn roller coaster" data-order="37" data-price="259000" data-product="" data-skills="tu-duy van-dong-tinh" data-slug="wire-bead-maze">
+<li data-age="4-6" data-cat="logic" data-name="Mê cung luồn hạt gỗ uốn lượn roller coaster" data-order="37" data-price="259000" data-product="" data-skills="tu-duy van-dong-tinh" data-slug="wire-bead-maze" data-gender="unisex">
 <article class="p-card">
 <a aria-hidden="true" class="p-card__media" href="product-detail.html?sp=wire-bead-maze" tabindex="-1">
 <img alt="" height="480" loading="lazy" src="assets/img/products/product-wire-bead-maze.jpg" width="480"/>
@@ -1077,7 +1151,7 @@
 </div>
 </article>
 </li>
-<li data-age="4-6" data-cat="nhap-vai" data-name="Chú cún con kéo dây bằng gỗ gõ chân" data-order="38" data-price="179000" data-product="" data-skills="van-dong-tinh sang-tao" data-slug="pull-along-puppy">
+<li data-age="4-6" data-cat="nhap-vai" data-name="Chú cún con kéo dây bằng gỗ gõ chân" data-order="38" data-price="179000" data-product="" data-skills="van-dong-tinh sang-tao" data-slug="pull-along-puppy" data-gender="unisex">
 <article class="p-card">
 <a aria-hidden="true" class="p-card__media" href="product-detail.html?sp=pull-along-puppy" tabindex="-1">
 <img alt="" height="480" loading="lazy" src="assets/img/products/product-pull-along-puppy.jpg" width="480"/>
@@ -1102,7 +1176,7 @@
 </div>
 </article>
 </li>
-<li data-age="4-6 6-8" data-cat="nhap-vai" data-name="Máy ảnh gỗ du lịch ống kính xoay cơ học" data-order="39" data-price="169000" data-product="" data-skills="sang-tao van-dong-tinh" data-slug="wooden-toy-camera">
+<li data-age="4-6 6-8" data-cat="nhap-vai" data-name="Máy ảnh gỗ du lịch ống kính xoay cơ học" data-order="39" data-price="169000" data-product="" data-skills="sang-tao van-dong-tinh" data-slug="wooden-toy-camera" data-gender="unisex">
 <article class="p-card">
 <a aria-hidden="true" class="p-card__media" href="product-detail.html?sp=wooden-toy-camera" tabindex="-1">
 <img alt="" height="480" loading="lazy" src="assets/img/products/product-wooden-toy-camera.jpg" width="480"/>
@@ -1127,7 +1201,7 @@
 </div>
 </article>
 </li>
-<li data-age="4-6 6-8" data-cat="logic" data-name="Bàn tính gỗ 10 hàng hạt học toán mầm non" data-order="40" data-price="279000" data-product="" data-skills="tu-duy van-dong-tinh" data-slug="classic-wooden-abacus">
+<li data-age="4-6 6-8" data-cat="logic" data-name="Bàn tính gỗ 10 hàng hạt học toán mầm non" data-order="40" data-price="279000" data-product="" data-skills="tu-duy van-dong-tinh" data-slug="classic-wooden-abacus" data-gender="unisex">
 <article class="p-card">
 <a aria-hidden="true" class="p-card__media" href="product-detail.html?sp=classic-wooden-abacus" tabindex="-1">
 <img alt="" height="480" loading="lazy" src="assets/img/products/product-classic-wooden-abacus.jpg" width="480"/>
@@ -1152,7 +1226,7 @@
 </div>
 </article>
 </li>
-<li data-age="4-6" data-cat="stem" data-name="Ghế đóng cọc gỗ kèm búa đập lực phản hồi" data-order="41" data-price="289000" data-product="" data-skills="van-dong-tinh khoa-hoc" data-slug="wooden-pounding-bench">
+<li data-age="4-6" data-cat="stem" data-name="Ghế đóng cọc gỗ kèm búa đập lực phản hồi" data-order="41" data-price="289000" data-product="" data-skills="van-dong-tinh khoa-hoc" data-slug="wooden-pounding-bench" data-gender="unisex">
 <article class="p-card">
 <a aria-hidden="true" class="p-card__media" href="product-detail.html?sp=wooden-pounding-bench" tabindex="-1">
 <img alt="" height="480" loading="lazy" src="assets/img/products/product-wooden-pounding-bench.jpg" width="480"/>
@@ -1177,7 +1251,7 @@
 </div>
 </article>
 </li>
-<li data-age="6-8 9-12" data-cat="sang-tao" data-name="Bảng ghép tranh khảm gỗ Mosaic hình học đa sắc" data-order="42" data-price="239000" data-product="" data-skills="sang-tao tu-duy" data-slug="geometric-mosaic-puzzle">
+<li data-age="6-8 9-12" data-cat="sang-tao" data-name="Bảng ghép tranh khảm gỗ Mosaic hình học đa sắc" data-order="42" data-price="239000" data-product="" data-skills="sang-tao tu-duy" data-slug="geometric-mosaic-puzzle" data-gender="unisex">
 <article class="p-card">
 <a aria-hidden="true" class="p-card__media" href="product-detail.html?sp=geometric-mosaic-puzzle" tabindex="-1">
 <img alt="" height="480" loading="lazy" src="assets/img/products/product-geometric-mosaic-puzzle.jpg" width="480"/>
@@ -1202,7 +1276,7 @@
 </div>
 </article>
 </li>
-<li data-age="4-6" data-cat="nhap-vai" data-name="Gấu bông hữu cơ dệt sợi tự nhiên dịu êm" data-order="43" data-price="249000" data-product="" data-skills="sang-tao choi-nhom" data-slug="organic-teddy-bear">
+<li data-age="4-6" data-cat="nhap-vai" data-name="Gấu bông hữu cơ dệt sợi tự nhiên dịu êm" data-order="43" data-price="249000" data-product="" data-skills="sang-tao choi-nhom" data-slug="organic-teddy-bear" data-gender="unisex">
 <article class="p-card">
 <a aria-hidden="true" class="p-card__media" href="product-detail.html?sp=organic-teddy-bear" tabindex="-1">
 <img alt="" height="480" loading="lazy" src="assets/img/products/product-organic-teddy-bear.jpg" width="480"/>
@@ -1227,7 +1301,7 @@
 </div>
 </article>
 </li>
-<li data-age="4-6 6-8" data-cat="nhap-vai" data-name="Bộ máy nướng bánh mì gạt cần bật nảy gỗ" data-order="44" data-price="329000" data-product="" data-skills="sang-tao choi-nhom" data-slug="wooden-toaster-playset">
+<li data-age="4-6 6-8" data-cat="nhap-vai" data-name="Bộ máy nướng bánh mì gạt cần bật nảy gỗ" data-order="44" data-price="329000" data-product="" data-skills="sang-tao choi-nhom" data-slug="wooden-toaster-playset" data-gender="girl">
 <article class="p-card">
 <a aria-hidden="true" class="p-card__media" href="product-detail.html?sp=wooden-toaster-playset" tabindex="-1">
 <img alt="" height="480" loading="lazy" src="assets/img/products/product-wooden-toaster-playset.jpg" width="480"/>
@@ -1252,7 +1326,7 @@
 </div>
 </article>
 </li>
-<li data-age="6-8 9-12" data-cat="nhap-vai" data-name="Ngôi nhà búp bê gỗ 2 tầng mái nghiêng ấm cúng" data-order="45" data-price="689000" data-product="" data-skills="sang-tao choi-nhom" data-slug="wooden-dollhouse-set">
+<li data-age="6-8 9-12" data-cat="nhap-vai" data-name="Ngôi nhà búp bê gỗ 2 tầng mái nghiêng ấm cúng" data-order="45" data-price="689000" data-product="" data-skills="sang-tao choi-nhom" data-slug="wooden-dollhouse-set" data-gender="unisex">
 <article class="p-card">
 <a aria-hidden="true" class="p-card__media" href="product-detail.html?sp=wooden-dollhouse-set" tabindex="-1">
 <img alt="" height="480" loading="lazy" src="assets/img/products/product-wooden-dollhouse-set.jpg" width="480"/>
@@ -1277,7 +1351,7 @@
 </div>
 </article>
 </li>
-<li data-age="4-6 6-8" data-cat="nhap-vai" data-name="Túi sơ cứu bác sĩ nhí kèm ống nghe và nhiệt kế" data-order="46" data-price="349000" data-product="" data-skills="sang-tao choi-nhom" data-slug="cloth-doctor-kit">
+<li data-age="4-6 6-8" data-cat="nhap-vai" data-name="Túi sơ cứu bác sĩ nhí kèm ống nghe và nhiệt kế" data-order="46" data-price="349000" data-product="" data-skills="sang-tao choi-nhom" data-slug="cloth-doctor-kit" data-gender="girl">
 <article class="p-card">
 <a aria-hidden="true" class="p-card__media" href="product-detail.html?sp=cloth-doctor-kit" tabindex="-1">
 <img alt="" height="480" loading="lazy" src="assets/img/products/product-cloth-doctor-kit.jpg" width="480"/>
@@ -1302,7 +1376,7 @@
 </div>
 </article>
 </li>
-<li data-age="4-6" data-cat="nhap-vai" data-name="Bộ thớt cắt rau củ dính nhám kèm dao gỗ" data-order="47" data-price="299000" data-product="" data-skills="van-dong-tinh choi-nhom" data-slug="cutting-veggies-set">
+<li data-age="4-6" data-cat="nhap-vai" data-name="Bộ thớt cắt rau củ dính nhám kèm dao gỗ" data-order="47" data-price="299000" data-product="" data-skills="van-dong-tinh choi-nhom" data-slug="cutting-veggies-set" data-gender="girl">
 <article class="p-card">
 <a aria-hidden="true" class="p-card__media" href="product-detail.html?sp=cutting-veggies-set" tabindex="-1">
 <img alt="" height="480" loading="lazy" src="assets/img/products/product-cutting-veggies-set.jpg" width="480"/>
@@ -1327,7 +1401,7 @@
 </div>
 </article>
 </li>
-<li data-age="6-8 9-12" data-cat="stem" data-name="Cân đĩa thăng bằng cơ học kèm quả cân gỗ" data-order="48" data-price="369000" data-product="" data-skills="khoa-hoc tu-duy" data-slug="wooden-balance-scale">
+<li data-age="6-8 9-12" data-cat="stem" data-name="Cân đĩa thăng bằng cơ học kèm quả cân gỗ" data-order="48" data-price="369000" data-product="" data-skills="khoa-hoc tu-duy" data-slug="wooden-balance-scale" data-gender="unisex">
 <article class="p-card">
 <a aria-hidden="true" class="p-card__media" href="product-detail.html?sp=wooden-balance-scale" tabindex="-1">
 <img alt="" height="480" loading="lazy" src="assets/img/products/product-wooden-balance-scale.jpg" width="480"/>
@@ -1352,7 +1426,7 @@
 </div>
 </article>
 </li>
-<li data-age="4-6 6-8" data-cat="nhap-vai" data-name="Bàn làm việc cơ khí nhí kèm búa vặn ốc gỗ" data-order="49" data-price="559000" data-product="" data-skills="van-dong-tinh sang-tao" data-slug="junior-workbench-set">
+<li data-age="4-6 6-8" data-cat="nhap-vai" data-name="Bàn làm việc cơ khí nhí kèm búa vặn ốc gỗ" data-order="49" data-price="559000" data-product="" data-skills="van-dong-tinh sang-tao" data-slug="junior-workbench-set" data-gender="boy">
 <article class="p-card">
 <a aria-hidden="true" class="p-card__media" href="product-detail.html?sp=junior-workbench-set" tabindex="-1">
 <img alt="" height="480" loading="lazy" src="assets/img/products/product-junior-workbench-set.jpg" width="480"/>
@@ -1377,7 +1451,7 @@
 </div>
 </article>
 </li>
-<li data-age="6-8 9-12" data-cat="stem" data-name="Bộ khối xây dựng kim tự tháp hình học đa tầng" data-order="50" data-price="379000" data-product="" data-skills="tu-duy khoa-hoc sang-tao" data-slug="geometric-pyramid-tower">
+<li data-age="6-8 9-12" data-cat="stem" data-name="Bộ khối xây dựng kim tự tháp hình học đa tầng" data-order="50" data-price="379000" data-product="" data-skills="tu-duy khoa-hoc sang-tao" data-slug="geometric-pyramid-tower" data-gender="unisex">
 <article class="p-card">
 <a aria-hidden="true" class="p-card__media" href="product-detail.html?sp=geometric-pyramid-tower" tabindex="-1">
 <img alt="" height="480" loading="lazy" src="assets/img/products/product-geometric-pyramid-tower.jpg" width="480"/>
@@ -1402,7 +1476,7 @@
 </div>
 </article>
 </li>
-<li data-age="4-6 6-8" data-cat="logic" data-name="Đồng hồ gỗ học xem giờ kèm kim giờ phút xoay" data-order="51" data-price="189000" data-product="" data-skills="tu-duy van-dong-tinh" data-slug="wooden-learning-clock">
+<li data-age="4-6 6-8" data-cat="logic" data-name="Đồng hồ gỗ học xem giờ kèm kim giờ phút xoay" data-order="51" data-price="189000" data-product="" data-skills="tu-duy van-dong-tinh" data-slug="wooden-learning-clock" data-gender="unisex">
 <article class="p-card">
 <a aria-hidden="true" class="p-card__media" href="product-detail.html?sp=wooden-learning-clock" tabindex="-1">
 <img alt="" height="480" loading="lazy" src="assets/img/products/product-wooden-learning-clock.jpg" width="480"/>
@@ -1427,7 +1501,7 @@
 </div>
 </article>
 </li>
-<li data-age="4-6" data-cat="sang-tao" data-name="Bộ xâu hạt gỗ luồn dây rèn luyện tính kiên nhẫn" data-order="52" data-price="179000" data-product="" data-skills="van-dong-tinh sang-tao" data-slug="wooden-lacing-beads">
+<li data-age="4-6" data-cat="sang-tao" data-name="Bộ xâu hạt gỗ luồn dây rèn luyện tính kiên nhẫn" data-order="52" data-price="179000" data-product="" data-skills="van-dong-tinh sang-tao" data-slug="wooden-lacing-beads" data-gender="girl">
 <article class="p-card">
 <a aria-hidden="true" class="p-card__media" href="product-detail.html?sp=wooden-lacing-beads" tabindex="-1">
 <img alt="" height="480" loading="lazy" src="assets/img/products/product-wooden-lacing-beads.jpg" width="480"/>
@@ -1452,7 +1526,7 @@
 </div>
 </article>
 </li>
-<li data-age="4-6 6-8" data-cat="boardgame" data-name="Bộ búp bê Matryoshka gỗ lồng hộp sắc màu" data-order="53" data-price="269000" data-product="" data-skills="tu-duy choi-nhom" data-slug="nesting-matryoshka-dolls">
+<li data-age="4-6 6-8" data-cat="boardgame" data-name="Bộ búp bê Matryoshka gỗ lồng hộp sắc màu" data-order="53" data-price="269000" data-product="" data-skills="tu-duy choi-nhom" data-slug="nesting-matryoshka-dolls" data-gender="unisex">
 <article class="p-card">
 <a aria-hidden="true" class="p-card__media" href="product-detail.html?sp=nesting-matryoshka-dolls" tabindex="-1">
 <img alt="" height="480" loading="lazy" src="assets/img/products/product-nesting-matryoshka-dolls.jpg" width="480"/>
@@ -1477,7 +1551,7 @@
 </div>
 </article>
 </li>
-<li data-age="4-6 6-8" data-cat="boardgame" data-name="Bộ mô hình muôn thú rừng xanh bằng gỗ tự nhiên" data-order="54" data-price="319000" data-product="" data-skills="sang-tao choi-nhom khoa-hoc" data-slug="forest-animals-set">
+<li data-age="4-6 6-8" data-cat="boardgame" data-name="Bộ mô hình muôn thú rừng xanh bằng gỗ tự nhiên" data-order="54" data-price="319000" data-product="" data-skills="sang-tao choi-nhom khoa-hoc" data-slug="forest-animals-set" data-gender="unisex">
 <article class="p-card">
 <a aria-hidden="true" class="p-card__media" href="product-detail.html?sp=forest-animals-set" tabindex="-1">
 <img alt="" height="480" loading="lazy" src="assets/img/products/product-forest-animals-set.jpg" width="480"/>
@@ -1502,7 +1576,7 @@
 </div>
 </article>
 </li>
-<li data-age="4-6 6-8" data-cat="boardgame" data-name="Bộ ném Bowling 6 ki gỗ sắc màu kèm bóng lăn" data-order="55" data-price="299000" data-product="" data-skills="van-dong-tinh choi-nhom" data-slug="wooden-bowling-set">
+<li data-age="4-6 6-8" data-cat="boardgame" data-name="Bộ ném Bowling 6 ki gỗ sắc màu kèm bóng lăn" data-order="55" data-price="299000" data-product="" data-skills="van-dong-tinh choi-nhom" data-slug="wooden-bowling-set" data-gender="unisex">
 <article class="p-card">
 <a aria-hidden="true" class="p-card__media" href="product-detail.html?sp=wooden-bowling-set" tabindex="-1">
 <img alt="" height="480" loading="lazy" src="assets/img/products/product-wooden-bowling-set.jpg" width="480"/>
@@ -1527,7 +1601,7 @@
 </div>
 </article>
 </li>
-<li data-age="4-6" data-cat="stem" data-name="Bảng bận rộn đa giác quan Sensory Busy Board" data-order="56" data-price="419000" data-product="" data-skills="khoa-hoc van-dong-tinh tu-duy" data-slug="sensory-busy-board">
+<li data-age="4-6" data-cat="stem" data-name="Bảng bận rộn đa giác quan Sensory Busy Board" data-order="56" data-price="419000" data-product="" data-skills="khoa-hoc van-dong-tinh tu-duy" data-slug="sensory-busy-board" data-gender="unisex">
 <article class="p-card">
 <a aria-hidden="true" class="p-card__media" href="product-detail.html?sp=sensory-busy-board" tabindex="-1">
 <img alt="" height="480" loading="lazy" src="assets/img/products/product-sensory-busy-board.jpg" width="480"/>
@@ -1552,7 +1626,7 @@
 </div>
 </article>
 </li>
-<li data-age="4-6" data-cat="sang-tao" data-name="Sách vải tương tác sột soạt đa giác quan" data-order="57" data-price="159000" data-product="" data-skills="sang-tao van-dong-tinh" data-slug="soft-cloth-book">
+<li data-age="4-6" data-cat="sang-tao" data-name="Sách vải tương tác sột soạt đa giác quan" data-order="57" data-price="159000" data-product="" data-skills="sang-tao van-dong-tinh" data-slug="soft-cloth-book" data-gender="unisex">
 <article class="p-card">
 <a aria-hidden="true" class="p-card__media" href="product-detail.html?sp=soft-cloth-book" tabindex="-1">
 <img alt="" height="480" loading="lazy" src="assets/img/products/product-soft-cloth-book.jpg" width="480"/>
@@ -1577,7 +1651,7 @@
 </div>
 </article>
 </li>
-<li data-age="6-8 9-12" data-cat="stem" data-name="Bộ đường đua bi lăn Marble Run gỗ đa tầng" data-order="58" data-price="589000" data-product="" data-skills="khoa-hoc tu-duy van-dong-tinh" data-slug="wooden-ball-run">
+<li data-age="6-8 9-12" data-cat="stem" data-name="Bộ đường đua bi lăn Marble Run gỗ đa tầng" data-order="58" data-price="589000" data-product="" data-skills="khoa-hoc tu-duy van-dong-tinh" data-slug="wooden-ball-run" data-gender="boy">
 <article class="p-card">
 <a aria-hidden="true" class="p-card__media" href="product-detail.html?sp=wooden-ball-run" tabindex="-1">
 <img alt="" height="480" loading="lazy" src="assets/img/products/product-wooden-ball-run.jpg" width="480"/>
@@ -1602,7 +1676,7 @@
 </div>
 </article>
 </li>
-<li data-age="4-6 6-8" data-cat="boardgame" data-name="Ban nhạc gõ nhịp điệu trống và maracas gỗ" data-order="59" data-price="339000" data-product="" data-skills="sang-tao choi-nhom" data-slug="wooden-music-band">
+<li data-age="4-6 6-8" data-cat="boardgame" data-name="Ban nhạc gõ nhịp điệu trống và maracas gỗ" data-order="59" data-price="339000" data-product="" data-skills="sang-tao choi-nhom" data-slug="wooden-music-band" data-gender="unisex">
 <article class="p-card">
 <a aria-hidden="true" class="p-card__media" href="product-detail.html?sp=wooden-music-band" tabindex="-1">
 <img alt="" height="480" loading="lazy" src="assets/img/products/product-wooden-music-band.jpg" width="480"/>
@@ -1627,7 +1701,7 @@
 </div>
 </article>
 </li>
-<li data-age="4-6 6-8" data-cat="logic" data-name="Bộ khối hộp lồng nhau và chồng tháp gỗ Nesting" data-order="60" data-price="259000" data-product="" data-skills="tu-duy van-dong-tinh" data-slug="nesting-cubes-set">
+<li data-age="4-6 6-8" data-cat="logic" data-name="Bộ khối hộp lồng nhau và chồng tháp gỗ Nesting" data-order="60" data-price="259000" data-product="" data-skills="tu-duy van-dong-tinh" data-slug="nesting-cubes-set" data-gender="unisex">
 <article class="p-card">
 <a aria-hidden="true" class="p-card__media" href="product-detail.html?sp=nesting-cubes-set" tabindex="-1">
 <img alt="" height="480" loading="lazy" src="assets/img/products/product-nesting-cubes-set.jpg" width="480"/>
@@ -1697,6 +1771,7 @@
 <h2 class="site-foot__title" id="foot-links">Liên kết nhanh</h2>
 <ul class="site-foot__list">
 <li><a href="index.html">Trang chủ</a></li>
+
 <li><a href="products.html">Sản phẩm</a></li>
 <li><a href="about.html">Giới thiệu</a></li>
 </ul>
