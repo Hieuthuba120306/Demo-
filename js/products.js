@@ -33,7 +33,7 @@
   var currentPage = 1;
   var totalPages = 1;
 
-  var FACETS = ["danh-muc", "tuoi", "gia", "ky-nang"];
+  var FACETS = ["danh-muc", "tuoi", "gia", "ky-nang", "gioi-tinh"];
   var query = "";
 
   function normalize(value) {
@@ -67,6 +67,24 @@
   }
 
   function matches(item, state) {
+    var gender = item.getAttribute("data-gender") || "unisex";
+    var selectedGenders = state["gioi-tinh"];
+
+    if (selectedGenders.length) {
+      var genderMatch = selectedGenders.some(function (value) {
+        if (value === "boy") {
+          return gender === "boy" || gender === "unisex";
+        }
+
+        if (value === "girl") {
+          return gender === "girl" || gender === "unisex";
+        }
+
+        return gender === "unisex";
+      });
+
+      if (!genderMatch) return false;
+    }
     var ages = (item.getAttribute("data-age") || "").split(/\s+/);
     var skills = (item.getAttribute("data-skills") || "").split(/\s+/);
     var band = priceBand(Number(item.getAttribute("data-price")));
