@@ -253,25 +253,28 @@
     var target = event.target;
     var addButton = target.closest("[data-add-to-cart]");
 
-  if (addButton) {
-    var productCard = addButton.closest("[data-product]");
+    if (addButton) {
+      var productCard = addButton.closest("[data-product]");
 
-  if (productCard) {
-      addToCart({
+      if (productCard) {
+        addToCart({
           id: productCard.getAttribute("data-slug"),
           name: productCard.getAttribute("data-name"),
           price: Number(productCard.getAttribute("data-price")),
           img: productCard.querySelector(".p-card__media img")
-              ? productCard.querySelector(".p-card__media img").getAttribute("src")
-              : "",
-          url: "product-detail.html?sp=" +
-              encodeURIComponent(productCard.getAttribute("data-slug")),
-          qty: 1
-       });
-  }
+            ? productCard
+                .querySelector(".p-card__media img")
+                .getAttribute("src")
+            : "",
+          url:
+            "product-detail.html?sp=" +
+            encodeURIComponent(productCard.getAttribute("data-slug")),
+          qty: 1,
+        });
+      }
 
-    return;
-  }
+      return;
+    }
 
     if (target.closest("[data-cart-open]")) {
       event.preventDefault();
@@ -319,7 +322,15 @@
     add: addToCart,
     open: openDrawer,
     showToast: showToast,
+    refresh: paintCart,
   };
+  // Đồng bộ giỏ hàng khi localStorage
+  // được thay đổi từ tab khác.
+  window.addEventListener("storage", function (event) {
+    if (event.key === CART_KEY || event.key === null) {
+      paintCart();
+    }
+  });
 
   paintCart();
 })();
