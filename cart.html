@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Giỏ hàng — WONDERLAB</title>
+<meta name="description" content="Giỏ hàng của bạn tại WONDERLAB.">
+<link rel="icon" href="assets/img/favicon.png" type="image/png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Bỏ qua điều hướng</a>
+<header class="site-head">
+<div class="container site-head__top">
+<a aria-label="WONDERLAB — trang chủ" class="brand" href="index.html">
+<video aria-label="WONDERLAB — Bé Khám Phá" autoplay="" class="brand__logo" loop="" muted="" playsinline="" poster="assets/img/logo-wonderlab.png" role="img">
+<source src="assets/img/video-logo.mp4" type="video/mp4"/>
+<img alt="WONDERLAB — Bé Khám Phá" src="assets/img/logo-wonderlab.png"/>
+</video>
+</a>
+<form action="products.html" class="search" data-search-form="" method="get" role="search">
+<label class="sr-only" for="q">Tìm sản phẩm</label>
+<input autocomplete="off" class="search__input" id="q" name="q" placeholder="Tìm bộ lắp ráp, xếp hình, thí nghiệm…" type="search"/>
+<button aria-label="Tìm sản phẩm" class="search__btn" type="submit">
+<svg aria-hidden="true" class="icon" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24">
+<circle cx="11" cy="11" r="7"></circle>
+<path d="m20 20-3.4-3.4"></path>
+</svg>
+</button>
+</form>
+<button aria-label="Mở giỏ hàng" class="cart-btn" data-cart-open="" type="button">
+<svg aria-hidden="true" class="icon" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24">
+<circle cx="9" cy="20" r="1.4"></circle>
+<circle cx="18" cy="20" r="1.4"></circle>
+<path d="M2.5 3.5h2.2l2.5 11.6a1.8 1.8 0 0 0 1.8 1.4h8.6a1.8 1.8 0 0 0 1.8-1.4L21 7H6"></path>
+</svg>
+<span class="cart-btn__count" data-cart-count="" hidden="">0</span>
+</button>
+</div>
+<div class="site-head__bar" data-nav-bar="">
+<div class="container site-head__nav-row">
+<button aria-controls="site-nav" aria-expanded="false" class="nav-toggle" data-nav-toggle="" type="button">
+<svg aria-hidden="true" class="icon" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="1.8" viewbox="0 0 24 24">
+<path d="M4 6h16M4 12h16M4 18h16"></path>
+</svg>
+<span>Menu</span>
+</button>
+<nav aria-label="Điều hướng chính" class="site-nav" id="site-nav">
+<a class="site-nav__link" href="index.html">Trang chủ</a>
+<a aria-current="page" class="site-nav__link" href="products.html">Sản phẩm</a>
+<a class="site-nav__link" href="about.html">Giới thiệu</a>
+</nav>
+<p class="site-head__note">Đồ chơi cho trẻ 4–12 tuổi</p>
+</div>
+</div>
+</header>
+<main class="page-main cart-page" id="main">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="index.html">Trang chủ</a></li><li><span aria-current="page">Giỏ hàng</span></li></ol></nav>
+    <div class="cart-page__head">
+      <div><h1 class="cart-page__title">Giỏ hàng của bạn</h1><p class="cart-page__lead">Kiểm tra sản phẩm và số lượng trước khi tiếp tục.</p></div>
+      <a class="c-btn c-btn--ghost" href="products.html">← Tiếp tục mua sắm</a>
+    </div>
+    <div id="cartPageContent" aria-live="polite"></div>
+  </div>
+</main>
+<footer class="site-foot">
+<div class="container site-foot__grid">
+<div class="site-foot__about">
+<a aria-label="WONDERLAB — trang chủ" class="brand brand--light" href="index.html">
+<span class="brand__plate">
+<img alt="WONDERLAB — Bé Khám Phá" class="brand__logo" height="321" src="assets/img/logo-wonderlab.png" width="560"/>
+</span>
+</a>
+<p class="brand__tagline">Play • Learn • Grow</p>
+<p>
+            Đồ chơi giáo dục giúp trẻ 4–12 tuổi lắp ráp, thử nghiệm và tự tìm ra
+            cách chơi.
+          </p>
+</div>
+<nav aria-labelledby="foot-links">
+<h2 class="site-foot__title" id="foot-links">Liên kết nhanh</h2>
+<ul class="site-foot__list">
+<li><a href="index.html">Trang chủ</a></li>
+<li><a href="products.html">Sản phẩm</a></li>
+<li><a href="about.html">Giới thiệu</a></li>
+</ul>
+</nav>
+<div>
+<h2 class="site-foot__title">Liên hệ</h2>
+<div class="site-foot__contact">
+<a href="mailto:wonderlab@example.com">wonderlab@example.com</a>
+<a href="tel:+84123456789">0123 456 789</a>
+<span>Thứ 2 – Thứ 7, 8:00 – 17:00</span>
+</div>
+</div>
+</div>
+<div class="container site-foot__rule"></div>
+<div class="container site-foot__bottom">
+<span>© 2026 WONDERLAB. Dự án học tập, không phải cửa hàng thật.</span>
+<span>Giỏ hàng trên trang là bản demo, không có thanh toán.</span>
+</div>
+</footer>
+<div aria-labelledby="cart-title" aria-modal="true" class="cart-drawer" data-cart-drawer="" hidden="" role="dialog">
+<button aria-label="Đóng giỏ hàng" class="cart-drawer__scrim" data-cart-close="" type="button"></button>
+<div class="cart-drawer__panel">
+<div class="cart-drawer__head">
+<h2 class="cart-drawer__title" id="cart-title">Giỏ hàng của bạn</h2>
+<button aria-label="Đóng giỏ hàng" class="icon-btn" data-cart-close="" type="button">
+<svg aria-hidden="true" class="icon" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="1.8" viewbox="0 0 24 24">
+<path d="M18 6 6 18M6 6l12 12"></path>
+</svg>
+</button>
+</div>
+<div class="cart-drawer__items" data-cart-items=""></div>
+<div class="cart-drawer__foot">
+<div class="cart-drawer__total">
+<span>Tạm tính</span><strong data-cart-total="">0đ</strong>
+</div>
+<a class="c-btn c-btn--ghost c-btn--wide" href="products.html">Tiếp tục xem sản phẩm</a>
+<a class="c-btn c-btn--primary c-btn--wide" href="cart.html">Xem giỏ hàng</a>
+<p class="cart-drawer__note">
+            Đây là giỏ hàng demo của một dự án học tập. Chưa có bước thanh toán
+            hoặc đặt hàng thật.
+          </p>
+</div>
+</div>
+</div>
+<div aria-live="polite" class="toast" data-toast="" hidden="" role="status">
+<span data-toast-text="">Đã thêm vào giỏ hàng demo.</span>
+<button aria-label="Đóng thông báo" class="toast__close" data-toast-close="" type="button">
+<svg aria-hidden="true" class="icon" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24">
+<path d="M18 6 6 18M6 6l12 12"></path>
+</svg>
+</button>
+</div>
+<script src="js/main.js"></script>
+<script src="js/cart-page.js"></script>
+</body>
+</html>
+

@@ -251,6 +251,27 @@
   /* clicks ---------------------------------------------------------------- */
   document.addEventListener("click", function (event) {
     var target = event.target;
+    var addButton = target.closest("[data-add-to-cart]");
+
+  if (addButton) {
+    var productCard = addButton.closest("[data-product]");
+
+  if (productCard) {
+      addToCart({
+          id: productCard.getAttribute("data-slug"),
+          name: productCard.getAttribute("data-name"),
+          price: Number(productCard.getAttribute("data-price")),
+          img: productCard.querySelector(".p-card__media img")
+              ? productCard.querySelector(".p-card__media img").getAttribute("src")
+              : "",
+          url: "product-detail.html?sp=" +
+              encodeURIComponent(productCard.getAttribute("data-slug")),
+          qty: 1
+       });
+  }
+
+    return;
+  }
 
     if (target.closest("[data-cart-open]")) {
       event.preventDefault();

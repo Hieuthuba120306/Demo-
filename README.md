@@ -68,3 +68,29 @@ hiển thị đủ 12 sản phẩm. Trạng thái lọc được ghi vào URL:
 - Ảnh đời sống: Pexels — `kaboompics.com` (trang chủ) và `Ksenia Chernaya` (trang giới thiệu);
   phần credit nằm trong `alt` của ảnh.
 - Thông tin liên hệ trong footer/about là **thông tin mẫu** của bài tập, không phải địa chỉ thật.
+
+## Bước 5: Xây dựng giỏ hàng
+
+Website đã bổ sung trang giỏ hàng với các chức năng:
+
+- Thêm sản phẩm từ trang danh sách và trang chi tiết.
+- Tăng số lượng nếu sản phẩm đã tồn tại.
+- Hiển thị tên, hình ảnh, đơn giá và số lượng.
+- Tăng, giảm và xóa sản phẩm.
+- Tính thành tiền từng sản phẩm.
+- Tính tổng số lượng và tổng tiền.
+- Đồng bộ số lượng sản phẩm trên biểu tượng giỏ hàng.
+- Hiển thị thông báo khi giỏ hàng trống.
+
+### Cấu trúc dữ liệu
+
+Giỏ hàng sử dụng localStorage với khóa:
+wonderlab_cart_v1
+
+### Trang giỏ hàng
+
+cart.html
+
+### Công nghệ
+
+HTML5, CSS3, JavaScript và localStorage.
