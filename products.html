@@ -1,254 +1,943 @@
 <!DOCTYPE html>
-
 <html lang="vi">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Sản phẩm — WONDERLAB</title>
-<meta content="Danh sách đồ chơi giáo dục của WONDERLAB: bộ lắp ráp STEM, xếp hình, vẽ sáng tạo, board game và đồ chơi nhập vai cho trẻ 4–12 tuổi." name="description"/>
-<link href="assets/img/favicon.png" rel="icon" type="image/png"/>
-<link href="css/style.css" rel="stylesheet"/>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Sản phẩm — WONDERLAB</title>
+  <meta
+    name="description"
+    content="Danh sách đồ chơi giáo dục của WONDERLAB: bộ lắp ráp STEM, xếp hình, vẽ sáng tạo, board game và đồ chơi nhập vai cho trẻ 4–12 tuổi."
+  />
+  <link href="assets/img/favicon.png" rel="icon" type="image/png"/>
+  <link href="css/style.css" rel="stylesheet"/>
+
+  <!-- Giao diện nút yêu thích -->
+  <style>
+    [data-grid] .p-card {
+      position: relative;
+      width: 100%;
+    }
+
+    .favorite-button {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      z-index: 5;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      padding: 0;
+      border: 1px solid #e5e7eb;
+      border-radius: 50%;
+      background: #fff;
+      color: #777;
+      box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
+      cursor: pointer;
+      transition:
+        background 0.2s,
+        color 0.2s,
+        transform 0.2s;
+    }
+
+    .favorite-button:hover,
+    .favorite-button[aria-pressed="true"] {
+      color: var(--red, #c43d45);
+      border-color: #fecdd3;
+      background: #fff1f2;
+    }
+
+    .favorite-button:active {
+      transform: scale(0.94);
+    }
+
+    .favorite-button svg {
+      display: block;
+      width: 23px;
+      height: 23px;
+      fill: none;
+      pointer-events: none;
+    }
+
+    .favorite-button[aria-pressed="true"] svg {
+      fill: currentColor;
+    }
+
+    .favorite-button:focus-visible {
+      outline: 3px solid #2563eb;
+      outline-offset: 3px;
+    }
+
+    .favorite-status {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip-path: inset(50%);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .favorite-button {
+        transition: none;
+      }
+    }
+  </style>
 </head>
+
 <body>
-<a class="skip-link" href="#main">Bỏ qua điều hướng</a>
-<header class="site-head">
-<div class="container site-head__top">
-<a aria-label="WONDERLAB — trang chủ" class="brand" href="index.html">
-<video aria-label="WONDERLAB — Bé Khám Phá" autoplay="" class="brand__logo" loop="" muted="" playsinline="" poster="assets/img/logo-wonderlab.png" role="img">
-<source src="assets/img/video-logo.mp4" type="video/mp4"/>
-<img alt="WONDERLAB — Bé Khám Phá" src="assets/img/logo-wonderlab.png"/>
-</video>
-</a>
-<form action="products.html" class="search" data-search-form="" method="get" role="search">
-<label class="sr-only" for="q">Tìm sản phẩm</label>
-<input autocomplete="off" class="search__input" id="q" name="q" placeholder="Tìm bộ lắp ráp, xếp hình, thí nghiệm…" type="search"/>
-<button aria-label="Tìm sản phẩm" class="search__btn" type="submit">
-<svg aria-hidden="true" class="icon" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24">
-<circle cx="11" cy="11" r="7"></circle>
-<path d="m20 20-3.4-3.4"></path>
-</svg>
-</button>
-</form>
-<button aria-label="Mở giỏ hàng" class="cart-btn" data-cart-open="" type="button">
-<svg aria-hidden="true" class="icon" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24">
-<circle cx="9" cy="20" r="1.4"></circle>
-<circle cx="18" cy="20" r="1.4"></circle>
-<path d="M2.5 3.5h2.2l2.5 11.6a1.8 1.8 0 0 0 1.8 1.4h8.6a1.8 1.8 0 0 0 1.8-1.4L21 7H6"></path>
-</svg>
-<span class="cart-btn__count" data-cart-count="" hidden="">0</span>
-</button>
-</div>
-<div class="site-head__bar" data-nav-bar="">
-<div class="container site-head__nav-row">
-<button aria-controls="site-nav" aria-expanded="false" class="nav-toggle" data-nav-toggle="" type="button">
-<svg aria-hidden="true" class="icon" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="1.8" viewbox="0 0 24 24">
-<path d="M4 6h16M4 12h16M4 18h16"></path>
-</svg>
-<span>Menu</span>
-</button>
-<nav aria-label="Điều hướng chính" class="site-nav" id="site-nav">
-<a class="site-nav__link" href="index.html">Trang chủ</a>
-<a aria-current="page" class="site-nav__link" href="products.html">Sản phẩm</a>
-<a class="site-nav__link" href="about.html">Giới thiệu</a>
-</nav>
-<p class="site-head__note">Đồ chơi cho trẻ 4–12 tuổi</p>
-</div>
-</div>
-</header>
-<main class="page-main" id="main">
-<div class="container">
-<nav aria-label="Breadcrumb" class="breadcrumb">
-<ol>
-<li><a href="index.html">Trang chủ</a></li>
-<li><span aria-current="page">Sản phẩm</span></li>
-</ol>
-</nav>
-<div class="p-catalogue__head">
-<h1 class="p-catalogue__title">Tất cả đồ chơi</h1>
-<p class="p-catalogue__lead">
-            Lọc theo danh mục, độ tuổi, ngân sách và kỹ năng.
-          </p>
-</div>
-<div class="catalogue">
-<button aria-label="Đóng bộ lọc" class="filters-backdrop" data-filters-close="" hidden="" type="button"></button>
-<aside aria-labelledby="filters-title">
-<form class="filters" data-filters="" id="filters">
-<div class="filters__head">
-<h2 class="filters__title" id="filters-title">Bộ lọc</h2>
-<button class="filters__reset" data-filters-reset="" type="reset">
-                  Xóa bộ lọc
-                </button>
-<button aria-label="Đóng bộ lọc" class="icon-btn filters__close" data-filters-close="" type="button">
-<svg aria-hidden="true" class="icon" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="1.8" viewbox="0 0 24 24">
-<path d="M18 6 6 18M6 6l12 12"></path>
-</svg>
-</button>
-</div>
-<fieldset class="f-group">
-<legend class="f-group__legend">Danh mục</legend>
-<label class="f-check"><input name="danh-muc" type="checkbox" value="stem"/><span>Lắp ráp &amp; STEM</span><span class="f-check__n">11</span></label>
-<label class="f-check"><input name="danh-muc" type="checkbox" value="logic"/><span>Xếp hình &amp; logic</span><span class="f-check__n">12</span></label>
-<label class="f-check"><input name="danh-muc" type="checkbox" value="sang-tao"/><span>Vẽ &amp; sáng tạo</span><span class="f-check__n">11</span></label>
-<label class="f-check"><input name="danh-muc" type="checkbox" value="boardgame"/><span>Board game</span><span class="f-check__n">10</span></label>
-<label class="f-check"><input name="danh-muc" type="checkbox" value="nhap-vai"/><span>Nhập vai</span><span class="f-check__n">16</span></label>
-</fieldset>
-<fieldset class="f-group">
-<legend class="f-group__legend">Độ tuổi</legend>
-<label class="f-check"><input name="tuoi" type="checkbox" value="4-6"/><span>4–6 tuổi</span><span class="f-check__n">38</span></label>
-<label class="f-check"><input name="tuoi" type="checkbox" value="6-8"/><span>6–8 tuổi</span><span class="f-check__n">35</span></label>
-<label class="f-check"><input name="tuoi" type="checkbox" value="9-12"/><span>9–12 tuổi</span><span class="f-check__n">13</span></label>
-</fieldset>
-<fieldset class="f-group">
-<legend class="f-group__legend">Khoảng giá</legend>
-<label class="f-check"><input name="gia" type="checkbox" value="duoi-300"/><span>Dưới 300.000đ</span><span class="f-check__n">32</span></label>
-<label class="f-check"><input name="gia" type="checkbox" value="300-500"/><span>300.000đ – 500.000đ</span><span class="f-check__n">21</span></label>
-<label class="f-check"><input name="gia" type="checkbox" value="tren-500"/><span>Trên 500.000đ</span><span class="f-check__n">7</span></label>
-</fieldset>
-<fieldset class="f-group">
-<legend class="f-group__legend">Kỹ năng</legend>
-<label class="f-check"><input name="ky-nang" type="checkbox" value="tu-duy"/><span>Tư duy logic</span><span class="f-check__n">29</span></label>
-<label class="f-check"><input name="ky-nang" type="checkbox" value="sang-tao"/><span>Sáng tạo</span><span class="f-check__n">31</span></label>
-<label class="f-check"><input name="ky-nang" type="checkbox" value="khoa-hoc"/><span>Khoa học</span><span class="f-check__n">12</span></label>
-<label class="f-check"><input name="ky-nang" type="checkbox" value="van-dong-tinh"/><span>Vận động tinh</span><span class="f-check__n">31</span></label>
-<label class="f-check"><input name="ky-nang" type="checkbox" value="choi-nhom"/><span>Chơi nhóm</span><span class="f-check__n">22</span></label>
-</fieldset>
-<button class="c-btn c-btn--primary filters__apply" data-filters-apply="" type="button">
-                Xem sản phẩm
-              </button>
-</form>
-</aside>
-<section aria-labelledby="results-title">
-<h2 class="sr-only" id="results-title">Kết quả</h2>
-<div class="filter-bar">
-<button aria-expanded="false" class="filter-toggle" data-filters-open="" type="button">
-<svg aria-hidden="true" class="icon" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24">
-<path d="M3 5h18l-7 8v6l-4 2v-8z"></path>
-</svg>
+  <a class="skip-link" href="#main">Bỏ qua điều hướng</a>
+
+  <header class="site-head">
+    <div class="container site-head__top">
+      <a
+        aria-label="WONDERLAB — trang chủ"
+        class="brand"
+        href="index.html"
+      >
+        <video
+          aria-label="WONDERLAB — Bé Khám Phá"
+          autoplay
+          class="brand__logo"
+          loop
+          muted
+          playsinline
+          poster="assets/img/logo-wonderlab.png"
+          role="img"
+        >
+          <source src="assets/img/video-logo.mp4" type="video/mp4"/>
+          <img
+            alt="WONDERLAB — Bé Khám Phá"
+            src="assets/img/logo-wonderlab.png"
+          />
+        </video>
+      </a>
+
+      <form
+        action="products.html"
+        class="search"
+        data-search-form
+        method="get"
+        role="search"
+      >
+        <label class="sr-only" for="q">Tìm sản phẩm</label>
+        <input
+          autocomplete="off"
+          class="search__input"
+          id="q"
+          name="q"
+          placeholder="Tìm bộ lắp ráp, xếp hình, thí nghiệm…"
+          type="search"
+        />
+        <button
+          aria-label="Tìm sản phẩm"
+          class="search__btn"
+          type="submit"
+        >
+          <svg
+            aria-hidden="true"
+            class="icon"
+            fill="none"
+            focusable="false"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1.8"
+            viewBox="0 0 24 24"
+          >
+            <circle cx="11" cy="11" r="7"></circle>
+            <path d="m20 20-3.4-3.4"></path>
+          </svg>
+        </button>
+      </form>
+
+      <button
+        aria-label="Mở giỏ hàng"
+        class="cart-btn"
+        data-cart-open
+        type="button"
+      >
+        <svg
+          aria-hidden="true"
+          class="icon"
+          fill="none"
+          focusable="false"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="1.7"
+          viewBox="0 0 24 24"
+        >
+          <circle cx="9" cy="20" r="1.4"></circle>
+          <circle cx="18" cy="20" r="1.4"></circle>
+          <path d="M2.5 3.5h2.2l2.5 11.6a1.8 1.8 0 0 0 1.8 1.4h8.6a1.8 1.8 0 0 0 1.8-1.4L21 7H6"></path>
+        </svg>
+        <span class="cart-btn__count" data-cart-count hidden>0</span>
+      </button>
+    </div>
+
+    <div class="site-head__bar" data-nav-bar>
+      <div class="container site-head__nav-row">
+        <button
+          aria-controls="site-nav"
+          aria-expanded="false"
+          class="nav-toggle"
+          data-nav-toggle
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="icon"
+            fill="none"
+            focusable="false"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1.8"
+            viewBox="0 0 24 24"
+          >
+            <path d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+          <span>Menu</span>
+        </button>
+
+        <nav
+          aria-label="Điều hướng chính"
+          class="site-nav"
+          id="site-nav"
+        >
+          <a class="site-nav__link" href="index.html">Trang chủ</a>
+          <a
+            aria-current="page"
+            class="site-nav__link"
+            href="products.html"
+          >Sản phẩm</a>
+          <a class="site-nav__link" href="about.html">Giới thiệu</a>
+        </nav>
+
+        <p class="site-head__note">Đồ chơi cho trẻ 4–12 tuổi</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-main" id="main">
+    <div class="container">
+      <nav aria-label="Breadcrumb" class="breadcrumb">
+        <ol>
+          <li><a href="index.html">Trang chủ</a></li>
+          <li><span aria-current="page">Sản phẩm</span></li>
+        </ol>
+      </nav>
+
+      <div class="p-catalogue__head">
+        <h1 class="p-catalogue__title">Tất cả đồ chơi</h1>
+        <p class="p-catalogue__lead">
+          Lọc theo danh mục, độ tuổi, ngân sách và kỹ năng.
+        </p>
+      </div>
+
+      <div class="catalogue">
+        <button
+          aria-label="Đóng bộ lọc"
+          class="filters-backdrop"
+          data-filters-close
+          hidden
+          type="button"
+        ></button>
+
+        <aside aria-labelledby="filters-title">
+          <form class="filters" data-filters id="filters">
+            <div class="filters__head">
+              <h2 class="filters__title" id="filters-title">
                 Bộ lọc
-              </button>
-<p aria-live="polite" class="toolbar__count" data-count="">
-                60 sản phẩm
-              </p>
-</div>
-<div class="toolbar">
-<p aria-live="polite" class="toolbar__count" data-count-desktop="">
-                60 sản phẩm
-              </p>
-<div class="toolbar__sort">
-<label for="sort">Sắp xếp</label>
-<select class="select" data-sort="" id="sort">
-<option value="default">Mặc định</option>
-<option value="price-asc">Giá tăng dần</option>
-<option value="price-desc">Giá giảm dần</option>
-<option value="name-asc">Tên A–Z</option>
-</select>
-</div>
-</div>
-<div class="active-filters" data-active="" hidden=""></div>
-<ul class="grid-catalogue" data-grid=""></ul>
-<nav aria-label="Phân trang sản phẩm" class="pagination" data-pagination="" hidden="">
-<div class="pagination__controls">
-<button aria-label="Trang trước" class="pagination__button" data-page-prev="" disabled="" type="button">
-<svg aria-hidden="true" class="icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24">
-<path d="m14 6-6 6 6 6"></path>
-</svg>
-</button>
-<div class="pagination__pages" data-pages=""></div>
-<button aria-label="Trang sau" class="pagination__button" data-page-next="" type="button">
-<svg aria-hidden="true" class="icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24">
-<path d="m10 6 6 6-6 6"></path>
-</svg>
-</button>
-</div>
-<p aria-atomic="true" aria-live="polite" class="pagination__status" data-page-status="" role="status"></p>
-</nav>
-<div class="empty-state" data-empty="" hidden="">
-<p>Không có sản phẩm nào khớp với bộ lọc hiện tại.</p>
-<button class="c-btn c-btn--ghost" data-filters-reset="" type="button">
+              </h2>
+
+              <button
+                class="filters__reset"
+                data-filters-reset
+                type="reset"
+              >
                 Xóa bộ lọc
               </button>
-</div>
-</section>
-</div>
-</div>
-</main>
-<footer class="site-foot">
-<div class="container site-foot__grid">
-<div class="site-foot__about">
-<a aria-label="WONDERLAB — trang chủ" class="brand brand--light" href="index.html">
-<span class="brand__plate">
-<img alt="WONDERLAB — Bé Khám Phá" class="brand__logo" height="321" src="assets/img/logo-wonderlab.png" width="560"/>
-</span>
-</a>
-<p class="brand__tagline">Play • Learn • Grow</p>
-<p>
-            Đồ chơi giáo dục giúp trẻ 4–12 tuổi lắp ráp, thử nghiệm và tự tìm ra
-            cách chơi.
-          </p>
-</div>
-<nav aria-labelledby="foot-links">
-<h2 class="site-foot__title" id="foot-links">Liên kết nhanh</h2>
-<ul class="site-foot__list">
-<li><a href="index.html">Trang chủ</a></li>
-<li><a href="products.html">Sản phẩm</a></li>
-<li><a href="about.html">Giới thiệu</a></li>
-</ul>
-</nav>
-<div>
-<h2 class="site-foot__title">Liên hệ</h2>
-<div class="site-foot__contact">
-<a href="mailto:wonderlab@example.com">wonderlab@example.com</a>
-<a href="tel:+84123456789">0123 456 789</a>
-<span>Thứ 2 – Thứ 7, 8:00 – 17:00</span>
-</div>
-</div>
-</div>
-<div class="container site-foot__rule"></div>
-<div class="container site-foot__bottom">
-<span>© 2026 WONDERLAB. Dự án học tập, không phải cửa hàng thật.</span>
-<span>Giỏ hàng trên trang là bản demo, không có thanh toán.</span>
-</div>
-</footer>
-<div aria-labelledby="cart-title" aria-modal="true" class="cart-drawer" data-cart-drawer="" hidden="" role="dialog">
-<button aria-label="Đóng giỏ hàng" class="cart-drawer__scrim" data-cart-close="" type="button"></button>
-<div class="cart-drawer__panel">
-<div class="cart-drawer__head">
-<h2 class="cart-drawer__title" id="cart-title">Giỏ hàng của bạn</h2>
-<button aria-label="Đóng giỏ hàng" class="icon-btn" data-cart-close="" type="button">
-<svg aria-hidden="true" class="icon" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="1.8" viewbox="0 0 24 24">
-<path d="M18 6 6 18M6 6l12 12"></path>
-</svg>
-</button>
-</div>
-<div class="cart-drawer__items" data-cart-items=""></div>
-<div class="cart-drawer__foot">
-<div class="cart-drawer__total">
-<span>Tạm tính</span><strong data-cart-total="">0đ</strong>
-</div>
-<a class="c-btn c-btn--primary c-btn--wide"
-   href="cart.html">
-    Xem giỏ hàng
-</a>
-<a class="c-btn c-btn--ghost c-btn--wide" href="products.html">Tiếp tục xem sản phẩm</a>
-<a class="c-btn c-btn--primary c-btn--wide" href="cart.html">Xem giỏ hàng</a>
-<p class="cart-drawer__note">
-            Đây là giỏ hàng demo của một dự án học tập. Chưa có bước thanh toán
-            hoặc đặt hàng thật.
-          </p>
-</div>
-</div>
-</div>
-<div aria-live="polite" class="toast" data-toast="" hidden="" role="status">
-<span data-toast-text="">Đã thêm vào giỏ hàng demo.</span>
-<button aria-label="Đóng thông báo" class="toast__close" data-toast-close="" type="button">
-<svg aria-hidden="true" class="icon" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24">
-<path d="M18 6 6 18M6 6l12 12"></path>
-</svg>
-</button>
-</div>
-<script src="catalogue-meta.js"></script>
-<script src="product-data.js"></script>
-<script src="js/main.js"></script>
-<script src="products.js"></script>
+
+              <button
+                aria-label="Đóng bộ lọc"
+                class="icon-btn filters__close"
+                data-filters-close
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="icon"
+                  fill="none"
+                  focusable="false"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.8"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M18 6 6 18M6 6l12 12"></path>
+                </svg>
+              </button>
+            </div>
+
+            <fieldset class="f-group">
+              <legend class="f-group__legend">Danh mục</legend>
+
+              <label class="f-check">
+                <input name="danh-muc" type="checkbox" value="stem"/>
+                <span>Lắp ráp &amp; STEM</span>
+                <span class="f-check__n">11</span>
+              </label>
+
+              <label class="f-check">
+                <input name="danh-muc" type="checkbox" value="logic"/>
+                <span>Xếp hình &amp; logic</span>
+                <span class="f-check__n">12</span>
+              </label>
+
+              <label class="f-check">
+                <input name="danh-muc" type="checkbox" value="sang-tao"/>
+                <span>Vẽ &amp; sáng tạo</span>
+                <span class="f-check__n">11</span>
+              </label>
+
+              <label class="f-check">
+                <input name="danh-muc" type="checkbox" value="boardgame"/>
+                <span>Board game</span>
+                <span class="f-check__n">10</span>
+              </label>
+
+              <label class="f-check">
+                <input name="danh-muc" type="checkbox" value="nhap-vai"/>
+                <span>Nhập vai</span>
+                <span class="f-check__n">16</span>
+              </label>
+            </fieldset>
+
+            <fieldset class="f-group">
+              <legend class="f-group__legend">Độ tuổi</legend>
+
+              <label class="f-check">
+                <input name="tuoi" type="checkbox" value="4-6"/>
+                <span>4–6 tuổi</span>
+                <span class="f-check__n">38</span>
+              </label>
+
+              <label class="f-check">
+                <input name="tuoi" type="checkbox" value="6-8"/>
+                <span>6–8 tuổi</span>
+                <span class="f-check__n">35</span>
+              </label>
+
+              <label class="f-check">
+                <input name="tuoi" type="checkbox" value="9-12"/>
+                <span>9–12 tuổi</span>
+                <span class="f-check__n">13</span>
+              </label>
+            </fieldset>
+
+            <fieldset class="f-group">
+              <legend class="f-group__legend">Khoảng giá</legend>
+
+              <label class="f-check">
+                <input name="gia" type="checkbox" value="duoi-300"/>
+                <span>Dưới 300.000đ</span>
+                <span class="f-check__n">32</span>
+              </label>
+
+              <label class="f-check">
+                <input name="gia" type="checkbox" value="300-500"/>
+                <span>300.000đ – 500.000đ</span>
+                <span class="f-check__n">21</span>
+              </label>
+
+              <label class="f-check">
+                <input name="gia" type="checkbox" value="tren-500"/>
+                <span>Trên 500.000đ</span>
+                <span class="f-check__n">7</span>
+              </label>
+            </fieldset>
+
+            <fieldset class="f-group">
+              <legend class="f-group__legend">Kỹ năng</legend>
+
+              <label class="f-check">
+                <input name="ky-nang" type="checkbox" value="tu-duy"/>
+                <span>Tư duy logic</span>
+                <span class="f-check__n">29</span>
+              </label>
+
+              <label class="f-check">
+                <input name="ky-nang" type="checkbox" value="sang-tao"/>
+                <span>Sáng tạo</span>
+                <span class="f-check__n">31</span>
+              </label>
+
+              <label class="f-check">
+                <input name="ky-nang" type="checkbox" value="khoa-hoc"/>
+                <span>Khoa học</span>
+                <span class="f-check__n">12</span>
+              </label>
+
+              <label class="f-check">
+                <input name="ky-nang" type="checkbox" value="van-dong-tinh"/>
+                <span>Vận động tinh</span>
+                <span class="f-check__n">31</span>
+              </label>
+
+              <label class="f-check">
+                <input name="ky-nang" type="checkbox" value="choi-nhom"/>
+                <span>Chơi nhóm</span>
+                <span class="f-check__n">22</span>
+              </label>
+            </fieldset>
+
+            <button
+              class="c-btn c-btn--primary filters__apply"
+              data-filters-apply
+              type="button"
+            >
+              Xem sản phẩm
+            </button>
+          </form>
+        </aside>
+
+        <section aria-labelledby="results-title">
+          <h2 class="sr-only" id="results-title">Kết quả</h2>
+
+          <div class="filter-bar">
+            <button
+              aria-expanded="false"
+              class="filter-toggle"
+              data-filters-open
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                class="icon"
+                fill="none"
+                focusable="false"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.8"
+                viewBox="0 0 24 24"
+              >
+                <path d="M3 5h18l-7 8v6l-4 2v-8z"></path>
+              </svg>
+              Bộ lọc
+            </button>
+
+            <p aria-live="polite" class="toolbar__count" data-count>
+              60 sản phẩm
+            </p>
+          </div>
+
+          <div class="toolbar">
+            <p
+              aria-live="polite"
+              class="toolbar__count"
+              data-count-desktop
+            >
+              60 sản phẩm
+            </p>
+
+            <div class="toolbar__sort">
+              <label for="sort">Sắp xếp</label>
+              <select class="select" data-sort id="sort">
+                <option value="default">Mặc định</option>
+                <option value="price-asc">Giá tăng dần</option>
+                <option value="price-desc">Giá giảm dần</option>
+                <option value="name-asc">Tên A–Z</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="active-filters" data-active hidden></div>
+
+          <!-- products.js tạo các thẻ sản phẩm trong danh sách này -->
+          <ul class="grid-catalogue" data-grid></ul>
+
+          <nav
+            aria-label="Phân trang sản phẩm"
+            class="pagination"
+            data-pagination
+            hidden
+          >
+            <div class="pagination__controls">
+              <button
+                aria-label="Trang trước"
+                class="pagination__button"
+                data-page-prev
+                disabled
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="icon"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.8"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="m14 6-6 6 6 6"></path>
+                </svg>
+              </button>
+
+              <div class="pagination__pages" data-pages></div>
+
+              <button
+                aria-label="Trang sau"
+                class="pagination__button"
+                data-page-next
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="icon"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.8"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="m10 6 6 6-6 6"></path>
+                </svg>
+              </button>
+            </div>
+
+            <p
+              aria-atomic="true"
+              aria-live="polite"
+              class="pagination__status"
+              data-page-status
+              role="status"
+            ></p>
+          </nav>
+
+          <div class="empty-state" data-empty hidden>
+            <p>Không có sản phẩm nào khớp với bộ lọc hiện tại.</p>
+            <button
+              class="c-btn c-btn--ghost"
+              data-filters-reset
+              type="button"
+            >
+              Xóa bộ lọc
+            </button>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-foot">
+    <div class="container site-foot__grid">
+      <div class="site-foot__about">
+        <a
+          aria-label="WONDERLAB — trang chủ"
+          class="brand brand--light"
+          href="index.html"
+        >
+          <span class="brand__plate">
+            <img
+              alt="WONDERLAB — Bé Khám Phá"
+              class="brand__logo"
+              height="321"
+              src="assets/img/logo-wonderlab.png"
+              width="560"
+            />
+          </span>
+        </a>
+
+        <p class="brand__tagline">Play • Learn • Grow</p>
+        <p>
+          Đồ chơi giáo dục giúp trẻ 4–12 tuổi lắp ráp, thử nghiệm
+          và tự tìm ra cách chơi.
+        </p>
+      </div>
+
+      <nav aria-labelledby="foot-links">
+        <h2 class="site-foot__title" id="foot-links">
+          Liên kết nhanh
+        </h2>
+        <ul class="site-foot__list">
+          <li><a href="index.html">Trang chủ</a></li>
+          <li><a href="products.html">Sản phẩm</a></li>
+          <li><a href="about.html">Giới thiệu</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <h2 class="site-foot__title">Liên hệ</h2>
+        <div class="site-foot__contact">
+          <a href="mailto:wonderlab@example.com">
+            wonderlab@example.com
+          </a>
+          <a href="tel:+84123456789">0123 456 789</a>
+          <span>Thứ 2 – Thứ 7, 8:00 – 17:00</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="container site-foot__rule"></div>
+
+    <div class="container site-foot__bottom">
+      <span>
+        © 2026 WONDERLAB. Dự án học tập, không phải cửa hàng thật.
+      </span>
+      <span>
+        Giỏ hàng trên trang là bản demo, không có thanh toán.
+      </span>
+    </div>
+  </footer>
+
+  <!-- Giỏ hàng -->
+  <div
+    aria-labelledby="cart-title"
+    aria-modal="true"
+    class="cart-drawer"
+    data-cart-drawer
+    hidden
+    role="dialog"
+  >
+    <button
+      aria-label="Đóng giỏ hàng"
+      class="cart-drawer__scrim"
+      data-cart-close
+      type="button"
+    ></button>
+
+    <div class="cart-drawer__panel">
+      <div class="cart-drawer__head">
+        <h2 class="cart-drawer__title" id="cart-title">
+          Giỏ hàng của bạn
+        </h2>
+
+        <button
+          aria-label="Đóng giỏ hàng"
+          class="icon-btn"
+          data-cart-close
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="icon"
+            fill="none"
+            focusable="false"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1.8"
+            viewBox="0 0 24 24"
+          >
+            <path d="M18 6 6 18M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+
+      <div class="cart-drawer__items" data-cart-items></div>
+
+      <div class="cart-drawer__foot">
+        <div class="cart-drawer__total">
+          <span>Tạm tính</span>
+          <strong data-cart-total>0đ</strong>
+        </div>
+
+        <a
+          class="c-btn c-btn--primary c-btn--wide"
+          href="cart.html"
+        >
+          Xem giỏ hàng
+        </a>
+
+        <a
+          class="c-btn c-btn--ghost c-btn--wide"
+          href="products.html"
+        >
+          Tiếp tục xem sản phẩm
+        </a>
+
+        <p class="cart-drawer__note">
+          Đây là giỏ hàng demo của một dự án học tập.
+          Chưa có bước thanh toán hoặc đặt hàng thật.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Thông báo giỏ hàng -->
+  <div
+    aria-live="polite"
+    class="toast"
+    data-toast
+    hidden
+    role="status"
+  >
+    <span data-toast-text>Đã thêm vào giỏ hàng demo.</span>
+
+    <button
+      aria-label="Đóng thông báo"
+      class="toast__close"
+      data-toast-close
+      type="button"
+    >
+      <svg
+        aria-hidden="true"
+        class="icon"
+        fill="none"
+        focusable="false"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+      >
+        <path d="M18 6 6 18M6 6l12 12"></path>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Thông báo yêu thích dành cho trình đọc màn hình -->
+  <p
+    id="favorite-status"
+    class="favorite-status"
+    role="status"
+    aria-live="polite"
+    aria-atomic="true"
+  ></p>
+
+  <!-- Giữ nguyên thứ tự các file JavaScript -->
+  <script src="catalogue-meta.js"></script>
+  <script src="product-data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="products.js"></script>
+
+  <!-- Chức năng thêm / bỏ sản phẩm yêu thích -->
+  <script>
+    (function () {
+      "use strict";
+
+      const grid = document.querySelector("[data-grid]");
+      const status = document.getElementById("favorite-status");
+      const storageKey = "wonderlab.favorites.v1";
+
+      if (!grid) return;
+
+      let favorites = new Set();
+      let storageAvailable = true;
+
+      function readFavorites() {
+        let raw;
+
+        try {
+          raw = localStorage.getItem(storageKey);
+        } catch {
+          return null;
+        }
+
+        try {
+          const saved = JSON.parse(raw || "[]");
+
+          return new Set(
+            Array.isArray(saved)
+              ? saved.filter(value => typeof value === "string")
+              : []
+          );
+        } catch {
+          return new Set();
+        }
+      }
+
+      favorites = readFavorites() || favorites;
+
+      function updateButton(button) {
+        const selected = favorites.has(
+          button.dataset.favoriteId
+        );
+
+        const name = button.dataset.favoriteName;
+
+        const label = selected
+          ? "Bỏ yêu thích: " + name
+          : "Thêm vào yêu thích: " + name;
+
+        button.setAttribute(
+          "aria-pressed",
+          String(selected)
+        );
+
+        button.setAttribute("aria-label", label);
+        button.title = label;
+      }
+
+      function updateAllButtons() {
+        grid
+          .querySelectorAll("[data-favorite-id]")
+          .forEach(updateButton);
+      }
+
+      function addFavoriteButtons() {
+        const cards = grid.querySelectorAll(
+          ":scope > [data-product]"
+        );
+
+        cards.forEach(card => {
+          const article = card.querySelector(".p-card");
+
+          const link = card.querySelector(
+            ".p-card__title a[href]"
+          );
+
+          if (
+            !article ||
+            !link ||
+            article.querySelector("[data-favorite-id]")
+          ) {
+            return;
+          }
+
+          // Dùng đường dẫn chi tiết làm mã lưu yêu thích.
+          // Cách này tương thích với bản HTML trước đó.
+          const url = new URL(
+            link.getAttribute("href"),
+            document.baseURI
+          );
+
+          url.searchParams.sort();
+
+          const productId = url.pathname + url.search;
+
+          const productName =
+            card.dataset.name ||
+            link.textContent.trim() ||
+            "sản phẩm";
+
+          const button = document.createElement("button");
+
+          button.type = "button";
+          button.className = "favorite-button";
+          button.dataset.favoriteId = productId;
+          button.dataset.favoriteName = productName;
+
+          button.innerHTML = `
+            <svg
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+              focusable="false"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="
+                M20.84 4.61
+                a5.5 5.5 0 0 0-7.78 0
+                L12 5.67
+                l-1.06-1.06
+                a5.5 5.5 0 0 0-7.78 7.78
+                L12 21.23
+                l8.84-8.84
+                a5.5 5.5 0 0 0 0-7.78
+                z
+              "></path>
+            </svg>
+          `;
+
+          updateButton(button);
+
+          button.addEventListener("click", event => {
+            event.preventDefault();
+            event.stopPropagation();
+
+            // Đọc lựa chọn mới nhất khi có nhiều tab.
+            // Nếu lưu bị chặn, giữ trạng thái trong bộ nhớ.
+            if (storageAvailable) {
+              favorites = readFavorites() || favorites;
+            }
+
+            const wasSelected = favorites.has(productId);
+
+            if (wasSelected) {
+              favorites.delete(productId);
+            } else {
+              favorites.add(productId);
+            }
+
+            try {
+              localStorage.setItem(
+                storageKey,
+                JSON.stringify([...favorites])
+              );
+              storageAvailable = true;
+            } catch {
+              storageAvailable = false;
+            }
+
+            updateAllButtons();
+
+            status.textContent =
+              (wasSelected
+                ? "Đã bỏ yêu thích: "
+                : "Đã thêm vào yêu thích: ") +
+              productName +
+              (storageAvailable
+                ? "."
+                : ". Trình duyệt không cho phép lưu; lựa chọn chỉ được giữ trong lần mở trang này.");
+          });
+
+          // Đặt ngoài liên kết để bấm trái tim
+          // không mở trang chi tiết sản phẩm.
+          article.appendChild(button);
+        });
+      }
+
+      // Thêm trái tim cho các sản phẩm đã hiển thị.
+      addFavoriteButtons();
+
+      // Thêm trái tim nếu danh sách sản phẩm được tạo lại.
+      const observer = new MutationObserver(() => {
+        observer.disconnect();
+
+        addFavoriteButtons();
+
+        observer.observe(grid, {
+          childList: true,
+          subtree: true
+        });
+      });
+
+      observer.observe(grid, {
+        childList: true,
+        subtree: true
+      });
+
+      // Đồng bộ lựa chọn giữa các tab cùng website.
+      window.addEventListener("storage", event => {
+        if (
+          event.key !== storageKey &&
+          event.key !== null
+        ) {
+          return;
+        }
+
+        const saved = readFavorites();
+
+        if (saved !== null) {
+          favorites = saved;
+          storageAvailable = true;
+          updateAllButtons();
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
