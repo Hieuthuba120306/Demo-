@@ -44,6 +44,12 @@
   var galleryVideoPill = document.querySelector("[data-play-main-video]");
   var thumbs = document.querySelector("[data-thumbs]");
 
+  function loadVideo(player) {
+    if (player && !player.getAttribute("src")) {
+      player.src = player.getAttribute("data-src");
+    }
+  }
+
   if (mainImage) {
     mainImage.src = product.images[0];
     mainImage.alt = product.name;
@@ -54,10 +60,13 @@
   }
 
   if (product.video && galleryVideo) {
-    galleryVideo.src = product.video;
+    galleryVideo.setAttribute("data-src", product.video);
     galleryVideo.poster = product.images[0] || "";
-    galleryVideo.load();
-    if (galleryVideoPill) galleryVideoPill.hidden = false;
+    galleryVideo.setAttribute("aria-label", "Video sản phẩm: " + product.name);
+    if (galleryVideoPill) {
+      galleryVideoPill.hidden = false;
+      galleryVideoPill.setAttribute("aria-label", "Xem video " + product.name);
+    }
   } else {
     if (galleryVideoPill) galleryVideoPill.hidden = true;
   }
@@ -67,7 +76,10 @@
     mainImage.hidden = true;
     galleryVideoBox.hidden = false;
     if (galleryVideoPill) galleryVideoPill.hidden = true;
-    if (galleryVideo) galleryVideo.play().catch(function () {});
+    if (galleryVideo) {
+      loadVideo(galleryVideo);
+      galleryVideo.play().catch(function () {});
+    }
 
     if (thumbs) {
       Array.prototype.forEach.call(thumbs.querySelectorAll(".gallery__thumb"), function (thumb) {
@@ -249,6 +261,7 @@
   var tabs = Array.prototype.slice.call(document.querySelectorAll('[role="tab"]'));
 
   function selectTab(tab, focus) {
+    if (tab.id === "tab-video") loadVideo(tabVideoPlayer);
     tabs.forEach(function (item) {
       var selected = item === tab;
       item.setAttribute("aria-selected", selected ? "true" : "false");
@@ -301,10 +314,19 @@
       if (overviewThumb) overviewThumb.src = product.images[0] || "";
     }
     if (tabVideoPlayer) {
-      tabVideoPlayer.src = product.video;
+      tabVideoPlayer.setAttribute("data-src", product.video);
       tabVideoPlayer.poster = product.images[0] || "";
-      tabVideoPlayer.load();
+      tabVideoPlayer.setAttribute("aria-label", "Video sản phẩm: " + product.name);
       setAll("[data-tab-video-title]", "Video thực tế: " + product.name);
+    }
+
+    if (galleryVideo && tabVideoPlayer) {
+      galleryVideo.addEventListener("play", function () {
+        tabVideoPlayer.pause();
+      });
+      tabVideoPlayer.addEventListener("play", function () {
+        galleryVideo.pause();
+      });
     }
 
     Array.prototype.forEach.call(document.querySelectorAll("[data-switch-to-video-tab]"), function (el) {

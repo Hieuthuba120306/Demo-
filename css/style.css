@@ -3621,6 +3621,11 @@ main {
   position: relative;
 }
 
+.gallery__main:has(.gallery__video-box:not([hidden])) {
+  aspect-ratio: 16 / 9;
+  border: 0;
+}
+
 .gallery__video-box {
   width: 100%;
   height: 100%;
@@ -3839,6 +3844,9 @@ main {
 }
 
 .overview-video-card__thumb {
+  width: 100%;
+  padding: 0;
+  border: 0;
   position: relative;
   aspect-ratio: 16 / 10;
   border-radius: var(--r-plate);
@@ -3885,33 +3893,9 @@ main {
   border-radius: 4px;
 }
 
-/* Card Video Badge in Catalog & Homepage */
+/* Product card media */
 .p-card__media {
   position: relative;
-}
-
-.p-card__video-badge {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  padding: 3px 9px;
-  background: rgba(36, 87, 167, 0.92);
-  color: #fff;
-  font-size: 11px;
-  font-weight: 600;
-  border-radius: 999px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(4px);
-  z-index: 2;
-  transition: all var(--dur) var(--ease);
-}
-
-.p-card:hover .p-card__video-badge {
-  background: var(--c-brand);
-  transform: scale(1.05);
 }
 
 @media (max-width: 768px) {

@@ -68,8 +68,7 @@
           <div class="gallery__main">
             <img id="gallery-main" src="assets/img/products/product-robot-stem.jpg" alt="Bộ lắp ráp robot STEM màu xanh và trắng có tay gắp và bốn bánh xe" width="1024" height="1024">
             <div class="gallery__video-box" id="gallery-video-box" hidden>
-              <video id="gallery-video" playsinline controls preload="metadata" poster="assets/img/products/product-robot-stem.jpg">
-                <source src="assets/videos/Bo-lap-rap-robot-stem.mp4" type="video/mp4">
+              <video id="gallery-video" data-src="assets/videos/trang-1/robot-stem.mp4" playsinline controls preload="none" aria-label="Video sản phẩm: Bộ lắp ráp Robot STEM" poster="assets/img/products/product-robot-stem.jpg">
                 Trình duyệt của bạn không hỗ trợ thẻ video.
               </video>
             </div>
@@ -78,7 +77,7 @@
               <span>Video thực tế</span>
             </button>
           </div>
-          <div class="gallery__thumbs" data-thumbs role="group" aria-label="Chọn ảnh sản phẩm">
+          <div class="gallery__thumbs" data-thumbs role="group" aria-label="Chọn ảnh hoặc video sản phẩm">
             <button class="gallery__thumb" type="button" aria-pressed="true" data-type="image" data-index="0" aria-label="Xem ảnh 1: toàn bộ mô hình robot">
               <img src="assets/img/products/product-robot-stem.jpg" alt="" width="160" height="160">
             </button>
@@ -110,7 +109,7 @@
             <a href="#panel-danhgia" class="rating-badge__count" data-jump-reviews>(<span data-review-count>28</span> đánh giá)</a>
             <button type="button" class="video-quick-link" data-jump-video aria-label="Xem video mô hình thực tế">
               <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-              <span>Xem video (0:10)</span>
+              <span>Xem video</span>
             </button>
           </div>
           <p class="buy__meta">
@@ -205,19 +204,19 @@
                   Trải nghiệm trực quan
                 </span>
                 <h3 class="overview-video-card__heading" data-overview-video-title>Xem video thực tế Bộ lắp ráp Robot STEM</h3>
-                <p class="overview-video-card__text">Khám phá chi tiết chuyển động cơ học và cách bé tương tác thực tế với sản phẩm qua clip ngắn sắc nét 10 giây.</p>
+                <p class="overview-video-card__text">Khám phá cách chơi và các chi tiết của sản phẩm qua video thực tế.</p>
                 <button type="button" class="c-btn c-btn--outline overview-video-card__btn" data-switch-to-video-tab>
                   <svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-                  Xem video toàn màn hình
+                  Xem video sản phẩm
                 </button>
               </div>
-              <div class="overview-video-card__thumb" data-switch-to-video-tab tabindex="0" role="button" aria-label="Xem video sản phẩm">
+              <button type="button" class="overview-video-card__thumb" data-switch-to-video-tab aria-label="Xem video sản phẩm">
                 <img src="assets/img/products/product-robot-stem.jpg" alt="" data-overview-video-thumb width="280" height="180">
-                <div class="overview-video-card__play">
+                <span class="overview-video-card__play">
                   <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-                </div>
-                <span class="overview-video-card__duration">0:10</span>
-              </div>
+                </span>
+                <span class="overview-video-card__duration">Video</span>
+              </button>
             </div>
           </div>
 
@@ -232,8 +231,7 @@
                 <p class="video-panel-desc">Góc quay thực tế giúp phụ huynh và các bé quan sát rõ ràng kích thước, khớp nối và cách món đồ chơi vận hành.</p>
               </div>
               <div class="video-player-frame">
-                <video id="tab-video-player" class="video-player-element" controls playsinline preload="metadata" poster="assets/img/products/product-robot-stem.jpg">
-                  <source src="assets/videos/Bo-lap-rap-robot-stem.mp4" type="video/mp4">
+                <video id="tab-video-player" data-src="assets/videos/trang-1/robot-stem.mp4" class="video-player-element" controls playsinline preload="none" aria-label="Video sản phẩm: Bộ lắp ráp Robot STEM" poster="assets/img/products/product-robot-stem.jpg">
                   Trình duyệt của bạn không hỗ trợ thẻ video.
                 </video>
               </div>

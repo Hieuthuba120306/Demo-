@@ -104,13 +104,6 @@ function renderProducts(list) {
       "Thêm " + product.name + " vào giỏ hàng"
     );
 
-    if (product.video) {
-      var badge = document.createElement("span");
-      badge.className = "p-card__video-badge";
-      badge.textContent = "▶ Video";
-      card.querySelector(".p-card__media").prepend(badge);
-    }
-
     grid.appendChild(card);
   });
 

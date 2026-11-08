@@ -69,6 +69,16 @@ hiển thị đủ 12 sản phẩm. Trạng thái lọc được ghi vào URL:
   phần credit nằm trong `alt` của ảnh.
 - Thông tin liên hệ trong footer/about là **thông tin mẫu** của bài tập, không phải địa chỉ thật.
 
+## Video sản phẩm
+
+- 60 video nằm trong `assets/videos/trang-1/` đến `trang-5/`, giữ nhóm thư mục từ nguồn.
+- Tên file dùng mã sản phẩm (`<slug>.mp4`); trường `video` trong `product-data.js` và
+  `js/product-data.js` ghép video với đúng sản phẩm, kể cả khi đổi thứ tự danh sách.
+- Video Domino được chuyển từ MOV/HEVC sang MP4/H.264; các MP4 khác giữ nguyên nội dung.
+- Trang danh sách dùng `catalogue-meta.js`, `product-data.js` và `products.js` ở thư mục gốc.
+  Trang chi tiết phát video trong thư viện ảnh hoặc tab Video thực tế.
+- Video sản phẩm chỉ tải khi người xem mở video; có điều khiển phát, âm lượng và toàn màn hình.
+
 ## Bước 5: Xây dựng giỏ hàng
 
 Website đã bổ sung trang giỏ hàng với các chức năng:

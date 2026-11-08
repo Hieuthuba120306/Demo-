@@ -8,6 +8,7 @@ window.WONDERLAB_PRODUCTS = {
     "price": 429000,
     "category": "Lắp ráp & STEM",
     "summary": "Ghép đường ray, thay độ dốc và quan sát đường đi của viên bi.",
+    "video": "assets/videos/trang-2/marble-run.mp4",
     "images": [
       "assets/img/products/product-marble-run.jpg"
     ],
@@ -111,6 +112,7 @@ window.WONDERLAB_PRODUCTS = {
     "price": 549000,
     "category": "Lắp ráp & STEM",
     "summary": "Lắp xe và khám phá cách ánh sáng tạo năng lượng chuyển động.",
+    "video": "assets/videos/trang-2/solar-rover.mp4",
     "images": [
       "assets/img/products/product-solar-rover.jpg"
     ],
@@ -206,6 +208,7 @@ window.WONDERLAB_PRODUCTS = {
     "price": 179000,
     "category": "Xếp hình & logic",
     "summary": "Xoay 7 mảnh hình học để ghép động vật và hình sáng tạo.",
+    "video": "assets/videos/trang-2/tangram.mp4",
     "images": [
       "assets/img/products/product-tangram.jpg"
     ],
@@ -301,6 +304,7 @@ window.WONDERLAB_PRODUCTS = {
     "price": 129000,
     "category": "Vẽ & sáng tạo",
     "summary": "Gấp giấy thành hạc, cáo và thuyền theo từng bước.",
+    "video": "assets/videos/trang-2/origami-set.mp4",
     "images": [
       "assets/img/products/product-origami-set.jpg"
     ],
@@ -396,6 +400,7 @@ window.WONDERLAB_PRODUCTS = {
     "price": 219000,
     "category": "Vẽ & sáng tạo",
     "summary": "Phối màu, xâu hạt và tạo vòng theo họa tiết riêng.",
+    "video": "assets/videos/trang-2/bead-jewelry.mp4",
     "images": [
       "assets/img/products/product-bead-jewelry.jpg"
     ],
@@ -491,6 +496,7 @@ window.WONDERLAB_PRODUCTS = {
     "price": 189000,
     "category": "Vẽ & sáng tạo",
     "summary": "Đồ khuôn, tô màu và kể chuyện bằng tranh thiên nhiên.",
+    "video": "assets/videos/trang-2/stencil-art.mp4",
     "images": [
       "assets/img/products/product-stencil-art.jpg"
     ],
@@ -586,6 +592,7 @@ window.WONDERLAB_PRODUCTS = {
     "price": 329000,
     "category": "Vẽ & sáng tạo",
     "summary": "Luồn len qua khung để dệt miếng trang trí nhiều màu.",
+    "video": "assets/videos/trang-2/weaving-loom.mp4",
     "images": [
       "assets/img/products/product-weaving-loom.jpg"
     ],
@@ -681,6 +688,7 @@ window.WONDERLAB_PRODUCTS = {
     "price": 159000,
     "category": "Board game",
     "summary": "Ghi nhớ vị trí và lật hai thẻ để tìm cặp giống nhau.",
+    "video": "assets/videos/trang-2/animal-memory.mp4",
     "images": [
       "assets/img/products/product-animal-memory.jpg"
     ],
@@ -776,6 +784,7 @@ window.WONDERLAB_PRODUCTS = {
     "price": 199000,
     "category": "Board game",
     "summary": "Nối hình thú giống nhau thành đường domino dài.",
+    "video": "assets/videos/trang-2/picture-domino.mp4",
     "images": [
       "assets/img/products/product-picture-domino.jpg"
     ],
@@ -871,6 +880,7 @@ window.WONDERLAB_PRODUCTS = {
     "price": 249000,
     "category": "Board game",
     "summary": "Gieo xúc xắc, đếm bước và đưa quân về đích.",
+    "video": "assets/videos/trang-2/ludo-game.mp4",
     "images": [
       "assets/img/products/product-ludo-game.jpg"
     ],
@@ -966,6 +976,7 @@ window.WONDERLAB_PRODUCTS = {
     "price": 289000,
     "category": "Board game",
     "summary": "Rút thanh gỗ rồi xếp lên đỉnh mà vẫn giữ tháp đứng.",
+    "video": "assets/videos/trang-2/balance-tower.mp4",
     "images": [
       "assets/img/products/product-balance-tower.jpg"
     ],
@@ -1061,6 +1072,7 @@ window.WONDERLAB_PRODUCTS = {
     "price": 359000,
     "category": "Board game",
     "summary": "Mua bán giả lập, tính tổng và quản lý ngân sách khi chơi.",
+    "video": "assets/videos/trang-3/math-market.mp4",
     "images": [
       "assets/img/products/product-math-market.jpg"
     ],
@@ -1156,6 +1168,7 @@ window.WONDERLAB_PRODUCTS = {
     "price": 269000,
     "category": "Nhập vai",
     "summary": "Đóng vai bác sĩ, hỏi thăm và chăm sóc búp bê.",
+    "video": "assets/videos/trang-3/doctor-kit.mp4",
     "images": [
       "assets/img/products/product-doctor-kit.jpg"
     ],
@@ -1251,6 +1264,7 @@ window.WONDERLAB_PRODUCTS = {
     "price": 599000,
     "category": "Nhập vai",
     "summary": "Vặn bu lông, gõ chốt và đóng vai người thợ sửa chữa.",
+    "video": "assets/videos/trang-3/tool-workbench.mp4",
     "images": [
       "assets/img/products/product-tool-workbench.jpg"
     ],
@@ -1346,6 +1360,7 @@ window.WONDERLAB_PRODUCTS = {
     "price": 649000,
     "category": "Nhập vai",
     "summary": "Đóng vai người bán, chọn rau củ và thanh toán giả lập.",
+    "video": "assets/videos/trang-3/grocery-store.mp4",
     "images": [
       "assets/img/products/product-grocery-store.jpg"
     ],
@@ -1441,6 +1456,7 @@ window.WONDERLAB_PRODUCTS = {
     "price": 279000,
     "category": "Nhập vai",
     "summary": "Bày bàn trà, mời khách và kể chuyện cùng bạn.",
+    "video": "assets/videos/trang-3/tea-party.mp4",
     "images": [
       "assets/img/products/product-tea-party.jpg"
     ],
@@ -1536,6 +1552,7 @@ window.WONDERLAB_PRODUCTS = {
     "price": 389000,
     "category": "Nhập vai",
     "summary": "Chải lông, khám giả và chăm sóc bạn thú nhồi bông.",
+    "video": "assets/videos/trang-3/vet-clinic.mp4",
     "images": [
       "assets/img/products/product-vet-clinic.jpg"
     ],
@@ -1632,6 +1649,7 @@ window.WONDERLAB_PRODUCTS = {
     "category": "Lắp ráp & STEM",
     "brand": "National Geographic",
     "summary": "Tạo hình, tô màu núi lửa và khám phá hiện tượng phun trào, phát triển kỹ năng sáng tạo và khoa học.",
+    "video": "assets/videos/trang-2/volcano-kit.mp4",
     "images": [
       "assets/img/products/nui-lua-phun-trao-1.webp",
       "assets/img/products/nui-lua-phun-trao-2.webp",
@@ -1843,7 +1861,7 @@ window.WONDERLAB_PRODUCTS = {
         "verified": true
       }
     ],
-    "video": "assets/videos/Bo-lap-rap-robot-stem.mp4"
+    "video": "assets/videos/trang-1/robot-stem.mp4"
   },
   "wooden-blocks": {
     "name": "Bộ xếp hình gỗ đa dạng",
@@ -1934,7 +1952,7 @@ window.WONDERLAB_PRODUCTS = {
         "verified": true
       }
     ],
-    "video": "assets/videos/Bo-xep-hinh-go-da-dang.mp4"
+    "video": "assets/videos/trang-1/wooden-blocks.mp4"
   },
   "letter-logic": {
     "name": "Bộ chữ từ logic",
@@ -1942,6 +1960,7 @@ window.WONDERLAB_PRODUCTS = {
     "price": 349000,
     "category": "Xếp hình & logic",
     "summary": "Ghép chữ cái thành từ theo thẻ gợi ý.",
+    "video": "assets/videos/trang-1/letter-logic.mp4",
     "images": [
       "assets/img/products/product-letter-logic.jpg"
     ],
@@ -2115,7 +2134,7 @@ window.WONDERLAB_PRODUCTS = {
         "verified": true
       }
     ],
-    "video": "assets/videos/Bo-ve-nghe-thuat-sang-tao.mp4"
+    "video": "assets/videos/trang-1/art-set.mp4"
   },
   "board-game": {
     "name": "Board Game Vương quốc động vật",
@@ -2123,6 +2142,7 @@ window.WONDERLAB_PRODUCTS = {
     "price": 459000,
     "category": "Board game",
     "summary": "Thu thập thẻ động vật và tính điểm theo lượt.",
+    "video": "assets/videos/trang-1/board-game.mp4",
     "images": [
       "assets/img/products/product-board-game.jpg"
     ],
@@ -2213,6 +2233,7 @@ window.WONDERLAB_PRODUCTS = {
     "price": 379000,
     "category": "Nhập vai",
     "summary": "Nấu ăn giả với bếp, nồi và đồ ăn bằng gỗ.",
+    "video": "assets/videos/trang-1/play-kitchen.mp4",
     "images": [
       "assets/img/products/product-play-kitchen.jpg"
     ],
@@ -2303,6 +2324,7 @@ window.WONDERLAB_PRODUCTS = {
     "price": 499000,
     "category": "Lắp ráp & STEM",
     "summary": "Lắp khung xe và điều khiển bằng tay cầm.",
+    "video": "assets/videos/trang-1/rc-car.mp4",
     "images": [
       "assets/img/products/product-rc-car.jpg"
     ],
@@ -2480,7 +2502,7 @@ window.WONDERLAB_PRODUCTS = {
         "verified": true
       }
     ],
-    "video": "assets/videos/Bo-thi-nghiem-khoa-hoc.mp4"
+    "video": "assets/videos/trang-1/science-kit.mp4"
   },
   "magnetic-tiles": {
     "name": "Bộ nam châm xếp hình",
@@ -2488,6 +2510,7 @@ window.WONDERLAB_PRODUCTS = {
     "price": 399000,
     "category": "Xếp hình & logic",
     "summary": "Ghép nam châm thành hình khối, nhà và cầu.",
+    "video": "assets/videos/trang-1/magnetic-tiles.mp4",
     "images": [
       "assets/img/products/product-magnetic-tiles.jpg"
     ],
@@ -2578,6 +2601,7 @@ window.WONDERLAB_PRODUCTS = {
     "price": 279000,
     "category": "Xếp hình & logic",
     "summary": "Ghép 200 mảnh thành tranh hệ mặt trời.",
+    "video": "assets/videos/trang-1/space-puzzle.mp4",
     "images": [
       "assets/img/products/product-space-puzzle.jpg"
     ],
@@ -2668,6 +2692,7 @@ window.WONDERLAB_PRODUCTS = {
     "price": 249000,
     "category": "Vẽ & sáng tạo",
     "summary": "Nặn hình bằng đất màu và dụng cụ gỗ.",
+    "video": "assets/videos/trang-1/clay-set.mp4",
     "images": [
       "assets/img/products/product-clay-set.jpg"
     ],
@@ -2758,6 +2783,7 @@ window.WONDERLAB_PRODUCTS = {
     "price": 319000,
     "category": "Xếp hình & logic",
     "summary": "Cầm nắm khối cầu, trụ, nón và so sánh.",
+    "video": "assets/videos/trang-1/geometric-solids.mp4",
     "images": [
       "assets/img/products/product-geometric-solids.jpg"
     ],
@@ -2848,6 +2874,7 @@ window.WONDERLAB_PRODUCTS = {
     "price": 269000,
     "category": "Xếp hình & logic",
     "summary": "Thả các khối gỗ đa giác vào đúng ô cửa để rèn luyện tư duy không gian.",
+    "video": "assets/videos/trang-3/shape-sorter-cube.mp4",
     "images": [
       "assets/img/products/product-shape-sorter-cube.jpg"
     ],
@@ -2939,6 +2966,7 @@ window.WONDERLAB_PRODUCTS = {
     "price": 389000,
     "category": "Nhập vai",
     "summary": "Lắp ráp đường ray uốn lượn và dẫn đoàn tàu nối toa chở hàng vượt dốc.",
+    "video": "assets/videos/trang-3/wooden-train-set.mp4",
     "images": [
       "assets/img/products/product-wooden-train-set.jpg"
     ],
@@ -3030,6 +3058,7 @@ window.WONDERLAB_PRODUCTS = {
     "price": 249000,
     "category": "Vẽ & sáng tạo",
     "summary": "Xếp chồng các vòm cung tạo cây cầu, đường hầm hoặc kiến trúc nghệ thuật.",
+    "video": "assets/videos/trang-3/rainbow-stacker.mp4",
     "images": [
       "assets/img/products/product-rainbow-stacker.jpg"
     ],
@@ -3121,6 +3150,7 @@ window.WONDERLAB_PRODUCTS = {
     "price": 199000,
     "category": "Nhập vai",
     "summary": "Gồm xe sedan, xe buýt trường học và xe tải nhỏ lăn bánh mượt mà.",
+    "video": "assets/videos/trang-3/wooden-car-set.mp4",
     "images": [
       "assets/img/products/product-wooden-car-set.jpg"
     ],
@@ -3212,6 +3242,7 @@ window.WONDERLAB_PRODUCTS = {
     "price": 229000,
     "category": "Vẽ & sáng tạo",
     "summary": "Gõ từng phím màu để cảm nhận cao độ nốt nhạc và nhịp điệu rộn ràng.",
+    "video": "assets/videos/trang-3/wooden-xylophone.mp4",
     "images": [
       "assets/img/products/product-wooden-xylophone.jpg"
     ],
@@ -3303,6 +3334,7 @@ window.WONDERLAB_PRODUCTS = {
     "price": 429000,
     "category": "Xếp hình & logic",
     "summary": "Tích hợp bánh răng xoay, thả khối, lật hình và mê cung luồn hạt.",
+    "video": "assets/videos/trang-3/wooden-activity-cube.mp4",
     "images": [
       "assets/img/products/product-wooden-activity-cube.jpg"
     ],
@@ -3394,6 +3426,7 @@ window.WONDERLAB_PRODUCTS = {
     "price": 259000,
     "category": "Xếp hình & logic",
     "summary": "Đẩy các hạt gỗ màu sắc luồn qua đường dây thép uốn lượn phức tạp.",
+    "video": "assets/videos/trang-4/wire-bead-maze.mp4",
     "images": [
       "assets/img/products/product-wire-bead-maze.jpg"
     ],
@@ -3485,6 +3518,7 @@ window.WONDERLAB_PRODUCTS = {
     "price": 179000,
     "category": "Nhập vai",
     "summary": "Dắt chú cún gỗ vui nhộn với bước đi lắc lư và đôi tai cử động nhịp nhàng.",
+    "video": "assets/videos/trang-4/pull-along-puppy.mp4",
     "images": [
       "assets/img/products/product-pull-along-puppy.jpg"
     ],
@@ -3576,6 +3610,7 @@ window.WONDERLAB_PRODUCTS = {
     "price": 169000,
     "category": "Nhập vai",
     "summary": "Nút bấm đàn hồi có lò xo và ống kính xoay chỉnh góc chụp thú vị.",
+    "video": "assets/videos/trang-4/wooden-toy-camera.mp4",
     "images": [
       "assets/img/products/product-wooden-toy-camera.jpg"
     ],
@@ -3667,6 +3702,7 @@ window.WONDERLAB_PRODUCTS = {
     "price": 279000,
     "category": "Xếp hình & logic",
     "summary": "Khung gỗ vững chãi với 100 hạt đếm sắc màu hỗ trợ bé học cộng trừ.",
+    "video": "assets/videos/trang-4/classic-wooden-abacus.mp4",
     "images": [
       "assets/img/products/product-classic-wooden-abacus.jpg"
     ],
@@ -3758,6 +3794,7 @@ window.WONDERLAB_PRODUCTS = {
     "price": 289000,
     "category": "Lắp ráp & STEM",
     "summary": "Gõ búa đóng cọc xuống, quan sát cơ chế đòn bẩy và lực tác động.",
+    "video": "assets/videos/trang-4/wooden-pounding-bench.mp4",
     "images": [
       "assets/img/products/product-wooden-pounding-bench.jpg"
     ],
@@ -3849,6 +3886,7 @@ window.WONDERLAB_PRODUCTS = {
     "price": 239000,
     "category": "Vẽ & sáng tạo",
     "summary": "Xếp các mảnh gỗ đa giác thành hoa văn đối xứng tuyệt mỹ trong khay gỗ.",
+    "video": "assets/videos/trang-4/geometric-mosaic-puzzle.mp4",
     "images": [
       "assets/img/products/product-geometric-mosaic-puzzle.jpg"
     ],
@@ -3940,6 +3978,7 @@ window.WONDERLAB_PRODUCTS = {
     "price": 249000,
     "category": "Nhập vai",
     "summary": "Chú gấu vải êm ái đồng hành cùng bé trong các giờ chơi kể chuyện.",
+    "video": "assets/videos/trang-4/organic-teddy-bear.mp4",
     "images": [
       "assets/img/products/product-organic-teddy-bear.jpg"
     ],
@@ -4031,6 +4070,7 @@ window.WONDERLAB_PRODUCTS = {
     "price": 329000,
     "category": "Nhập vai",
     "summary": "Gạt cần nướng để bật nảy bánh mì lát, chuẩn bị bữa sáng thơm ngon.",
+    "video": "assets/videos/trang-4/wooden-toaster-playset.mp4",
     "images": [
       "assets/img/products/product-wooden-toaster-playset.jpg"
     ],
@@ -4122,6 +4162,7 @@ window.WONDERLAB_PRODUCTS = {
     "price": 689000,
     "category": "Nhập vai",
     "summary": "Gồm bàn ghế, giường ngủ và tủ lạnh mini để sắp đặt không gian sống ước mơ.",
+    "video": "assets/videos/trang-4/wooden-dollhouse-set.mp4",
     "images": [
       "assets/img/products/product-wooden-dollhouse-set.jpg"
     ],
@@ -4213,6 +4254,7 @@ window.WONDERLAB_PRODUCTS = {
     "price": 349000,
     "category": "Nhập vai",
     "summary": "Vali vải chứa tai nghe nhịp tim, xilanh gỗ, nhiệt kế và thuốc khám bệnh.",
+    "video": "assets/videos/trang-4/cloth-doctor-kit.mp4",
     "images": [
       "assets/img/products/product-cloth-doctor-kit.jpg"
     ],
@@ -4304,6 +4346,7 @@ window.WONDERLAB_PRODUCTS = {
     "price": 299000,
     "category": "Nhập vai",
     "summary": "Cắt đôi cà chua, cà tím, dưa hấu phát tiếng 'xoẹt' chân thực rèn cổ tay.",
+    "video": "assets/videos/trang-4/cutting-veggies-set.mp4",
     "images": [
       "assets/img/products/product-cutting-veggies-set.jpg"
     ],
@@ -4395,6 +4438,7 @@ window.WONDERLAB_PRODUCTS = {
     "price": 369000,
     "category": "Lắp ráp & STEM",
     "summary": "Đặt quả cân lên 2 đĩa để khám phá định luật thăng bằng và so sánh trọng lượng.",
+    "video": "assets/videos/trang-4/wooden-balance-scale.mp4",
     "images": [
       "assets/img/products/product-wooden-balance-scale.jpg"
     ],
@@ -4486,6 +4530,7 @@ window.WONDERLAB_PRODUCTS = {
     "price": 559000,
     "category": "Nhập vai",
     "summary": "Bàn thao tác mini tích hợp ê-tô kẹp, đinh gỗ, cờ lê và thước đo cho thợ nhí.",
+    "video": "assets/videos/trang-5/junior-workbench-set.mp4",
     "images": [
       "assets/img/products/product-junior-workbench-set.jpg"
     ],
@@ -4577,6 +4622,7 @@ window.WONDERLAB_PRODUCTS = {
     "price": 379000,
     "category": "Lắp ráp & STEM",
     "summary": "Lắp ghép khối lăng trụ và lập phương xây nên công trình kiến trúc vững chãi.",
+    "video": "assets/videos/trang-5/geometric-pyramid-tower.mp4",
     "images": [
       "assets/img/products/product-geometric-pyramid-tower.jpg"
     ],
@@ -4668,6 +4714,7 @@ window.WONDERLAB_PRODUCTS = {
     "price": 189000,
     "category": "Xếp hình & logic",
     "summary": "Mặt số to rõ cùng kim giờ và phút có khớp xoay giúp bé nhận biết thời gian.",
+    "video": "assets/videos/trang-5/wooden-learning-clock.mp4",
     "images": [
       "assets/img/products/product-wooden-learning-clock.jpg"
     ],
@@ -4759,6 +4806,7 @@ window.WONDERLAB_PRODUCTS = {
     "price": 179000,
     "category": "Vẽ & sáng tạo",
     "summary": "Xâu các hạt gỗ hình khối tròn, trụ qua sợi dây đầu kim gỗ trơn nhẵn an toàn.",
+    "video": "assets/videos/trang-5/wooden-lacing-beads.mp4",
     "images": [
       "assets/img/products/product-wooden-lacing-beads.jpg"
     ],
@@ -4850,6 +4898,7 @@ window.WONDERLAB_PRODUCTS = {
     "price": 269000,
     "category": "Board game",
     "summary": "Mở từng búp bê gỗ để tìm thấy búp bê nhỏ hơn, học về kích thước lớn nhỏ.",
+    "video": "assets/videos/trang-5/nesting-matryoshka-dolls.mp4",
     "images": [
       "assets/img/products/product-nesting-matryoshka-dolls.jpg"
     ],
@@ -4941,6 +4990,7 @@ window.WONDERLAB_PRODUCTS = {
     "price": 319000,
     "category": "Board game",
     "summary": "Gồm voi rừng, hươu sao, cọp vằn và gấu nâu chạm khắc thủ công bo tròn.",
+    "video": "assets/videos/trang-5/forest-animals-set.mp4",
     "images": [
       "assets/img/products/product-forest-animals-set.jpg"
     ],
@@ -5032,6 +5082,7 @@ window.WONDERLAB_PRODUCTS = {
     "price": 299000,
     "category": "Board game",
     "summary": "Xếp các ki gỗ thẳng hàng và lăn bóng gỗ ngắm đích, rèn sự khéo léo.",
+    "video": "assets/videos/trang-5/wooden-bowling-set.mp4",
     "images": [
       "assets/img/products/product-wooden-bowling-set.jpg"
     ],
@@ -5123,6 +5174,7 @@ window.WONDERLAB_PRODUCTS = {
     "price": 419000,
     "category": "Lắp ráp & STEM",
     "summary": "Tích hợp bánh răng cơ khí, chốt khóa then, công tắc bấm và đồng hồ hẹn giờ.",
+    "video": "assets/videos/trang-5/sensory-busy-board.mp4",
     "images": [
       "assets/img/products/product-sensory-busy-board.jpg"
     ],
@@ -5214,6 +5266,7 @@ window.WONDERLAB_PRODUCTS = {
     "price": 159000,
     "category": "Vẽ & sáng tạo",
     "summary": "Các trang vải mềm nhiều chất liệu có đuôi thú thò ra kích thích giác quan.",
+    "video": "assets/videos/trang-5/soft-cloth-book.mp4",
     "images": [
       "assets/img/products/product-soft-cloth-book.jpg"
     ],
@@ -5305,6 +5358,7 @@ window.WONDERLAB_PRODUCTS = {
     "price": 589000,
     "category": "Lắp ráp & STEM",
     "summary": "Lắp ghép máng trượt và phễu xoáy gỗ để bi thép cuộn tròn theo quán tính.",
+    "video": "assets/videos/trang-5/wooden-ball-run.mp4",
     "images": [
       "assets/img/products/product-wooden-ball-run.jpg"
     ],
@@ -5396,6 +5450,7 @@ window.WONDERLAB_PRODUCTS = {
     "price": 339000,
     "category": "Board game",
     "summary": "Trống gõ âm vang trầm ấm kết hợp cặp chuông lắc maracas sôi động.",
+    "video": "assets/videos/trang-5/wooden-music-band.mp4",
     "images": [
       "assets/img/products/product-wooden-music-band.jpg"
     ],
@@ -5487,6 +5542,7 @@ window.WONDERLAB_PRODUCTS = {
     "price": 259000,
     "category": "Xếp hình & logic",
     "summary": "Xếp lồng các hộp rỗng vào nhau hoặc chồng cao thành ngọn tháp cân bằng.",
+    "video": "assets/videos/trang-5/nesting-cubes-set.mp4",
     "images": [
       "assets/img/products/product-nesting-cubes-set.jpg"
     ],
