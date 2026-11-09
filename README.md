@@ -29,9 +29,10 @@ Mở trực tiếp `index.html` bằng `file://` cũng xem được, nhưng nên
 index.html  products.html  product-detail.html  about.html
 css/style.css        # 00 fonts → 21 motion, toàn bộ token nằm ở :root
 js/main.js           # nav mobile, giỏ hàng demo, drawer, toast
-js/products.js       # lọc, sắp xếp, trạng thái URL, drawer bộ lọc trên mobile
+js/catalogue-meta.js # danh sách metadata định danh và thuộc tính sản phẩm
+js/products.js       # render danh sách, lọc, sắp xếp, trạng thái URL, drawer bộ lọc trên mobile
 js/product-detail.js # gallery, tabs, số lượng, thêm vào giỏ
-js/product-data.js   # dữ liệu 12 sản phẩm cho trang chi tiết (?sp=)
+js/product-data.js   # dữ liệu 60 sản phẩm cho trang danh sách và trang chi tiết (?sp=)
 assets/fonts/        # Be Vietnam Pro (woff2, tự host, 3 subset)
 assets/img/          # logo-wonderlab.png + ảnh sản phẩm
 assets/favicon.png   # favicon cắt từ logo
@@ -72,10 +73,10 @@ hiển thị đủ 12 sản phẩm. Trạng thái lọc được ghi vào URL:
 ## Video sản phẩm
 
 - 60 video nằm trong `assets/videos/trang-1/` đến `trang-5/`, giữ nhóm thư mục từ nguồn.
-- Tên file dùng mã sản phẩm (`<slug>.mp4`); trường `video` trong `product-data.js` và
-  `js/product-data.js` ghép video với đúng sản phẩm, kể cả khi đổi thứ tự danh sách.
+- Tên file dùng mã sản phẩm (`<slug>.mp4`); trường `video` trong `js/product-data.js`
+  ghép video với đúng sản phẩm, kể cả khi đổi thứ tự danh sách.
 - Video Domino được chuyển từ MOV/HEVC sang MP4/H.264; các MP4 khác giữ nguyên nội dung.
-- Trang danh sách dùng `catalogue-meta.js`, `product-data.js` và `products.js` ở thư mục gốc.
+- Toàn bộ script danh mục (`catalogue-meta.js`, `product-data.js`, `products.js`) nằm trong thư mục `js/`.
   Trang chi tiết phát video trong thư viện ảnh hoặc tab Video thực tế.
 - Video sản phẩm chỉ tải khi người xem mở video; có điều khiển phát, âm lượng và toàn màn hình.
 

@@ -5629,3 +5629,18 @@ window.WONDERLAB_PRODUCTS = {
     ]
   }
 };
+if (window.WONDERLAB_CATALOGUE_META) {
+  window.products = window.WONDERLAB_CATALOGUE_META.map(function (meta) {
+    const product = window.WONDERLAB_PRODUCTS[meta.id];
+
+    return {
+      ...product,
+      ...meta,
+      name: product.name,
+      price: Number(product.price),
+      category: product.category,
+      image: product.images[0],
+      description: product.summary
+    };
+  });
+}
