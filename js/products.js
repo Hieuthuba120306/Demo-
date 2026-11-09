@@ -8,7 +8,116 @@
   var grid = document.querySelector("[data-grid]");
 
   if (!form || !grid) return;
+  // Tạo danh sách sản phẩm từ dữ liệu JavaScript.
+function renderProducts(list) {
+  grid.textContent = "";
 
+  list.forEach(function (product) {
+    var card = document.createElement("li");
+
+    // Thông tin để tìm kiếm, lọc, sắp xếp và thêm vào giỏ.
+    card.setAttribute("data-product", "");
+    card.dataset.slug = product.id;
+    card.dataset.name = product.name;
+    card.dataset.price = product.price;
+    card.dataset.cat = product.categoryCode;
+    card.dataset.age = product.ages || "";
+    card.dataset.skills = product.skills || "";
+    card.dataset.order = product.order;
+
+    var detailUrl =
+      "product-detail.html?sp=" + encodeURIComponent(product.id);
+
+    // Giữ các class CSS hiện có của website.
+    card.innerHTML = `
+      <article class="p-card">
+        <a class="p-card__media" aria-hidden="true" tabindex="-1">
+          <img alt="" width="480" height="480" loading="lazy">
+        </a>
+
+        <div class="p-card__body">
+          <p class="p-card__age"></p>
+
+          <h3 class="p-card__title">
+            <a></a>
+          </h3>
+
+          <p class="p-card__act"></p>
+
+          <div class="p-card__foot">
+            <span class="price"></span>
+
+            <a class="p-card__link">
+              Xem chi tiết
+              <svg
+                class="icon"
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M5 12h14"></path>
+                <path d="m13 6 6 6-6 6"></path>
+              </svg>
+            </a>
+
+            <button
+              class="p-card__add"
+              data-add-to-cart
+              type="button"
+            >
+              ＋ Thêm vào giỏ
+            </button>
+          </div>
+        </div>
+      </article>
+    `;
+
+    // Điền dữ liệu vào thẻ sản phẩm.
+    card.querySelectorAll("a").forEach(function (link) {
+      link.href = detailUrl;
+    });
+
+    card.querySelector("img").src = product.image;
+
+    card.querySelector(".p-card__age").textContent =
+      product.age || "";
+
+    card.querySelector(".p-card__title a").textContent =
+      product.name;
+
+    card.querySelector(".p-card__act").textContent =
+      product.description;
+
+    card.querySelector(".price").textContent =
+      new Intl.NumberFormat("vi-VN").format(product.price) + "đ";
+
+    card.querySelector(".p-card__link").setAttribute(
+      "aria-label",
+      "Xem chi tiết " + product.name
+    );
+
+    card.querySelector("[data-add-to-cart]").setAttribute(
+      "aria-label",
+      "Thêm " + product.name + " vào giỏ hàng"
+    );
+
+  
+    grid.appendChild(card);
+  });
+
+  var emptyMessage = document.querySelector("[data-empty]");
+
+  if (emptyMessage) {
+    emptyMessage.hidden = list.length !== 0;
+  }
+}
+
+// Tạo thẻ trước khi bộ lọc lấy danh sách sản phẩm.
+renderProducts(window.products);
   var items = Array.prototype.slice.call(
     grid.querySelectorAll("[data-product]"),
   );
@@ -368,6 +477,23 @@
     }
   });
 
+function handleSearch() {
+  query = normalize(searchInput.value);
+  apply();
+}
+
+if (searchInput) {
+  searchInput.addEventListener("input", handleSearch);
+
+  var searchForm = searchInput.closest("form");
+
+  if (searchForm) {
+    searchForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+      handleSearch();
+    });
+  }
+}
   hydrateFromUrl();
   apply(false);
 })();
